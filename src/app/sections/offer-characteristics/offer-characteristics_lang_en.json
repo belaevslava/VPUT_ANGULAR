@@ -1,0 +1,27 @@
+{
+  "title": "About:",
+  "accommodation_type": "Accommodation type:",
+  "floor": "Floor:",
+  "floors_total": "Floors total:",
+  "cleaning": "Cleaning:",
+  "change_of_bed_sheets": "Change of bed sheets:",
+  "parking": "Parking:",
+  "internet": "Internet:",
+  "balcony": "Balcony:",
+  "view_from_the_windows": "View from the windows:",
+  "order_cleaning": "Order cleaning:",
+  "extra_guest_fee": "Extra guest fee:",
+  "order_change_of_bed_sheet": "Order change of bed sheets:",
+  "non_refundable_deposit": "Non-refundable deposit:",
+  "final_cleaning_fee": "Final cleaning fee:",
+  "prepayment": "Prepayment:",
+  "non_refundable_deposit_description": "<strong>Non-refundable deposit</strong> is an amount that is not refunded to a Guest in case of Guest's unilateral cancellation of booking.",
+  "prepayment_description": "<strong>Prepayment</strong> is an amount of the first payment; a Guest pays it on the website. It is usually equal to the amount of 'non-refundable deposit'. In case the Host cannot accept the money on the spot, the Host sets 100% prepayment, so as, after Guest's arrival, to receive all the money from V.P.U.T. company. This does not affect the amount of non-refundable deposit.",
+
+  "yes": "Yes",
+  "no": "No",
+  "ask_the_host": "Ask the host",
+  "extra_guests_not_allowed": "extra guests not allowed",
+  "free": "Free",
+  "not_required": "Not allowed"
+}

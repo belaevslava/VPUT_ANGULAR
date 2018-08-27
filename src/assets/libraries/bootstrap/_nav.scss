@@ -1,0 +1,138 @@
+// Base class
+//
+// Kickstart any navigation component with a set of style resets. Works with
+// `<nav>`s or `<ul>`s.
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: $nav-link-padding-y $nav-link-padding-x;
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  // Disabled state lightens text
+  &.disabled {
+    color: $nav-link-disabled-color;
+  }
+}
+
+.nav-link_style_dashed {
+  text-decoration: none;
+  border-bottom: 1px dashed;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+//
+// Tabs
+//
+
+.nav-tabs {
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+
+  .nav-item {
+    margin-bottom: -$nav-tabs-border-width;
+  }
+
+  .nav-link {
+    border: $nav-tabs-border-width solid transparent;
+    border-radius: $nav-tabs-border-radius;
+    font-size: $nav-tabs-font-size;
+    color: $dark;
+    transition: $transition-base;
+
+    @include hover-focus {
+      border-color: $nav-tabs-link-hover-border-color;
+      color: $primary;
+    }
+
+    &.disabled {
+      color: $nav-link-disabled-color;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $nav-tabs-link-active-color;
+    background-color: $nav-tabs-link-active-bg;
+    border-color: $nav-tabs-link-active-border-color;
+  }
+
+  .dropdown-menu {
+    // Make dropdown border overlap tab border
+    margin-top: -$nav-tabs-border-width;
+    // Remove the top rounded corners here since there is a hard edge above the menu
+    @include border-top-radius(0);
+  }
+}
+
+//
+// Pills
+//
+
+.nav-pills {
+  .nav-link {
+    @include border-radius($nav-pills-border-radius);
+  }
+  .nav-link.active,
+  .show > .nav-link {
+    color: $nav-pills-link-active-color;
+    background-color: $nav-pills-link-active-bg;
+    border-radius: $border-radius;
+  }
+}
+
+.nav-pills_orientation_horizontal .nav-link.active,
+.nav-pills_orientation_horizontal .show > .nav-link {
+  color: $nav-pills-link-active-bg;
+  background-color: transparent;
+  border-bottom: 3px solid $nav-pills-link-active-bg;
+  font-weight: bold;
+  border-radius: 0;
+}
+
+
+//
+// Justified variants
+//
+
+.nav-fill {
+  .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+.nav-justified {
+  .nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}
