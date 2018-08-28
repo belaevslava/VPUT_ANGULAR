@@ -27,12 +27,13 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/slick-carousel/slick/slick.css",
               "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css",
               // Date Range Picker
               "node_modules/daterangepicker/daterangepicker.css",
-              "node_modules/nouislider/distribute/nouislider.min.css",
               "node_modules/filepond/dist/filepond.min.css",
+
+              "src/assets/libraries/slick-carousel/slick-theme.scss",
+              "src/assets/libraries/nouislider/nouislider.scss",
 
               "src/assets/libraries/bootstrap/bootstrap.scss",
               "src/styles.scss"
