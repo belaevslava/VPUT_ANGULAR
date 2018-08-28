@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import $ from 'jquery';
-
 @Component({
   selector: 'app-reviews-slider',
   templateUrl: './reviews-slider.component.html',
@@ -12,7 +10,6 @@ export class ReviewsSliderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    $('.reviews-slider').slick();
   }
 
 }

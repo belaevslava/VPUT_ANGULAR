@@ -92,29 +92,6 @@
     max-width: 80%;
   }
 }
-@include media-breakpoint-down(md) {
-  .cities-tabs__content {
-    padding: 0;
-  }
-  .form-search-offers__cities-tabs {
-    .cities-tabs {
-      border-radius: 0;
-    }
-    .cities-tabs__link {
-      padding: $btn-padding-y-lg $btn-padding-x-lg;
-      border-bottom: 1px solid $border-color;
-      font-size: $font-size-lg;
-      margin-top: 0;
-      white-space: nowrap;
-      display: block;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      &:before {
-        display: none;
-      }
-    }
-  }
-}
 
 @include media-breakpoint-down(sm) {
   .form-search-offers__search-col.col {

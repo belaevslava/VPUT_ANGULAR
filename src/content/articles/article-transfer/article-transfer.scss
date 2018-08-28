@@ -1,0 +1,58 @@
+@import "../../../templates/library.blocks/bootstrap/bootstrap-reboot";
+
+@include media-breakpoint-down(sm) {
+  .article-transfer__transfer-table {
+    tbody>tr>td {
+      text-align: center;
+      &:before {
+        display: block;
+        font-weight: bold;
+      }
+    }
+  }
+  .article-cleaning_lang_ru {
+    .article-transfer__transfer-table {
+      tbody>tr>td {
+        &:nth-child(1):before {
+          content: "Город";
+        }
+        &:nth-child(2):before {
+          content: "Легковой автомобиль";
+        }
+        &:nth-child(3):before {
+          content: "Минивэн";
+        }
+      }
+    }
+  }
+  .article-cleaning_lang_en {
+    .article-transfer__transfer-table {
+      tbody>tr>td {
+        &:nth-child(1):before {
+          content: "Destination";
+        }
+        &:nth-child(2):before {
+          content: "Car";
+        }
+        &:nth-child(3):before {
+          content: "Minivan";
+        }
+      }
+    }
+  }
+  .article-cleaning_lang_ua {
+    .article-transfer__transfer-table {
+      tbody>tr>td {
+        &:nth-child(1):before {
+          content: "Місто";
+        }
+        &:nth-child(2):before {
+          content: "Легковий автомобіль";
+        }
+        &:nth-child(3):before {
+          content: "Мінівен";
+        }
+      }
+    }
+  }
+}

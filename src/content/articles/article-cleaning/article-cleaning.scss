@@ -1,0 +1,17 @@
+@import "../../../templates/library.blocks/bootstrap/bootstrap-reboot";
+
+.article-cleaning {
+  .table {
+    text-align: center;
+    th {
+      white-space: nowrap;
+    }
+
+    &:not(.article-cleaning__table-center) {
+      td:nth-child(1),
+      th:nth-child(1) {
+        text-align: left;
+      }
+    }
+  }
+}
