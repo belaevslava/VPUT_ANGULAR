@@ -1,0 +1,21 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.list-of-offer-ratings {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.list-of-offer-ratings__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.list-of-offer-ratings__label {
+  flex: auto;
+  color: $text-muted;
+  margin-bottom: 0;
+  margin-right: 1rem;
+}
+.list-of-offer-ratings__rating {
+  margin-left: auto;
+}

@@ -1,0 +1,123 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.form-search-offers {
+  position: relative;
+
+  .form-control[readonly] {
+    background-color: $white;
+  }
+
+  .input-group,
+  .custom-select,
+  .custom-control {
+    &:hover,
+    *:hover {
+      cursor: pointer;
+    }
+  }
+  .custom-control-label {
+    display: block;
+  }
+}
+.form-search-offers__search-by-complexes-col,
+.form-search-offers__cityId-col {
+  min-width: 270px;
+}
+.form-search-offers__id-col {
+  min-width: 120px;
+}
+.form-search-offers__guests-col {
+  min-width: 150px;
+}
+.form-search-offers__dateRange-col {
+  min-width: 270px;
+}
+.form-search-offers__slider {
+  margin: auto;
+  min-width: 240px;
+  max-width: 90%;
+  max-width: calc(100% - 50px);
+}
+.form-search-offers__fieldset-list {
+  .form-group {
+    margin-bottom: .5rem;
+  }
+}
+.form-search-offers__fieldset {
+  &:not(:last-child) {
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+.form-search-offers__options-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.form-search-offers__other-filters-toggle-button {
+  &:not(.collapsed) {
+    background-color: $primary;
+    color: $white;
+  }
+}
+.form-search-offers__cities-tabs-toggle {
+  transition: $transition-base;
+  &:not(.collapsed) {
+    @if $enable-shadows {
+      box-shadow: $input-box-shadow, $input-focus-box-shadow;
+    } @else {
+      box-shadow: $input-focus-box-shadow;
+    }
+  }
+}
+
+.form-search-offers__is_short {
+  .col {
+    flex: 1 15%;
+  }
+  .form-search-offers__cityId-col {
+    flex: 1 35%;
+  }
+  .form-search-offers__show-booked,
+  .form-search-offers__id-col,
+  .form-search-offers__other-filters-col,
+  .form-search-offers__search-by-complexes-col {
+    display: none;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .form-search-offers__search-by-complexes-button {
+    max-width: 80%;
+  }
+}
+@include media-breakpoint-down(md) {
+  .cities-tabs__content {
+    padding: 0;
+  }
+  .form-search-offers__cities-tabs {
+    .cities-tabs {
+      border-radius: 0;
+    }
+    .cities-tabs__link {
+      padding: $btn-padding-y-lg $btn-padding-x-lg;
+      border-bottom: 1px solid $border-color;
+      font-size: $font-size-lg;
+      margin-top: 0;
+      white-space: nowrap;
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .form-search-offers__search-col.col {
+    flex: 100%;
+  }
+}

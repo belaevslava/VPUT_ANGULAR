@@ -1,0 +1,70 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.services {
+  text-align: center;
+}
+.services__table {
+  font-size: 1.125rem;
+  color: $dark;
+}
+.services__table-td {
+  padding: $table-cell-padding $table-cell-padding $table-cell-padding 0;
+}
+.services__other-services-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+.services__figure-title {
+  font-size: 1.25rem;
+}
+.services__price {
+  color: $secondary;
+  font-size: 1.75rem;
+}
+.services__link {
+  font-size: 1.125rem;
+}
+.services__img {
+  width: 50%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  margin-bottom: 0;
+}
+.services__other-services-item {
+  margin-bottom: 0;
+}
+
+@include media-breakpoint-up(xl) {
+  .services__transfer,
+  .services__other-services-list-item {
+    position: relative;
+    &:not(:last-child):after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      border-right: 1px solid $border-color;
+      height: 60%
+    }
+  }
+
+  .services__transfer {
+    &:not(:last-child):after {
+      bottom: 0;
+      top: initial;
+      height: 80%;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .services__img_is_luggage {
+    background-position: right center;
+    margin-right: 2rem;
+  }
+}

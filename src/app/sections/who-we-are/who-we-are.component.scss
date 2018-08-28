@@ -1,0 +1,54 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.who-we-are__title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.who-we-are__description {
+  line-height: 1;
+  font-size: 1.5rem;
+}
+.who-we-are__form-search-offers {
+  background-color: $light;
+  border-radius: $card-border-radius;
+}
+.who-we-are__form-search-offers,
+.who-we-are__popular-cities {
+  max-width: 1024px;
+  margin: auto;
+}
+
+@include media-breakpoint-up(lg) {
+  .who-we-are__form-search-offers {
+    .form-search-offers__cities-tabs {
+      margin-left: -1rem;
+      margin-right: -1rem;
+      &.collapse,
+      &.collapsing {
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 99;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .who-we-are__form-search-offers {
+    background-color: rgba(255,255,255,.3);
+  }
+  .who-we-are__title {
+    font-size: 3.25rem;
+  }
+  .who-we-are__description {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .who-we-are__form-search-offers {
+    .custom-select {
+      border-width: 0;
+    }
+  }
+}

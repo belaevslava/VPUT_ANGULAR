@@ -1,0 +1,113 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.page-footer {
+  background-color: $gray-700;
+  color: $white;
+  padding-bottom: 3rem;
+}
+.page-footer__link {
+  color: $white;
+  opacity: .8;
+  @include hover-focus {
+    opacity: 1;
+    color: $white;
+    text-decoration: none;
+  }
+}
+.page-footer__title {
+  font-size: 1.125rem;
+  margin-bottom: .875rem;
+  text-transform: initial;
+  font-weight: initial;
+}
+
+.page-footer__delimiter {
+  opacity: .36;
+}
+
+.page-footer__subscribe {
+  color: $gray-700;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  margin-bottom: 3rem;
+  border-top: $border-color 1px solid;
+  .container {
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.page-footer__social-nav,
+.page-footer__list-of-navs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.page-footer__list-of-navs {
+  margin-bottom: 2rem;
+}
+.page-footer__info {
+  text-align: center;
+}
+.page-footer__delimiter {
+  max-width: 70px;
+  border-color: $white;
+}
+.page-footer__logo {
+  margin-bottom: .5rem;
+}
+
+.page-footer__social-list {
+  display: flex;
+  max-width: 240px;
+  list-style: none;
+  padding-left: 0;
+}
+.page-footer__social-item {
+  flex: 1;
+}
+
+.page-footer__copyright {
+  opacity: .7;
+  font-size: .875rem;
+}
+.page-footer__developer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: .7;
+  font-size: .875rem;
+  &:hover {
+    opacity: initial;
+  }
+}
+
+.page-footer__social-icon,
+.page-footer__logo,
+.page-footer__developed-by {
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-footer__logo {
+  width: 92px;
+  height: 38px;
+  background-image: url(/assets/images/common/page-footer/page-footer__VPUT-logo.svg);
+}
+
+.page-footer__developed-by {
+  width: 85px;
+  height: 20px;
+  margin-left: 6px;
+  background-image: url(/assets/images/common/page-footer/page-footer__developed-by.svg);
+}
+
+.page-footer__social-icon {
+  width: 32px;
+  height: 32px;
+}
+.page-footer__social-icon_type_instagram { background-image: url(/assets/images/common/page-footer/page-footer__social-icon_type_instagram.svg); }
+.page-footer__social-icon_type_facebook { background-image: url(/assets/images/common/page-footer/page-footer__social-icon_type_facebook.svg); }
+.page-footer__social-icon_type_vk { background-image: url(/assets/images/common/page-footer/page-footer__social-icon_type_vk.svg); }
+.page-footer__social-icon_type_ok { background-image: url(/assets/images/common/page-footer/page-footer__social-icon_type_ok.svg); }

@@ -1,0 +1,40 @@
+<app-page-header theme="dark"></app-page-header>
+
+<!-- Page: page-profile -->
+<main class="page-profile">
+    <header class="page-cabinet__header py-4">
+        <div class="container">
+            <h1 class="page-cabinet__title mb-0">Ваш профиль</h1>
+        </div>
+    </header>
+    <div class="container mw-1024px py-4">
+        <div class="alert alert-info lead mb-4">
+            <p class="mb-0">Анализ статистики показывает: <strong>объекты, у которых есть отзывы, получают в 2-5 раз больше бронирований</strong>. Вы можете получить ваши первые отзывы от своих друзей прямо сейчас.</p>
+            <div class="text-center"><a routerLink="/cabinet/reviews/" class="nav-link">Узнайте как это сделать</a></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="page-profile__form-change-profile-picture mb-4">
+                    <app-form-change-profile-picture></app-form-change-profile-picture>
+                </div>
+                <div class="page-profile__form-change-languages mb-4">
+                    <app-form-change-languages></app-form-change-languages>
+                </div>
+                <div class="page-profile__form-change-password mb-4">
+                    <app-form-change-password></app-form-change-password>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-6">
+                <div class="page-profile__form-change-personal-data mb-4">
+                    <app-form-change-personal-data></app-form-change-personal-data>
+                </div>
+                <div class="page-profile__form-service-settings mb-4">
+                    <app-form-service-settings></app-form-service-settings>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- /Page: page-profile -->
+
+<app-page-footer></app-page-footer>

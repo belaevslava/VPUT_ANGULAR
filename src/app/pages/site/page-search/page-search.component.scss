@@ -1,0 +1,61 @@
+@import "../../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.page-search__form-search-offers {
+  .form-search-offers__main-fieldset {
+    .form-group {
+      flex: 1 20%;
+    }
+
+    .form-search-offers__search-by-complexes-col,
+    .form-search-offers__cityId-col {
+      flex: 1 35%;
+    }
+  }
+}
+
+.form-search-offers__show-booked {
+  margin-bottom: .5rem;
+}
+
+.page-search__form-search-offers {
+  .form-search-offers__show-booked {
+    position: absolute;
+    bottom: -20px;
+    background-color: $white;
+    padding-right: $custom-control-spacer-x;
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .page-search {
+    position: fixed;
+    top: 66px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .page-search__search-container {
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .page-search__map-container {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
+  .page-search__offers-on-the-map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}

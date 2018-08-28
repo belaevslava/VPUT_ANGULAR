@@ -1,0 +1,27 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.5rem;
+  height: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.icon_style_dark {
+  fill: $dark;
+}
+.icon_style_gray {
+  fill: $gray-700;
+}
+.icon_style_light {
+  fill: $light;
+}
+
+.icon_style_primary {
+  fill: $primary;
+}
+

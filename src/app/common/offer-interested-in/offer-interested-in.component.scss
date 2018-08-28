@@ -1,0 +1,43 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.offer-interested-in {
+  position: relative;
+  overflow: hidden;
+  border: $secondary 1px solid;
+  border-radius: $border-radius;
+  &:hover {
+    .offer-interested-in__time {
+      transform: translateX(0);
+    }
+  }
+}
+
+.offer-interested-in__time,
+.offer-interested-in__how-much {
+  padding: $card-spacer-y $card-spacer-x;
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  margin-bottom: 0;
+  color: $dark;
+}
+.offer-interested-in__how-much-number {
+  color: $secondary;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.offer-interested-in__how-much-number,
+.offer-interested-in__time-icon {
+  margin-right: 1rem;
+}
+
+.offer-interested-in__time {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: all .5s ease;
+}

@@ -1,0 +1,108 @@
+<!-- Common: page-header -->
+<header class="page-header {{ theme == 'dark' ? 'navbar-dark-md' : 'navbar-light' }}">
+    <nav class="navbar navbar-expand-md container">
+        <a class="page-header__logo mr-md-4"
+           routerLink="/index/"></a>
+        <a class="page-header__favorites-link icon icon__heart icon_size_32 ml-auto mr-4 d-md-none"
+           routerLink="/favorites/">99</a>
+        <button class="navbar-toggler hamburger collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target=".page-header__collapse"
+                aria-expanded="false">
+            <i class="hamburger__icon"></i>
+        </button>
+        <div class="page-header__collapse collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto d-md-none d-lg-block">
+                <li class="nav-item">
+                    <a class="nav-link"
+                       routerLink="/contacts/">Контакты</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mr-md-4 ml-md-auto">
+                <li class="nav-item d-none d-md-flex align-items-center">
+                    <a routerLink="/favorites/" class="page-header__favorites-link mr-4">
+                        <app-icon name="heart" size="2">99</app-icon>
+                    </a>
+                </li>
+                <li class="page-header__language-nav-item nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"
+                       role="button"
+                       data-toggle="dropdown"
+                       aria-haspopup="true"
+                       aria-expanded="false">
+                        Руc
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg">
+                        <a class="dropdown-item"
+                           href="?lang=en">Английский</a>
+                        <a class="dropdown-item"
+                           href="?lang=ua">Украинский</a>
+                    </div>
+                </li>
+            </ul>
+            <!-- Hide if user authorized -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link"
+
+                       data-toggle="modal"
+                       data-target=".modal-authorization">Вход</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+
+                       data-toggle="modal"
+                       data-target=".modal-registration">Регистрация</a>
+                </li>
+            </ul>
+            <!-- /Hide if user authorized -->
+            <ul class="navbar-nav">
+                <li class="page-header__cabinet-menu-dropdown nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"
+
+                       role="button"
+                       data-toggle="dropdown"
+                       aria-haspopup="true"
+                       aria-expanded="false">
+                        <div class="page-header__user-avatar mr-1">
+                            <app-user-avatar [size]="2"></app-user-avatar>
+                        </div>
+                        Кабинет
+                    </a>
+                    <div class="page-header__cabinet-menu dropdown-menu dropdown-menu-lg">
+                        <a class="dropdown-item"
+                           routerLink="/cabinet/realties/"><app-icon name="poster" class="mr-2"></app-icon>Мои объявления</a>
+                        <a class="dropdown-item"
+                           routerLink="/cabinet/bookings/"><app-icon name="book" class="mr-2"></app-icon>Бронирования</a>
+                        <a class="dropdown-item"
+                           routerLink="/cabinet/trips/"><app-icon name="suitcase" class="mr-2"></app-icon>Мои поездки <span class="badge badge-dark">5</span></a>
+                        <a class="dropdown-item"
+                           routerLink="/cabinet/profile/"><app-icon name="profile" class="mr-2"></app-icon>Профиль</a>
+                        <a class="dropdown-item"
+                           routerLink="/cabinet/transfers/"><app-icon name="car" class="mr-2"></app-icon>Трансферы</a>
+                        <a class="dropdown-item"
+                           routerLink="/cabinet/balance/"><app-icon name="credit-card" class="mr-2"></app-icon>Баланс</a>
+                        <a class="dropdown-item"
+                           routerLink="/cabinet/partnership/"><app-icon name="megaphone" class="mr-2"></app-icon>Партнерская программа</a>
+                        <a class="dropdown-item"
+                           routerLink="/cabinet/reviews/"><app-icon name="review" class="mr-2"></app-icon>Отзывы</a>
+                        <a class="dropdown-item"
+                           routerLink="/cabinet/referral-bookings/"><app-icon name="group" class="mr-2"></app-icon>Бронирования рефералов</a>
+                        <a class="dropdown-item page-header__dropdown-item-logout"
+                           routerLink="/cabinet/logout/">Выйти</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="page-header__action-container">
+                <a class="page-header__to-rent-button btn btn-outline-secondary btn-lg w-100"
+                   routerLink="/cabinet/add/" i18n>Сдать в аренду</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- /Common: page-header -->
+
+<app-modal-password-recovery></app-modal-password-recovery>
+<app-modal-authorization></app-modal-authorization>
+<app-modal-registration></app-modal-registration>

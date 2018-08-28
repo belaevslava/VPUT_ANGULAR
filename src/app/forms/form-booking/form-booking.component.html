@@ -1,0 +1,97 @@
+
+
+<!-- Form: form-booking -->
+<form action="/realties/getFactureToPeriod/"
+      class="form-booking">
+    <div class="row mb-3">
+        <div class="form-booking__price col-6">
+            <label class="form-booking__price-label">От</label>
+            <span class="form-booking__price-value">€25</span>
+        </div>
+        <div class="col-6">
+            <span class="form-booking__description">Цена указана за квартиру целиком</span>
+        </div>
+    </div>
+    <div class="form-booking__form form-row">
+        <div class="form-group col-6">
+            <label for="form-booking__control_name_check-in">Заезд</label>
+            <input name="startDate"
+                   type="date"
+                   required
+                   class="form-control"
+                   id="form-booking__control_name_check-in">
+        </div>
+        <div class="form-group col-6">
+            <label for="form-booking__control_name_check-out">Выезд</label>
+            <input name="endDate"
+                   type="date"
+                   required
+                   class="form-control"
+                   id="form-booking__control_name_check-out">
+        </div>
+        <div class="form-group col-12">
+            <select name="guests"
+                    required
+                    class="custom-select"
+                    id="form-booking__control_name_guests">
+                <option selected
+                        disabled>Гостей</option>
+                
+                <option value="1">1</option>
+                
+                <option value="2">2</option>
+                
+                <option value="3">3</option>
+                
+                <option value="4">4</option>
+                
+                <option value="5">5</option>
+                
+                <option value="6">6</option>
+                
+                <option value="7">7</option>
+                
+                <option value="8">8</option>
+                
+                <option value="9">9</option>
+                
+                <option value="10">10</option>
+                
+            </select>
+        </div>
+    </div>
+
+    <table class="form-booking__table table">
+        <tbody>
+        <tr>
+            <td>€25 x 5 ночей</td>
+            <td class="text-right">
+                <strong class="form-booking__amount">€123</strong>
+            </td>
+        </tr>
+        <tr>
+            <td>К оплате:</td>
+            <td class="text-right">
+                <strong class="form-booking__to-pay">€123</strong>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a href="" class="btn btn-secondary btn-lg w-100 mb-3">Написать хозяину</a>
+    <a href="" class="btn btn-outline-primary btn-filled btn-lg w-100 mb-3">Оплатить бронирование</a>
+
+    <div class="form-booking__alert alert alert-danger">Бронирование невозможно</div>
+    <div class="form-booking__alert alert alert-danger">Эти дни недоступны!</div>
+
+    <figure class="form-booking__informer">
+        <app-icon name="lamp" size="2" class="mr-3"></app-icon>
+        <figcaption class="form-booking__informer-description">
+            <strong class="form-booking__informer-number-of-persons">2 человек</strong>
+            планирует остановиться здесь
+            <span class="form-booking__informer-period">в выбранный период</span>
+            <span class="form-booking__informer-season">в этот сезон</span>
+        </figcaption>
+    </figure>
+</form>
+<!-- /Form: form-booking -->

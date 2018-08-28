@@ -1,0 +1,15 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.offer-characteristic {
+  display: flex;
+  margin-bottom: .875rem;
+}
+.offer-characteristic__label {
+  margin-bottom: 0;
+  margin-right: .5rem;
+  display: inline;
+}
+.offer-characteristic__value {
+  color: $text-muted;
+  display: inline;
+}

@@ -1,0 +1,13 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.form-change-personal-data__control-code {
+  max-width: 150px;
+}
+
+.form-change-personal-data__socials {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-around;
+}

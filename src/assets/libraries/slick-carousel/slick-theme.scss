@@ -1,4 +1,4 @@
-@import "../../library.blocks/bootstrap/bootstrap-reboot";
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
 
 @charset "UTF-8";
 
@@ -11,7 +11,7 @@
 
 $slick-font-path: "./fonts/" !default;
 $slick-font-family: "slick" !default;
-$slick-loader-path: "#{$rootDir}/templates/library.blocks/slick-carousel/" !default;
+$slick-loader-path: "/assets/libraries/slick-carousel/" !default;
 $slick-arrow-color: white !default;
 $slick-dot-color: black !default;
 $slick-dot-color-active: $slick-dot-color !default;
@@ -96,12 +96,12 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-prev {
     left: 1rem;
-    background-image: url(#{$rootDir}/templates/library.blocks/slick-carousel/slick-carousel__arrow-left.svg);
+    background-image: url(/assets/libraries/slick-carousel/slick-carousel__arrow-left.svg);
 }
 
 .slick-next {
     right: 1rem;
-    background-image: url(#{$rootDir}/templates/library.blocks/slick-carousel/slick-carousel__arrow-right.svg);
+    background-image: url(/assets/libraries/slick-carousel/slick-carousel__arrow-right.svg);
 }
 
 /* Dots */

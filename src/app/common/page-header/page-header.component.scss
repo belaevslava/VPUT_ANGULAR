@@ -1,0 +1,112 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.page-header {
+  border-bottom: 1px solid $border-color;
+  z-index: 99;
+}
+.page-header__empty-space {
+  display: none;
+  height: 67px;
+}
+.page-header__favorites-link.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  text-decoration: none;
+  padding-bottom: 4px;
+}
+.page-header__logo {
+  width: 120px;
+  height: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-image: url(/assets/images/logos/VPUT-logo_style_light.svg);
+  transition: $transition-base;
+  &:hover {
+    opacity: .7;
+  }
+}
+.page-header__cabinet-menu {
+  .dropdown-item {
+    position: relative;
+  }
+  .badge {
+    position: absolute;
+    right: $dropdown-item-padding-x;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 1.125rem;
+  }
+}
+.page-header__dropdown-item-logout {
+  border-bottom: 3px solid $primary;
+  border-radius: 0 0 $border-radius $border-radius;
+  text-align: center;
+  font-size: $font-size-lg;
+  color: $primary;
+}
+.page-header__user-avatar {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  .user-avatar {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .page-header {
+    border-bottom: $border-color $border-width solid;
+  }
+  .page-header__collapse {
+    margin-left: -($navbar-padding-x);
+    margin-right: -($navbar-padding-x);
+    &>.navbar-nav:nth-child(1) {
+      margin-top: $navbar-padding-y;
+      border-top: $border-color $border-width solid;
+    }
+    .nav-link {
+      padding: $btn-padding-y-lg $btn-padding-x-lg;
+      border-bottom: $border-color $border-width solid;
+    }
+    .dropdown-menu {
+      border-left-width: 0;
+      border-right-width: 0;
+      border-top-width: 0;
+      border-radius: 0;
+      margin: 0;
+      background-color: rgba(0,0,0,.036);
+    }
+  }
+  .page-header__dropdown-item-logout {
+    border-radius: 0;
+  }
+  .page-header__action-container {
+    padding: 1rem $dropdown-item-padding-x;
+    padding-bottom: (1rem - $navbar-padding-y);
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .page-header {
+    .dropdown-menu {
+      border-radius: 0 0 $dropdown-border-radius $dropdown-border-radius;
+    }
+  }
+  .page-header__action-container {
+    margin-left: 1rem;
+  }
+
+  .navbar-dark-md {
+    .page-header__logo {
+      background-image: url(/assets/images/logos/VPUT-logo_style_dark.svg);
+    }
+    .page-header__to-rent-button {
+      @include button-outline-variant($light);
+    }
+  }
+}

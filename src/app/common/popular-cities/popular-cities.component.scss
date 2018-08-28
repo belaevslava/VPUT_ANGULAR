@@ -1,0 +1,24 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.popular-cities {
+  font-size: 1.125rem;
+  margin-bottom: 0;
+  display: inline-flex;
+  &:hover {
+    .popular-cities__link {
+      opacity: .6;
+      &:hover {
+        opacity: 1;
+        color: $light;
+        border-color: $light;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.popular-cities__link {
+  border-bottom: 1px dashed;
+  cursor: pointer;
+  color: transparentize($light, .2);
+  transition: $transition-base;
+}

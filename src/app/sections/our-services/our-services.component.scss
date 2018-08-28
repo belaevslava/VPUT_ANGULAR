@@ -1,0 +1,48 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.our-services__nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: $dark;
+  min-height: 120px;
+  padding: $card-spacer-x;
+  color: rgba($white, .8);
+  text-decoration: none;
+  background-size: cover;
+  background-position: center;
+  font-size: 1.25rem;
+  transition: $transition-base;
+  @include hover-focus-active() {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.our-services_image_cleaning {
+  background-image: url(/assets/images/sections/our-services/our-services__cleaning.jpg);
+}
+.our-services_image_escort {
+  background-image: url(/assets/images/sections/our-services/our-services__escort.jpg);
+}
+.our-services_image_transfer {
+  background-image: url(/assets/images/sections/our-services/our-services__transfer.jpg);
+}
+.our-services_image_car-rental {
+  background-image: url(/assets/images/sections/our-services/our-services__car-rental.jpg);
+}
+.our-services_image_management {
+  background-image: url(/assets/images/sections/our-services/our-services__management.jpg);
+}
+
+@include media-breakpoint-up(xl) {
+  .our-services__nav-item {
+    background-size: 100% auto;
+    min-height: 200px;
+    @include hover-focus-active() {
+      background-size: 120%;
+    }
+  }
+}

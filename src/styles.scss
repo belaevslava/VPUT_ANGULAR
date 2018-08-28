@@ -1,1 +1,80 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/libraries/bootstrap/bootstrap-reboot";
+
+::selection {
+  background: $primary;
+  color: $white;
+}
+::-moz-selection {
+  background: $primary;
+  color: $white;
+}
+
+.page-preloader {
+  position: fixed;
+}
+
+.block-image {
+  min-height: 240px;
+  background-size: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+}
+
+ul {
+  &.d-inline-flex,
+  &.d-flex,
+  &.form-row,
+  &.row {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+.h2-bold {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.page-article__article-header {
+  text-align: center;
+  background-color: $dark;
+  color: $white;
+  display: flex;
+  align-items: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: rgba(0,0,0,.5) 0 60px 60px inset;
+}
+
+[data-toggle=tooltip] {
+  cursor: help;
+}
+
+@include media-breakpoint-up(md) {
+  .page-article__article-header {
+    margin-top: -67px;
+    min-height: 360px;
+  }
+  .page-article__article-header {
+    .page-header {
+      border-width: 0;
+    }
+  }
+  .page-article__page-header {
+    background-color: $gray-700;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  [data-slick-adaptive] {
+    .slick-slide {
+      padding-left: ($grid-gutter-width / 4);
+      padding-right: ($grid-gutter-width / 4);
+    }
+  }
+}

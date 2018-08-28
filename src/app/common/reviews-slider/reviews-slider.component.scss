@@ -1,0 +1,14 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.reviews-slider {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  .offer-item__details {
+    display: none;
+  }
+  .offer-item-carousel__image.slick-slide,
+  .offer-item-carousel {
+    height: 240px;
+  }
+}

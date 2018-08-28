@@ -1,0 +1,159 @@
+import { NgModule }             from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { AnimatedHeartComponent } from './common/animated-heart/animated-heart.component';
+import { AskForHelpComponent } from './common/ask-for-help/ask-for-help.component';
+import { BookingItemComponent } from './common/booking-item/booking-item.component';
+import { CabinetNavigationComponent } from './common/cabinet-navigation/cabinet-navigation.component';
+import { CitiesTabsComponent } from './common/cities-tabs/cities-tabs.component';
+import { ComplexItemComponent } from './common/complex-item/complex-item.component';
+import { ComplexTabsComponent } from './common/complex-tabs/complex-tabs.component';
+import { FaviconComponent } from './common/favicon/favicon.component';
+import { IconComponent } from './common/icon/icon.component';
+import { ListOfComplexesComponent } from './common/list-of-complexes/list-of-complexes.component';
+import { ListOfOfferRatingsComponent } from './common/list-of-offer-ratings/list-of-offer-ratings.component';
+import { ListOfOffersComponent } from './common/list-of-offers/list-of-offers.component';
+import { OfferEmployedByComponent } from './common/offer-employed-by/offer-employed-by.component';
+import { OfferImageSliderComponent } from './common/offer-image-slider/offer-image-slider.component';
+import { OfferItemComponent } from './common/offer-item/offer-item.component';
+import { OfferOwnerComponent } from './common/offer-owner/offer-owner.component';
+import { OffersOnTheMapComponent } from './common/offers-on-the-map/offers-on-the-map.component';
+import { PageFooterComponent } from './common/page-footer/page-footer.component';
+import { PaginationComponent } from './common/pagination/pagination.component';
+import { PopularCitiesComponent } from './common/popular-cities/popular-cities.component';
+import { PreloaderComponent } from './common/preloader/preloader.component';
+import { ReviewComponent } from './common/review/review.component';
+import { ReviewRatingComponent } from './common/review-rating/review-rating.component';
+import { SocialAuthorizationComponent } from './common/social-authorization/social-authorization.component';
+import { UserAvatarComponent } from './common/user-avatar/user-avatar.component';
+import { FormAuthorizationComponent } from './forms/form-authorization/form-authorization.component';
+import { FormBookingComponent } from './forms/form-booking/form-booking.component';
+import { FormCarRentalComponent } from './forms/form-car-rental/form-car-rental.component';
+import { FormChangeLanguagesComponent } from './forms/form-change-languages/form-change-languages.component';
+import { FormChangePersonalDataComponent } from './forms/form-change-personal-data/form-change-personal-data.component';
+import { FormChangeProfilePictureComponent } from './forms/form-change-profile-picture/form-change-profile-picture.component';
+import { FormFeedbackComponent } from './forms/form-feedback/form-feedback.component';
+import { FormRecoveryComponent } from './forms/form-recovery/form-recovery.component';
+import { FormRegistrationComponent } from './forms/form-registration/form-registration.component';
+import { FormRentingComponent } from './forms/form-renting/form-renting.component';
+import { FormSearchOffersComponent } from './forms/form-search-offers/form-search-offers.component';
+import { FormSubscribeComponent } from './forms/form-subscribe/form-subscribe.component';
+import { FormSupportComponent } from './forms/form-support/form-support.component';
+import { ModalPasswordRecoveryComponent } from './modals/modal-password-recovery/modal-password-recovery.component';
+import { ModalRegistrationComponent } from './modals/modal-registration/modal-registration.component';
+import { PageBalanceComponent } from './pages/cabinet/page-balance/page-balance.component';
+import { PageBookingComponent } from './pages/cabinet/page-booking/page-booking.component';
+import { PagePartnershipComponent } from './pages/cabinet/page-partnership/page-partnership.component';
+import { PageRealtiesComponent } from './pages/cabinet/page-realties/page-realties.component';
+import { PageReviewsComponent } from './pages/cabinet/page-reviews/page-reviews.component';
+import { PageTransfersComponent } from './pages/cabinet/page-transfers/page-transfers.component';
+import { PageArticleComponent } from './pages/site/page-article/page-article.component';
+import { PageAuthorizationComponent } from './pages/site/page-authorization/page-authorization.component';
+import { PageCarRentalComponent } from './pages/site/page-car-rental/page-car-rental.component';
+import { PageCommissionComponent } from './pages/site/page-commission/page-commission.component';
+import { PageComplexComponent } from './pages/site/page-complex/page-complex.component';
+import { PageContactsComponent } from './pages/site/page-contacts/page-contacts.component';
+import { PageFavoritesComponent } from './pages/site/page-favorites/page-favorites.component';
+import { PageManagementComponent } from './pages/site/page-management/page-management.component';
+import { PageSearchComponent } from './pages/site/page-search/page-search.component';
+import { PageSupportComponent } from './pages/site/page-support/page-support.component';
+import { PageTransferComponent } from './pages/site/page-transfer/page-transfer.component';
+import { PageWithdrawComponent } from './pages/site/page-withdraw/page-withdraw.component';
+import { AboutTheComplexComponent } from './sections/about-the-complex/about-the-complex.component';
+import { ApartmentsInTheComplexComponent } from './sections/apartments-in-the-complex/apartments-in-the-complex.component';
+import { AuthorizationComponent } from './sections/authorization/authorization.component';
+import { CharacteristicsOfTheComplexComponent } from './sections/characteristics-of-the-complex/characteristics-of-the-complex.component';
+import { ComplexOffersComponent } from './sections/complex-offers/complex-offers.component';
+import { DescriptionOfTheComplexComponent } from './sections/description-of-the-complex/description-of-the-complex.component';
+import { FeedbackComponent } from './sections/feedback/feedback.component';
+import { HowItWorksComponent } from './sections/how-it-works/how-it-works.component';
+import { LatestOffersComponent } from './sections/latest-offers/latest-offers.component';
+import { MostPopularCitiesComponent } from './sections/most-popular-cities/most-popular-cities.component';
+import { OfferBedroomsComponent } from './sections/offer-bedrooms/offer-bedrooms.component';
+import { OfferFacilitiesComponent } from './sections/offer-facilities/offer-facilities.component';
+import { OfferLocationComponent } from './sections/offer-location/offer-location.component';
+import { OfferMainCharacteristicsComponent } from './sections/offer-main-characteristics/offer-main-characteristics.component';
+import { OfferPricesForThePeriodComponent } from './sections/offer-prices-for-the-period/offer-prices-for-the-period.component';
+import { OfferReviewsComponent } from './sections/offer-reviews/offer-reviews.component';
+import { OfferShortDescriptionComponent } from './sections/offer-short-description/offer-short-description.component';
+import { PhotosOfTheComplexComponent } from './sections/photos-of-the-complex/photos-of-the-complex.component';
+import { ServicesComponent } from './sections/services/services.component';
+import { SimilarOffersComponent } from './sections/similar-offers/similar-offers.component';
+import { WhoWeAreComponent } from './sections/who-we-are/who-we-are.component';
+import { HamburgerComponent } from './common/hamburger/hamburger.component';
+import { OfferInterestedInComponent } from './common/offer-interested-in/offer-interested-in.component';
+import { OfferItemCarouselComponent } from './common/offer-item-carousel/offer-item-carousel.component';
+import { PageHeaderComponent } from './common/page-header/page-header.component';
+import { ViewOnMapComponent } from './common/view-on-map/view-on-map.component';
+import { FormChangePasswordComponent } from './forms/form-change-password/form-change-password.component';
+import { FormEditTransferComponent } from './forms/form-edit-transfer/form-edit-transfer.component';
+import { FormRealtiesFilterComponent } from './forms/form-realties-filter/form-realties-filter.component';
+import { FormServiceSettingsComponent } from './forms/form-service-settings/form-service-settings.component';
+import { ModalAuthorizationComponent } from './modals/modal-authorization/modal-authorization.component';
+import { PageBookingsComponent } from './pages/cabinet/page-bookings/page-bookings.component';
+import { PageProfileComponent } from './pages/cabinet/page-profile/page-profile.component';
+import { PageReferralBookingsComponent } from './pages/cabinet/page-referral-bookings/page-referral-bookings.component';
+import { PageTripsComponent } from './pages/cabinet/page-trips/page-trips.component';
+import { PageAboutComponent } from './pages/site/page-about/page-about.component';
+import { PageCleaningComponent } from './pages/site/page-cleaning/page-cleaning.component';
+import { PageOfferComponent } from './pages/site/page-offer/page-offer.component';
+import { PageTrustComponent } from './pages/site/page-trust/page-trust.component';
+import { BestOffersOfTheWeekComponent } from './sections/best-offers-of-the-week/best-offers-of-the-week.component';
+import { ComplexOnTheMapComponent } from './sections/complex-on-the-map/complex-on-the-map.component';
+import { GuaranteesComponent } from './sections/guarantees/guarantees.component';
+import { LatestReviewsComponent } from './sections/latest-reviews/latest-reviews.component';
+import { OfferPlacesNearbyComponent } from './sections/offer-places-nearby/offer-places-nearby.component';
+import { OfferRulesOfResidenceComponent } from './sections/offer-rules-of-residence/offer-rules-of-residence.component';
+import { OurServicesComponent } from './sections/our-services/our-services.component';
+import { OfferCharacteristicComponent } from './common/offer-characteristic/offer-characteristic.component';
+import { ReviewsSliderComponent } from './common/reviews-slider/reviews-slider.component';
+import { FormBookingsFilterComponent } from './forms/form-bookings-filter/form-bookings-filter.component';
+import { PageAddComponent } from './pages/cabinet/page-add/page-add.component';
+import { PageIndexComponent } from './pages/site/page-index/page-index.component';
+import { NearestComplexesComponent } from './sections/nearest-complexes/nearest-complexes.component';
+import { ListOfOfferCharacteristicsComponent } from './common/list-of-offer-characteristics/list-of-offer-characteristics.component';
+import { ListOfReviewsComponent } from './common/list-of-reviews/list-of-reviews.component';
+import { OfferShareComponent } from './common/offer-share/offer-share.component';
+import { PageEscortComponent } from './pages/site/page-escort/page-escort.component';
+import { OfferCharacteristicsComponent } from './sections/offer-characteristics/offer-characteristics.component';
+ 
+const routes: Routes = [
+  { path: '', redirectTo: '/index', pathMatch: 'full' },
+  { path: 'index', component: PageIndexComponent },
+  { path: 'search', component: PageSearchComponent },
+  { path: 'offer', component: PageOfferComponent },
+  { path: 'complex', component: PageComplexComponent },
+  { path: 'favorites', component: PageFavoritesComponent },
+  { path: 'article', component: PageArticleComponent },
+  { path: 'authorization', component: PageAuthorizationComponent },
+
+  { path: 'rentacar', component: PageCarRentalComponent },
+  { path: 'cleaning', component: PageCleaningComponent },
+  { path: 'commission', component: PageCommissionComponent },
+  { path: 'contacs', component: PageContactsComponent },
+  { path: 'escort', component: PageEscortComponent },
+  { path: 'management', component: PageManagementComponent },
+  { path: 'support', component: PageSupportComponent },
+  { path: 'transfer', component: PageTransferComponent },
+  { path: 'trust', component: PageTrustComponent },
+  { path: 'withdraw', component: PageWithdrawComponent },
+  { path: 'about', component: PageAboutComponent },
+
+  { path: 'cabinet/add', component: PageAddComponent },
+  { path: 'cabinet/balance', component: PageBalanceComponent },
+  { path: 'cabinet/bookings', component: PageBookingsComponent },
+  { path: 'cabinet/booking', component: PageBookingComponent },
+  { path: 'cabinet/partnership', component: PagePartnershipComponent },
+  { path: 'cabinet/profile', component: PageProfileComponent },
+  { path: 'cabinet/realties', component: PageRealtiesComponent },
+  { path: 'cabinet/referral-bookings', component: PageReferralBookingsComponent },
+  { path: 'cabinet/reviews', component: PageReviewsComponent },
+  { path: 'cabinet/transfers', component: PageTransfersComponent },
+  { path: 'cabinet/trips', component: PageTripsComponent },
+];
+ 
+@NgModule({
+  imports: [ RouterModule.forRoot(routes) ],
+  exports: [ RouterModule ],
+  declarations: [AnimatedHeartComponent, AskForHelpComponent, BookingItemComponent, CabinetNavigationComponent, CitiesTabsComponent, ComplexItemComponent, ComplexTabsComponent, FaviconComponent, IconComponent, ListOfComplexesComponent, ListOfOfferRatingsComponent, ListOfOffersComponent, OfferEmployedByComponent, OfferImageSliderComponent, OfferItemComponent, OfferOwnerComponent, OffersOnTheMapComponent, PageFooterComponent, PaginationComponent, PopularCitiesComponent, PreloaderComponent, ReviewComponent, ReviewRatingComponent, SocialAuthorizationComponent, UserAvatarComponent, FormAuthorizationComponent, FormBookingComponent, FormCarRentalComponent, FormChangeLanguagesComponent, FormChangePersonalDataComponent, FormChangeProfilePictureComponent, FormFeedbackComponent, FormRecoveryComponent, FormRegistrationComponent, FormRentingComponent, FormSearchOffersComponent, FormSubscribeComponent, FormSupportComponent, ModalPasswordRecoveryComponent, ModalRegistrationComponent, PageBalanceComponent, PageBookingComponent, PagePartnershipComponent, PageRealtiesComponent, PageReviewsComponent, PageTransfersComponent, PageArticleComponent, PageAuthorizationComponent, PageCarRentalComponent, PageCommissionComponent, PageComplexComponent, PageContactsComponent, PageFavoritesComponent, PageManagementComponent, PageSearchComponent, PageSupportComponent, PageTransferComponent, PageWithdrawComponent, AboutTheComplexComponent, ApartmentsInTheComplexComponent, AuthorizationComponent, CharacteristicsOfTheComplexComponent, ComplexOffersComponent, DescriptionOfTheComplexComponent, FeedbackComponent, HowItWorksComponent, LatestOffersComponent, MostPopularCitiesComponent, OfferBedroomsComponent, OfferFacilitiesComponent, OfferLocationComponent, OfferMainCharacteristicsComponent, OfferPricesForThePeriodComponent, OfferReviewsComponent, OfferShortDescriptionComponent, PhotosOfTheComplexComponent, ServicesComponent, SimilarOffersComponent, WhoWeAreComponent, HamburgerComponent, OfferInterestedInComponent, OfferItemCarouselComponent, PageHeaderComponent, ViewOnMapComponent, FormChangePasswordComponent, FormEditTransferComponent, FormRealtiesFilterComponent, FormServiceSettingsComponent, ModalAuthorizationComponent, PageBookingsComponent, PageProfileComponent, PageReferralBookingsComponent, PageTripsComponent, PageAboutComponent, PageCleaningComponent, PageOfferComponent, PageTrustComponent, BestOffersOfTheWeekComponent, ComplexOnTheMapComponent, GuaranteesComponent, LatestReviewsComponent, OfferPlacesNearbyComponent, OfferRulesOfResidenceComponent, OurServicesComponent, OfferCharacteristicComponent, ReviewsSliderComponent, FormBookingsFilterComponent, PageAddComponent, PageIndexComponent, NearestComplexesComponent, ListOfOfferCharacteristicsComponent, ListOfReviewsComponent, OfferShareComponent, PageEscortComponent, OfferCharacteristicsComponent]
+})
+export class AppRoutingModule {}

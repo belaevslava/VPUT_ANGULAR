@@ -1,0 +1,81 @@
+
+
+<!-- Form: form-feedback -->
+<form action="/feedback/ajaxAboutFeedbackSend/"
+      method="post"
+      class="form-feedback">
+    <ul class="row">
+        <li class="col-12">
+            <div class="form-group">
+                <input type="text"
+                       name="aboutName"
+                       required
+                       class="form-control form-control-lg"
+                       placeholder="Ваше имя и фамилия">
+            </div>
+        </li>
+        <li class="col-md-6">
+            <div class="form-group">
+                <input type="tel"
+                       name="aboutPhone"
+                       required
+                       class="form-control form-control-lg"
+                       placeholder="Телефон">
+            </div>
+        </li>
+        <li class="col-md-6">
+            <div class="form-group">
+                <input type="email"
+                       name="aboutEmail"
+                       required
+                       class="form-control form-control-lg"
+                       placeholder="E-mail">
+            </div>
+        </li>
+        <li class="col-12">
+            <div class="form-group">
+                <textarea class="form-control form-control-lg"
+                          name="aboutComment"
+                          required
+                          placeholder="Сообщение"></textarea>
+            </div>
+        </li>
+        <li class="col-md-12">
+            <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox"
+                       name="aboutJuridic"
+                       class="custom-control-input"
+                       id="form-feedback__about-juridic">
+                <label class="custom-control-label"
+                       for="form-feedback__about-juridic">Я юридическое лицо</label>
+            </div>
+        </li>
+        <li class="col-md-12">
+            <div class="form-group">
+                <input type="text"
+                       name="aboutRequisits"
+                       class="form-control form-control-lg"
+                       placeholder="Реквизиты">
+            </div>
+        </li>
+        <li class="col-md-12">
+            <div class="form-group">
+                <input type="text"
+                       name="aboutMap"
+                       class="form-control form-control-lg"
+                       placeholder="Платёжная карта">
+            </div>
+        </li>
+    </ul>
+    <div class="text-right">
+        <button type="submit"
+                class="btn btn-secondary btn-lg">Отправить</button>
+    </div>
+    <div class="form-feedback__alert form-feedback__alert_is_success alert alert-success mt-3 mb-0 d-none">
+        Спасибо. Заявка была успешно отправлена.
+    </div>
+    <div class="form-feedback__alert form-feedback__alert_is_danger alert alert-danger mt-3 mb-0 d-none">
+        Простите. Похоже что-то пошло не так. Пожалуйста, обратитесь в нашу службу поддержки.
+    </div>
+</form>
+<!-- /Form: form-feedback -->

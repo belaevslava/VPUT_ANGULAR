@@ -1,4 +1,6 @@
-jQuery(document).ready(function($) {
+import $ from 'jquery';
+
+$(document).ready(function() {
     $('.table-adaptive').each(function(tableIndex, tableElement) {
         $(tableElement).find('>thead>tr>th').each(function(columnIndex, columnElement) {
             let $columnElement = $(columnElement),

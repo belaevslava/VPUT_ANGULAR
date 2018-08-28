@@ -1,0 +1,92 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.form-edit-transfer__id {
+  font-weight: normal;
+}
+.form-edit-transfer__price {
+  color: $secondary;
+}
+.form-edit-transfer__buttons {
+  white-space: nowrap;
+  text-align: right;
+}
+.form-edit-transfer__from {
+  &::after {
+    content: "→";
+    display: inline-block;
+    margin-left: .5rem;
+    margin-right: .5rem;
+  }
+}
+.form-edit-transfer__buttons-editable {
+  display: none;
+}
+
+.form-edit-transfer_state_edit {
+  .form-edit-transfer__buttons-default {
+    display: none;
+  }
+  .form-edit-transfer__buttons-editable {
+    display: block;
+  }
+}
+
+.form-edit-transfer__col  {
+  min-width: 240px;
+}
+
+@mixin form-edit-transfer_orientation_vertical {
+  .form-edit-transfer__title {
+    position: relative;
+    flex: 100%;
+    order: 1;
+    margin-bottom: -$card-spacer-y;
+    margin-top: $card-spacer-y;
+    text-align: center;
+  }
+  .form-edit-transfer__from,
+  .form-edit-transfer__to {
+    display: block;
+    border-top: $card-border-width solid $card-border-color;
+    padding: ($card-spacer-y / 1.5) $card-spacer-x;
+    margin-left: -$card-spacer-x;
+    margin-right: -$card-spacer-x;
+  }
+  .form-edit-transfer__from {
+    &::after {
+      height: $font-size-base;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      transform: rotate(90deg);
+    }
+  }
+
+  .form-edit-transfer__status {
+    margin-bottom: 1rem;
+  }
+  .form-edit-transfer__buttons,
+  .form-edit-transfer__footer {
+    text-align: center;
+  }
+  .form-edit-transfer__footer-col {
+    flex: 100%;
+  }
+}
+
+.form-edit-transfer_orientation_vertical {
+  @include form-edit-transfer_orientation_vertical;
+}
+
+@include media-breakpoint-up(lg) {
+  .form-edit-transfer__col  {
+    min-width: 200px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  @include form-edit-transfer_orientation_vertical;
+}

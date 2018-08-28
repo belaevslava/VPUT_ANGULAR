@@ -1,0 +1,40 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.review {
+  margin-bottom: 0;
+}
+.review__user {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.review__user-avatar {
+  text-align: center;
+}
+.review__content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.review__created-at {
+  flex: auto;
+  color: $text-muted;
+  margin-right: 1rem;
+}
+.review__created-at,
+.review__review-rating {
+  margin-bottom: 1rem;
+}
+.review__message {
+  flex: 100%;
+  color: $text-muted;
+}
+
+@include media-breakpoint-up(sm) {
+  .review {
+    display: flex;
+  }
+  .review__user {
+    margin-bottom: 0;
+    padding-right: 24px;
+  }
+}

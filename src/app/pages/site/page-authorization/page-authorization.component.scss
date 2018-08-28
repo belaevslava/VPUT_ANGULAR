@@ -1,0 +1,20 @@
+@import "../../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.page-authorization {
+  background-color: $dark;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.page-authorization__container {
+  max-width: 850px;
+  margin: auto;
+}
+.page-authorization__logo {
+  display: block;
+  width: 100px;
+  height: 42px;
+  margin: auto;
+  background-image: url(/../app/common/page-header/page-header__VPUT-logo_style_dark.svg);
+  background-size: cover;
+}

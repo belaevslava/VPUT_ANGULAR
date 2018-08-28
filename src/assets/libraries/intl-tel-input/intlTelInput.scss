@@ -1,4 +1,4 @@
-@import "../../library.blocks/bootstrap/bootstrap-reboot";
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
 
 // rgba is needed for the selected flag hover state to blend in with
 // the border-highlighting some browsers give the input on focus
@@ -26,7 +26,7 @@ $selectedFlagDialCodeWidth: $selectedFlagWidth + $flagPadding !default;
 $selectedFlagArrowDialCodeWidth: $selectedFlagArrowWidth + $flagPadding !default;
 
 // image related variables
-$flagsImagePath: "#{$rootDir}/templates/library.blocks/intl-tel-input/img/" !default;
+$flagsImagePath: "/assets/libraries/intl-tel-input/img/" !default;
 $flagsImageName: "flags" !default;
 $flagsImageExtension: "png" !default;
 

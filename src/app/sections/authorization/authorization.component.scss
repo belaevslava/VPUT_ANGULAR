@@ -1,0 +1,45 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.authorization {
+  .form-control {
+    border-width: 0;
+  }
+}
+
+.authorization__card {
+  position: relative;
+  color: $white;
+}
+.authorization__card-body {
+  padding: $card-spacer-x;
+  background-color: $gray-500;
+  border-radius: $card-border-radius;
+}
+
+.authorization__card-front {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: $gray-500;
+  z-index: 1;
+  background-position: center;
+  background-size: 120px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: $transition-base;
+
+  @include hover-focus {
+    background-color: lighten($gray-500, 5%);
+  }
+}
+.authorization__title {
+  text-align: center;
+}
+.authorization__card-front-auth {
+  background-image: url(/assets/images/sections/authorization/authorization__auth.svg);
+}
+.authorization__card-front-register {
+  background-image: url(/assets/images/sections/authorization/authorization__register.svg);
+}

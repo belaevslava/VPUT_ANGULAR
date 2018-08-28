@@ -1,0 +1,50 @@
+
+
+<!-- Common: complex-tabs -->
+<div class="complex-tabs">
+    <ul class="nav nav-tabs"
+        role="tablist">
+        <li class="nav-item">
+            <a
+               class="nav-link active"
+               data-toggle="tab"
+               data-target=".complex-tabs__about-the-complex-collapse"
+               role="tab">Описание</a>
+        </li>
+        <li class="nav-item">
+            <a
+               class="nav-link"
+               data-toggle="tab"
+               data-target=".complex-tabs__apartments-in-the-complex-collapse"
+               role="tab">Апартаменты</a>
+        </li>
+        <li class="nav-item">
+            <a
+               class="nav-link"
+               data-toggle="tab"
+               data-target=".complex-tabs__complex-on-the-map-collapse"
+               role="tab">На карте</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="complex-tabs__about-the-complex-collapse tab-pane fade show active"
+             role="tabpanel">
+            <div class="complex-tabs__section complex-tabs__about-the-complex">
+                <app-about-the-complex></app-about-the-complex>
+            </div>
+        </div>
+        <div class="complex-tabs__apartments-in-the-complex-collapse tab-pane fade"
+             role="tabpanel">
+            <div class="complex-tabs__section complex-tabs__apartments-in-the-complex">
+                <app-apartments-in-the-complex></app-apartments-in-the-complex>
+            </div>
+        </div>
+        <div class="complex-tabs__complex-on-the-map-collapse tab-pane fade"
+             role="tabpanel">
+            <div class="complex-tabs__section complex-tabs__complex-on-the-map">
+                <app-complex-on-the-map></app-complex-on-the-map>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Common: complex-tabs -->

@@ -1,0 +1,16 @@
+@import "../../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.page-add__header {
+  background-color: $dark;
+  color: $white;
+  background-image: url(/../app/pages/site/page-add/page-add__header-bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+@include media-breakpoint-up(lg) {
+  .page-add__header {
+    min-height: 300px;
+    margin-top: -67px;
+  }
+}

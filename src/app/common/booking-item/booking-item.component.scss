@@ -1,0 +1,23 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.booking-item {
+  .offer-item-carousel,
+  .offer-item-carousel__image {
+    border-radius: 0;
+  }
+}
+.booking-item__id {
+  font-weight: normal;
+}
+.booking-item__price {
+  color: $secondary;
+}
+
+@include media-breakpoint-up(sm) {
+  .booking-item__communication {
+    display: flex;
+  }
+  .booking-item__communication-body {
+    flex: auto;
+  }
+}

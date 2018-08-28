@@ -27,9 +27,38 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/slick-carousel/slick/slick.css",
+              "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css",
+              // Date Range Picker
+              "node_modules/daterangepicker/daterangepicker.css",
+              "node_modules/nouislider/distribute/nouislider.min.css",
+              "node_modules/filepond/dist/filepond.min.css",
+
+              "src/assets/libraries/bootstrap/bootstrap.scss",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              // JQuery
+              "node_modules/jquery/dist/jquery.min.js",
+              // Bootstrap 4
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              // Image Gallery
+              "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
+              // Date Range Picker
+              "node_modules/moment/min/moment.min.js",
+              "node_modules/daterangepicker/daterangepicker.js",
+              // Price Slider
+              "node_modules/nouislider/distribute/nouislider.min.js",
+              "node_modules/wnumb/wNumb.js",
+              // Slick Slider
+              "node_modules/slick-carousel/slick/slick.min.js",
+              // Drag and drop Uploader
+              "node_modules/filepond/dist/filepond.js",
+              // Sticky Sidebar
+              //"node_modules/sticky-sidebar/dist/sticky-sidebar.min.js"
+              // Int-tel-input - https://github.com/jackocnr/intl-tel-input
+              "node_modules/intl-tel-input/build/js/intlTelInput.min.js"
+            ]
           },
           "configurations": {
             "production": {

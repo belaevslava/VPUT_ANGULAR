@@ -1,0 +1,86 @@
+@import "../../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.page-offer__article h2,
+.page-offer__complex h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.page-offer__place {
+  color: $text-muted;
+}
+.page-offer__how-it-works {
+  .how-it-works {
+    height: 260px;
+  }
+}
+.page-offer__modal-dialog {
+  max-width: 375px;
+}
+
+.page-offer__modal-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1051;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transition: $transition-base;
+}
+.page-offer__aside-toggle-caption-hide {
+  display: none;
+}
+
+@include media-breakpoint-down(lg) {
+  .page-offer__aside {
+    background-color: $white;
+    padding: $card-spacer-y;
+    border-radius: 0;
+  }
+}
+@include media-breakpoint-up(xl) {
+  .page-offer__modal,
+  .page-offer__modal-dialog,
+  .page-offer__modal {
+    position: relative;
+    display: block!important;
+    opacity: 1!important;
+    transform: initial!important;
+  }
+  .page-offer__aside {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .page-offer__modal-toggle {
+    display: none;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .page-offer {
+    .breadcrumb {
+      display: none;
+    }
+  }
+
+  .page-offer__article {
+    h2 {
+      font-size: $h4-font-size * .875;
+    }
+  }
+}
+@include media-breakpoint-down(xs) {
+  .page-offer {
+    .form-booking {
+      padding: 0;
+      background-color: initial;
+    }
+    .form-booking__table {
+      background-color: $light;
+    }
+  }
+}

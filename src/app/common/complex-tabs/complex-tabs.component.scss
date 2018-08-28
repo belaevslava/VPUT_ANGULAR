@@ -1,0 +1,11 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.complex-tabs__section {
+  padding-top: $card-spacer-y;
+  padding-bottom: $card-spacer-y;
+}
+.complex-tabs__about-the-complex {
+  h2 {
+    display: none;
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.social-authorization {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+.social-authorization__item:not(:last-child) {
+  margin-right: 2rem;
+}
+.social-authorization__icon {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: .8;
+  &:hover {
+    opacity: 1;
+  }
+}
+.social-authorization__icon_type_facebook { background-image: url(/assets/images/common/social-authorization/social-authorization__icon_type_facebook.svg); }
+.social-authorization__icon_type_vk { background-image: url(/assets/images/common/social-authorization/social-authorization__icon_type_vk.svg); }
+.social-authorization__icon_type_ok { background-image: url(/assets/images/common/social-authorization/social-authorization__icon_type_ok.svg); }

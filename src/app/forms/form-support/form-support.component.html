@@ -1,0 +1,74 @@
+
+
+<!-- Form: form-support -->
+<form action="/realties/addRealtyMessage/"
+      class="form-support bg-light card"
+      data-post="&page=/forRent/?lang=">
+    <h3 class="form-support__header bg-light card-header">Попросить помощи</h3>
+    <fieldset class="form-support__body card-body">
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <app-icon name="guest"></app-icon>
+                </span>
+            </div>
+            <input type="text"
+                   name="name"
+                   required
+                   placeholder="Ф.И.О."
+                   class="form-control form-control-lg"
+                   value="">
+        </div>
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <app-icon name="phone"></app-icon>
+                </span>
+            </div>
+            <input type="text" 
+                   name="phone"
+                   placeholder="Телефон"
+                   class="form-control form-control-lg" 
+                   value="">
+        </div>
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <app-icon name="skype"></app-icon>
+                </span>
+            </div>
+            <input type="text"
+                   name="skype"
+                   placeholder="Skype"
+                   class="form-control form-control-lg"
+                   value="">
+        </div>
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <app-icon name="email"></app-icon>
+                </span>
+            </div>
+            <input type="text"
+                   name="email"
+                   placeholder="E-mail"
+                   class="form-control form-control-lg"
+                   value="">
+        </div>
+        <div class="form-group mb-0">
+            <textarea name="message"
+                      required
+                      rows="3"
+                      class="form-control form-control-lg"
+                      placeholder="Опишите проблему"></textarea>
+        </div>
+
+        <figure class="form-support__alert-success alert alert-success mb-0 d-none">Сообщение успешно отправлено!</figure>
+        <figure class="form-support__alert-danger alert alert-danger mb-0 d-none">Сообщение не было отправлено!</figure>
+    </fieldset>
+    <footer class="form-support__footer card-footer bg-light text-right">
+        <button type="submit"
+                class="form-support__submit btn btn-primary btn-lg">Отправить</button>
+    </footer>
+</form>
+<!-- /Form: form-support -->

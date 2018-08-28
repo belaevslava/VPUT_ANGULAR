@@ -1,0 +1,53 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.how-it-works {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 240px;
+  background-color: $dark;
+  color: $white;
+  border-radius: $card-border-radius;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: $card-border-radius;
+    background-image: url(/assets/images/sections/how-it-works/how-it-works__preview.png);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(.75);
+  }
+}
+.how-it-works__container {
+  z-index: 1;
+}
+.how-it-works__icon-play {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-image: url(/assets/images/sections/how-it-works/how-it-works__icon-play.svg);
+  background-size: cover;
+  background-position: center;
+  transition: $transition-base;
+  &:hover {
+    transform: scale(1.125);
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .how-it-works {
+    height: 440px;
+  }
+}
+@include media-breakpoint-down(md) {
+  .how-it-works__modal {
+    background-color: rgba($modal-backdrop-bg, .5);
+  }
+}

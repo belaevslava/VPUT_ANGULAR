@@ -1,0 +1,92 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+
+.complex-item {
+  position: relative;
+}
+.complex-item__image {
+  display: block;
+  height: 200px;
+  border-radius: .1825rem;
+  background-size: cover;
+  transition: .24s;
+  &:hover {
+    filter: brightness(1.1);
+  }
+}
+
+.complex-item__description {
+  position: relative;
+  padding: .75rem 0;
+}
+.complex-item__details {
+  list-style: none;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-bottom: 0;
+  color: $gray-900;
+}
+.complex-item__detail {
+  flex: 1 50%;
+  white-space: nowrap;
+}
+.complex-item__link {
+  color: $dark;
+  transition: .24s;
+  &:hover {
+    color: $secondary;
+    text-decoration: none;
+  }
+}
+.complex-item__title {
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-transform: initial;
+  font-weight: 500;
+  margin-bottom: .5rem;
+  &:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 24px;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    box-shadow: $white -24px 0 24px -12px inset;
+  }
+}
+.complex-item__price-label,
+.complex-item__number-of-apartments-label {
+  margin-right: .5rem;
+}
+.complex-item__number-of-apartments {
+  font-size: 1.25rem;
+}
+.complex-item__price {
+  color: $secondary;
+  font-size: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .complex-item__detail {
+    position: relative;
+    &:not(:last-child) {
+      padding-right: 1rem;
+      &:after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 1rem;
+        height: 1rem;
+        margin: auto;
+        border-right: 1px solid $gray-900;
+      }
+    }
+  }
+}

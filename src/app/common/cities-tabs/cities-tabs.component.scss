@@ -1,0 +1,64 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.cities-tabs {
+  border-radius: $card-border-radius;
+  border: $card-border-width solid $card-border-color;
+  background-color: $card-bg;
+}
+.cities-tabs__header {
+  padding: $card-spacer-y $card-spacer-x;
+  border-color: $border-color;
+}
+.cities-tabs__content {
+  padding: $card-spacer-x;
+}
+.cities-tabs__nav {
+  column-count: 5;
+  column-gap: 0;
+}
+
+.cities-tabs__link {
+  display: block;
+  position: relative;
+  padding: .25rem 3rem .25rem .5rem;
+  color: $dark;
+  line-height: 1.2;
+  font-weight: 500;
+  transition: $transition-base;
+  &:hover {
+    text-decoration: none;
+    color: $primary;
+  }
+  &:first-letter {
+    font-weight: bold;
+  }
+}
+.cities-tabs__count-offers {
+  position: absolute;
+  right: .5rem;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 1.25rem;
+}
+
+@include media-breakpoint-up(xs) {
+  .cities-tabs__nav {
+    column-count: 1;
+  }
+}
+@include media-breakpoint-up(sm) {
+  .cities-tabs__nav {
+    column-count: 2;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .cities-tabs__nav {
+    column-count: 4;
+  }
+}
+@include media-breakpoint-up(xl) {
+  .cities-tabs__nav {
+    column-count: 5;
+  }
+}

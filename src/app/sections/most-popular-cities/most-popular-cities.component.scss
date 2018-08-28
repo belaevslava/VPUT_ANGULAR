@@ -1,0 +1,48 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.most-popular-cities__list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.most-popular-cities__figure {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  text-align: center;
+  min-height: 240px;
+  background-color: $dark;
+  border-radius: $border-radius;
+  color: $white;
+  margin-bottom: 0;
+  &:hover {
+    .most-popular-cities__image {
+      filter: brightness(.6);
+    }
+  }
+}
+.most-popular-cities__image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  border-radius: $border-radius;
+  filter: brightness(.5);
+  transition: $transition-base;
+}
+.most-popular-cities__caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 1;
+}
+
+@include media-breakpoint-up(lg) {
+  .most-popular-cities__figure {
+    min-height: 360px;
+  }
+}

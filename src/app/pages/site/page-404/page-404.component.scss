@@ -1,0 +1,88 @@
+@import "../../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.page-404 {
+  position: relative;
+  height: 100%;
+}
+
+.page-404__sea {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 40%;
+  overflow: hidden;
+}
+.page-404__sea-wave {
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  z-index: 1;
+}
+
+.page-404__sea-wave + .page-404__sea-wave {
+  z-index: 2;
+}
+
+.page-404 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  background-color: #74b9ff;
+}
+
+.page-404__island {
+  position: absolute;
+  top: 0;
+  bottom: 28%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-size: 800px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.page-404__header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 40px;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  text-align: center;
+}
+
+.page-404__logo {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  margin: auto;
+}
+
+.page-404__title {
+  font-size: 160px;
+  margin: 0;
+}
+
+.page-404__description {
+  font-size: 24px;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,30 @@
+
+
+<!-- Common: modal-authorization -->
+<div class="modal-authorization modal fade"
+     tabindex="-1"
+     role="dialog"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm"
+         role="document">
+        <div class="modal-authorization__content modal-content">
+            <a
+               data-dismiss="modal"
+               class="close"
+               aria-label="Закрыть">
+                <app-icon name="close" theme="light"></app-icon>
+            </a>
+            <div class="modal-authorization__body modal-body">
+                <app-form-authorization></app-form-authorization>
+            </div>
+            <div class="modal-authorization__footer modal-footer">
+                <a
+                   class="modal-authorization__register-link"
+                   data-toggle="modal"
+                   data-dismiss="modal"
+                   data-target=".modal-registration">Регистрация</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Common: modal-authorization -->

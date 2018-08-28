@@ -1,0 +1,18 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.photos-of-the-complex__slider {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  overflow: hidden;
+  border-radius: $border-radius;
+}
+
+.photos-of-the-complex__slider-link {
+  display: block;
+  height: 340px;
+  background-color: $dark;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
