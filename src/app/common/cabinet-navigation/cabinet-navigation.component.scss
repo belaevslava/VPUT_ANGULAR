@@ -1,15 +1,18 @@
 @import "../../../assets/libraries/bootstrap/bootstrap-reboot";
 
-.cabinet-navigation {
-  .nav-link {
-    position: relative;
-  }
-  .badge {
-    position: absolute;
-    right: $nav-link-padding-y;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    height: 1.125rem;
+.cabinet-navigation__badge {
+  position: absolute;
+  right: $nav-link-padding-y;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 1.125rem;
+}
+.cabinet-navigation__link {
+  position: relative;
+  &.active {
+    app-icon {
+      filter: brightness(0) invert(1);
+    }
   }
 }

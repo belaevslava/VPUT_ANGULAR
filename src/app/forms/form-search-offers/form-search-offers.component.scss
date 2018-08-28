@@ -87,6 +87,20 @@
   }
 }
 
+@include media-breakpoint-up(lg) {
+  .form-search-offers__cities-tabs {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    &.collapse,
+    &.collapsing {
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 99;
+    }
+  }
+}
+
 @include media-breakpoint-up(xl) {
   .form-search-offers__search-by-complexes-button {
     max-width: 80%;
