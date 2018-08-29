@@ -1,0 +1,236 @@
+[
+  {
+    "id": 1262,
+    "name": "Афины",
+    "country": "Греция",
+    "count_offers": 4
+  },
+  {
+    "id": 4055,
+    "name": "Анапа",
+    "country": "Россия",
+    "count_offers": 1
+  },
+  {
+    "id": 15789615,
+    "name": "Аланья",
+    "country": "Турция",
+    "count_offers": 2
+  },
+  {
+    "id": 1733,
+    "name": "Барселона",
+    "country": "Испания",
+    "count_offers": 8
+  },
+  {
+    "id": 15789559,
+    "name": "Будва",
+    "country": "Черногория",
+    "count_offers": 5
+  },
+  {
+    "id": 15789578,
+    "name": "Бенидорм",
+    "country": "Испания",
+    "count_offers": 3
+  },
+  {
+    "id": 1743,
+    "name": "Валенсия",
+    "country": "Испания",
+    "count_offers": 1
+  },
+  {
+    "id": 7593157,
+    "name": "Гирне",
+    "country": "Кипр",
+    "count_offers": 1
+  },
+  {
+    "id": 2541,
+    "name": "Друскининкай",
+    "country": "Литва",
+    "count_offers": 1
+  },
+  {
+    "id": 5198,
+    "name": "Домбай",
+    "country": "Россия",
+    "count_offers": 1
+  },
+  {
+    "id": 15789580,
+    "name": "Дения",
+    "country": "Испания",
+    "count_offers": 1
+  },
+  {
+    "id": 1273,
+    "name": "Ираклион",
+    "country": "Греция",
+    "count_offers": 1
+  },
+  {
+    "id": 4049790,
+    "name": "Иматра",
+    "country": "Финляндия",
+    "count_offers": 1
+  },
+  {
+    "id": 15789600,
+    "name": "Коста Адехе Тенерифе",
+    "country": "Испания",
+    "count_offers": 2
+  },
+  {
+    "id": 15789608,
+    "name": "Криопиги",
+    "country": "Греция",
+    "count_offers": 2
+  },
+  {
+    "id": 2299,
+    "name": "Лимассол",
+    "country": "Кипр",
+    "count_offers": 3
+  },
+  {
+    "id": 15789599,
+    "name": "Лос Гигантэс Тенерифе",
+    "country": "Испания",
+    "count_offers": 3
+  },
+  {
+    "id": 157896324,
+    "name": "Лутракион",
+    "country": "Греция",
+    "count_offers": 4
+  },
+  {
+    "id": 15789588,
+    "name": "Марбелья",
+    "country": "Испания",
+    "count_offers": 1
+  },
+  {
+    "id": 157896325,
+    "name": "Метаморфоси",
+    "country": "Греция",
+    "count_offers": 2
+  },
+  {
+    "id": 157896349,
+    "name": "Мармарис",
+    "country": "Турция",
+    "count_offers": 1
+  },
+  {
+    "id": 10398,
+    "name": "Одесса",
+    "country": "Украина",
+    "count_offers": 1
+  },
+  {
+    "id": 15789590,
+    "name": "Ориуэла Коста",
+    "country": "Испания",
+    "count_offers": 1
+  },
+  {
+    "id": 1770,
+    "name": "Палма-де-Мальорка",
+    "country": "Испания",
+    "count_offers": 2
+  },
+  {
+    "id": 1853,
+    "name": "Палермо",
+    "country": "Италия",
+    "count_offers": 3
+  },
+  {
+    "id": 15789561,
+    "name": "Пхукет",
+    "country": "Тайланд",
+    "count_offers": 2
+  },
+  {
+    "id": 15789570,
+    "name": "Пафос",
+    "country": "Кипр",
+    "count_offers": 3
+  },
+  {
+    "id": 15789591,
+    "name": "Плая де лас Америкас",
+    "country": "Испания",
+    "count_offers": 6
+  },
+  {
+    "id": 15789598,
+    "name": "Пинеда де Мар",
+    "country": "Испания",
+    "count_offers": 1
+  },
+  {
+    "id": 1809,
+    "name": "Реджио-ди-Калабриа",
+    "country": "Италия",
+    "count_offers": 1
+  },
+  {
+    "id": 4440,
+    "name": "Серпухов",
+    "country": "Россия",
+    "count_offers": 1
+  },
+  {
+    "id": 4962,
+    "name": "Санкт-Петербург",
+    "country": "Россия",
+    "count_offers": 1
+  },
+  {
+    "id": 1344,
+    "name": "Тбилиси",
+    "country": "Грузия",
+    "count_offers": 10
+  },
+  {
+    "id": 15789595,
+    "name": "Торревьеха",
+    "country": "Испания",
+    "count_offers": 5
+  },
+  {
+    "id": 1269,
+    "name": "Ханья",
+    "country": "Греция",
+    "count_offers": 4
+  },
+  {
+    "id": 7718652,
+    "name": "Ханты-Мансийск",
+    "country": "Россия",
+    "count_offers": 1
+  },
+  {
+    "id": 15789602,
+    "name": "Халкидики",
+    "country": "Греция",
+    "count_offers": 3
+  },
+  {
+    "id": 15789620,
+    "name": "Элеонас",
+    "country": "Греция",
+    "count_offers": 1
+  },
+  {
+    "id": 2508,
+    "name": "Юрмала",
+    "country": "Латвия",
+    "count_offers": 2
+  }
+]

@@ -60,5 +60,8 @@
 @include media-breakpoint-up(xl) {
   .cities-tabs__nav {
     column-count: 5;
+    &.cities-tabs__nav_country_all {
+      column-count: 4;
+    }
   }
 }

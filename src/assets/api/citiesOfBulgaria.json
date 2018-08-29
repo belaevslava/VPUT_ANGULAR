@@ -1,0 +1,211 @@
+[
+  {
+    "id": 1,
+    "name": "Албена",
+    "count_offers": 5
+  },
+  {
+    "id": 2,
+    "name": "Ахелой",
+    "count_offers": 24
+  },
+  {
+    "id": 3,
+    "name": "Ахтополь",
+    "count_offers": 3
+  },
+  {
+    "id": 4,
+    "name": "Боровец",
+    "count_offers": 1
+  },
+  {
+    "id": 5,
+    "name": "Бургас",
+    "count_offers": 41
+  },
+  {
+    "id": 6,
+    "name": "Банско",
+    "count_offers": 48
+  },
+  {
+    "id": 7,
+    "name": "Бяла",
+    "count_offers": 2
+  },
+  {
+    "id": 8,
+    "name": "Балчик",
+    "count_offers": 17
+  },
+  {
+    "id": 9,
+    "name": "Бяла",
+    "count_offers": 53
+  },
+  {
+    "id": 10,
+    "name": "Велико Тарново",
+    "count_offers": 2
+  },
+  {
+    "id": 11,
+    "name": "Варна",
+    "count_offers": 72
+  },
+  {
+    "id": 12,
+    "name": "Велинград",
+    "count_offers": 1
+  },
+  {
+    "id": 13,
+    "name": "Габрово",
+    "count_offers": 1
+  },
+  {
+    "id": 14,
+    "name": "Добрич",
+    "count_offers": 1
+  },
+  {
+    "id": 15,
+    "name": "Елените",
+    "count_offers": 65
+  },
+  {
+    "id": 16,
+    "name": "Золотые Пески",
+    "count_offers": 65
+  },
+  {
+    "id": 17,
+    "name": "Кранево",
+    "count_offers": 7
+  },
+  {
+    "id": 18,
+    "name": "Каварна",
+    "count_offers": 1
+  },
+  {
+    "id": 19,
+    "name": "Кошарица",
+    "count_offers": 5
+  },
+  {
+    "id": 20,
+    "name": "Китен",
+    "count_offers": 2
+  },
+  {
+    "id": 21,
+    "name": "Каблешково",
+    "count_offers": 1
+  },
+  {
+    "id": 22,
+    "name": "Лозенец",
+    "count_offers": 12
+  },
+  {
+    "id": 23,
+    "name": "Несебр",
+    "count_offers": 108
+  },
+  {
+    "id": 24,
+    "name": "Обзор",
+    "count_offers": 29
+  },
+  {
+    "id": 25,
+    "name": "область Благоевград, Разлог",
+    "count_offers": 1
+  },
+  {
+    "id": 26,
+    "name": "Пловдив",
+    "count_offers": 1
+  },
+  {
+    "id": 27,
+    "name": "Поморие",
+    "count_offers": 167
+  },
+  {
+    "id": 28,
+    "name": "Приморско",
+    "count_offers": 26
+  },
+  {
+    "id": 29,
+    "name": "Пампорово",
+    "count_offers": 17
+  },
+  {
+    "id": 30,
+    "name": "Равда",
+    "count_offers": 126
+  },
+  {
+    "id": 31,
+    "name": "Рогачево",
+    "count_offers": 1
+  },
+  {
+    "id": 32,
+    "name": "Сандански",
+    "count_offers": 7
+  },
+  {
+    "id": 33,
+    "name": "София",
+    "count_offers": 4
+  },
+  {
+    "id": 34,
+    "name": "Святой Влас",
+    "count_offers": 511
+  },
+  {
+    "id": 35,
+    "name": "Солнечный берег",
+    "count_offers": 539
+  },
+  {
+    "id": 36,
+    "name": "Сарафово",
+    "count_offers": 35
+  },
+  {
+    "id": 37,
+    "name": "Созополь",
+    "count_offers": 103
+  },
+  {
+    "id": 38,
+    "name": "Св. Константин и Елена",
+    "count_offers": 7
+  },
+  {
+    "id": 39,
+    "name": "Синеморец",
+    "count_offers": 1
+  },
+  {
+    "id": 40,
+    "name": "Царево",
+    "count_offers": 6
+  },
+  {
+    "id": 41,
+    "name": "Черноморец",
+    "count_offers": 13
+  },
+  {
+    "id": 42,
+    "name": "Шабла",
+    "count_offers": 1
+  }]

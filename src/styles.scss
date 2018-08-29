@@ -1,15 +1,17 @@
 // Bootstrap 4
 @import "assets/libraries/bootstrap/bootstrap";
+// FancyApp (Image Gallery)
+@import "~@fancyapps/fancybox/dist/jquery.fancybox";
 // Slick Carousel
+@import "~slick-carousel/slick/slick";
 @import "assets/libraries/slick-carousel/slick-theme";
 // noUiSlider
 @import "assets/libraries/nouislider/nouislider";
-// FancyApp (Image Gallery)
-@import "~@fancyapps/fancybox/dist/jquery.fancybox";
 // dateRangePicker
 @import "~daterangepicker/daterangepicker";
 // FilePond
 @import "~filepond/dist/filepond";
+
 
 ::selection {
   background: $primary;

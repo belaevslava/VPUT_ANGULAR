@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import $ from 'jquery';
-import * as bootstrap from 'bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +7,7 @@ import * as bootstrap from 'bootstrap';
 })
 export class AppComponent {
   title = 'app';
+
+  onActivate() {
+  }
 }

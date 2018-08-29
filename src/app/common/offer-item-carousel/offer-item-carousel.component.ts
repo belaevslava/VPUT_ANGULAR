@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import $ from 'jquery';
+import * as slick from 'slick-carousel';
 
 @Component({
   selector: 'app-offer-item-carousel',
@@ -6,10 +8,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./offer-item-carousel.component.scss']
 })
 export class OfferItemCarouselComponent implements OnInit {
-
-  constructor() { }
+  usedPlugins: Object;
+  constructor() {
+      this.usedPlugins = { slick: slick };
+  }
 
   ngOnInit() {
   }
 
+  onActivate(event) {
+    const targetElement = $(event.target);
+
+    const $slick = targetElement
+          .siblings('[data-slick]')
+          .css('backgroundImage', 'none')
+          .slick({
+              swipe: false
+          });
+    if (targetElement.hasClass('.offer-item-carousel__arrow_slide_next')) {
+        $slick.slick('slickNext');
+    } else {
+        $slick.slick('slickPrev');
+    }
+    targetElement.siblings('.offer-item-carousel__arrow').remove();
+    targetElement.remove();
+  }
 }

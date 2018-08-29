@@ -5,46 +5,40 @@
             <a href="javascript: void(0);"
                class="nav-link active"
                data-toggle="tab"
-               data-target=".cities-tabs__tab-0"
+               data-target=".cities-tabs__nav_country_bulgaria"
                role="tab"
-               aria-selected="true">Болгария (2113)</a>
+               aria-selected="true">Болгария ({{countOffersOfCitiesOfBulgaria}})</a>
         </li>
         <li class="nav-item">
-            <a href="javascript: void(0);" class="nav-link "
+            <a href="javascript: void(0);" class="nav-link"
                data-toggle="tab"
-               data-target=".cities-tabs__tab-1"
+               data-target=".cities-tabs__nav_country_all"
                role="tab"
-               aria-selected="true">Другие (98)</a>
+               aria-selected="true">Другие ({{countOffersOfAllCities}})</a>
         </li>
     </ul>
     <div class="cities-tabs__content tab-content bg-white">
-        <div class="cities-tabs__tab-0 tab-pane fade active show"
+        <nav class="cities-tabs__nav cities-tabs__nav_country_bulgaria tab-pane fade active show"
              role="tabpanel">
-            <nav class="cities-tabs__nav">
-                <a *ngFor="let city of citiesOfBulgaria"
-                   href="javascript: void(0);"
-                   data-id="{{city.id}}"
-                   data-name="{{city.name}}"
-                   class="cities-tabs__link">
-                    {{city.name}}
-                    <span class="cities-tabs__count-offers badge badge-primary">{{city.count_offers}}</span>
-                </a>
-            </nav>
-        </div>
-        
-        <div class="cities-tabs__tab-1 tab-pane fade "
+            <a *ngFor="let city of citiesOfBulgaria"
+               href="javascript: void(0);"
+               data-id="{{city.id}}"
+               data-name="{{city.name}}"
+               class="cities-tabs__link">
+                {{city.name}}
+                <span class="cities-tabs__count-offers badge badge-primary">{{city.count_offers}}</span>
+            </a>
+        </nav>
+        <nav class="cities-tabs__nav cities-tabs__nav_country_all tab-pane fade"
              role="tabpanel">
-            <nav class="cities-tabs__nav">
-                <a *ngFor="let city of allCities"
-                   href="javascript: void(0);"
-                   data-id="{{city.id}}"
-                   data-name="{{city.name}}, {{city.country}}"
-                   class="cities-tabs__link">
-                    {{city.name}}, {{city.country}}
-                    <span class="cities-tabs__count-offers badge badge-primary">{{city.count_offers}}</span>
-                </a>
-            </nav>
-        </div>
-        
+            <a *ngFor="let city of allCities"
+               href="javascript: void(0);"
+               data-id="{{city.id}}"
+               data-name="{{city.name}}, {{city.country}}"
+               class="cities-tabs__link">
+                {{city.name}}, {{city.country}}
+                <span class="cities-tabs__count-offers badge badge-primary">{{city.count_offers}}</span>
+            </a>
+        </nav>
     </div>
 </div>

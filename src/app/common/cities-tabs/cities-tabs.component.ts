@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { City } from './city';
 import { CityService } from './city.service';
 
 @Component({
@@ -9,20 +8,28 @@ import { CityService } from './city.service';
   styleUrls: ['./cities-tabs.component.scss']
 })
 export class CitiesTabsComponent implements OnInit {
-  citiesOfBulgaria: City[];
-  allCities: City[];
-  constructor(private cityService: CityService) { }
+  citiesOfBulgaria: Object[];
+  allCities: Object[];
+  countOffersOfCitiesOfBulgaria: number;
+  countOffersOfAllCities: number;
+  constructor(private cityService: CityService) {
+      this.countOffersOfCitiesOfBulgaria = 0;
+      this.countOffersOfAllCities = 0;
+  }
 
   ngOnInit() {
     this.getCitiesOfBulgaria();
     this.getAllCities();
   }
 
-    getCitiesOfBulgaria(): void {
+  getCitiesOfBulgaria(): void {
       this.cityService.getCitiesOfBulgaria()
           .subscribe(citiesOfBulgaria => {
             this.citiesOfBulgaria = citiesOfBulgaria;
-            console.log(citiesOfBulgaria);
+
+            for (let index in citiesOfBulgaria) {
+                this.countOffersOfCitiesOfBulgaria += citiesOfBulgaria[index]['count_offers'];
+            }
           });
   }
 
@@ -30,7 +37,10 @@ export class CitiesTabsComponent implements OnInit {
       this.cityService.getAllCities()
           .subscribe(allCities => {
             this.allCities = allCities;
-            console.log(allCities);
+
+            for(let index in allCities) {
+                this.countOffersOfAllCities += allCities[index]['count_offers'];
+            }
           });
   }
 

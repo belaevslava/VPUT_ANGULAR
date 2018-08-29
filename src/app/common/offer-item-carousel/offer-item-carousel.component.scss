@@ -10,9 +10,14 @@
   background-color: $dark;
 }
 
-.offer-item-carousel__image.slick-slide,
+.offer-item-carousel__image,
+.offer-item-carousel__link,
 .offer-item-carousel {
+  display: block;
   height: 240px;
+}
+.offer-item-carousel__image {
+  margin: auto;
 }
 .offer-item-carousel__image.slick-slide,
 .offer-item-carousel__image,

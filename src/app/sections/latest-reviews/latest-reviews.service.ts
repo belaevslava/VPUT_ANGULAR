@@ -1,35 +1,22 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 import { Observable, of } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
-
-const httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
+import { catchError } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
-export class CityService {
+export class LatestReviewsService {
     private apiUrl = {
-        citiesOfBulgaria: 'api/citiesOfBulgaria',
-        allCities: 'api/allCities',
+        latestReviews: 'api/latestReviews'
     };
 
     constructor(private http: HttpClient) { }
 
-    /** GET Bulgaria cities from the server */
-    getCitiesOfBulgaria(): Observable<Object[]> {
-        return this.http.get<Object[]>(this.apiUrl.citiesOfBulgaria)
+    /** GET latest reviews from the server */
+    getLatestReviews(): Observable<Object[]> {
+        return this.http.get<Object[]>(this.apiUrl.latestReviews)
             .pipe(
-                catchError(this.handleError('getCitiesOfBulgaria', []))
-            );
-    }
-
-    /** GET all cities from the server */
-    getAllCities(): Observable<Object[]> {
-        return this.http.get<Object[]>(this.apiUrl.allCities)
-            .pipe(
-                catchError(this.handleError('getAllCities', []))
+                catchError(this.handleError('getLatestReviews', []))
             );
     }
 

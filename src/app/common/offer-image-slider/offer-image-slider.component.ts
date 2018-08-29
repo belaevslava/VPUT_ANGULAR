@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import $ from 'jquery';
+import * as slick from 'slick-carousel';
 
 @Component({
   selector: 'app-offer-image-slider',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./offer-image-slider.component.scss']
 })
 export class OfferImageSliderComponent implements OnInit {
-
-  constructor() { }
+  usedPlugins: Object;
+  constructor() {
+      this.usedPlugins = { slick: slick };
+  }
 
   ngOnInit() {
+    $('.offer-image-slider__images-list[data-slick]').slick();
   }
 
 }

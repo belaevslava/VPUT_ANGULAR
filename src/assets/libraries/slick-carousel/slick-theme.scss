@@ -31,6 +31,22 @@ $slick-opacity-not-active: 0.25 !default;
     }
 }
 
+.slick-slider {
+    &:hover {
+        .slick-prev,
+        .slick-next {
+            opacity: .5;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    .slick-prev,
+    .slick-next {
+        opacity: 0;
+    }
+}
+
 /* Arrows */
 
 .slick-prev,
