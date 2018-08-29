@@ -2,7 +2,7 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 
 //import * as citiesOfBulgaria from '../assets/api/citiesOfBulgaria.json';
 //import * as allCities from '../assets/api/allCities.json';
-import * as latestReviews from '../assets/api/latestReviews.json';
+//import * as latestReviews from '../assets/api/latestReviews.json';
 
 export class InMemoryDataService implements InMemoryDbService {
     createDb() {
@@ -91,6 +91,6 @@ export class InMemoryDataService implements InMemoryDbService {
             { id: 15789620, name: 'Элеонас', country: 'Греция', count_offers: 1 },
             { id: 2508, name: 'Юрмала', country: 'Латвия', count_offers: 2 }
         ];
-        return {citiesOfBulgaria, allCities, latestReviews};
+        return {citiesOfBulgaria, allCities};
     }
 }

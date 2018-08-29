@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import $ from 'jquery';
+import * as bootstrap from 'bootstrap/dist/js/bootstrap.bundle';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  usedPlugins: Object;
 
   onActivate() {
+    this.usedPlugins = {
+      jquery: $,
+      bootstrap: bootstrap
+    };
   }
 }
