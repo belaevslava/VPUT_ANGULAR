@@ -1,5 +1,5 @@
 <!-- Common: offer-item -->
-<figure class="offer-item">
+<figure class="offer-item" *ngIf="offerItem">
     <app-icon name="heart"
               size="2"
               theme="light"
@@ -7,31 +7,30 @@
               data-toggle="button"
               aria-pressed="false"></app-icon>
     <div class="offer-item__offer-item-carousel">
-        <app-offer-item-carousel></app-offer-item-carousel>
+        <app-offer-item-carousel [images]="offerItem.images"></app-offer-item-carousel>
     </div>
     <figcaption class="offer-item__description">
         <h3 class="offer-item__title">
             <a routerLink="/offer/"
                _target="_blank"
                class="offer-item__link"
-               title="Studio - Fort Noks Grand Resort">Studio - Fort Noks Grand Resort</a>
+               [attr.title]="offerItem.name">{{offerItem.name}}</a>
         </h3>
         <ul class="offer-item__details">
-            <li class="offer-item__detail offer-item__country">Болгария</li>
-            <li class="offer-item__detail offer-item__city">Солнечный берег</li>
+            <li class="offer-item__detail offer-item__address">{{offerItem.address}}</li>
             <br>
-            <li class="offer-item__detail offer-item__type">Квартира</li>
+            <li class="offer-item__detail offer-item__type">{{offerItem.category}}</li>
             <li class="offer-item__detail offer-item__numbers-of-rooms">
-                <span class="offer-item__numbers-of-rooms-label">Комнат:</span>
-                <span class="offer-item__numbers-of-rooms-value">1</span>
+                <span class="offer-item__numbers-of-rooms-label" i18n>Комнат:</span>
+                <span class="offer-item__numbers-of-rooms-value">{{offerItem.rooms}}</span>
             </li>
             <li class="offer-item__detail offer-item__numbers-of-guests">
                 <span class="offer-item__numbers-of-guests-label">Гостей:</span>
-                <span class="offer-item__numbers-of-guests-value">7</span>
+                <span class="offer-item__numbers-of-guests-value">{{offerItem.guests}}</span>
             </li>
             <li class="offer-item__detail offer-item__price">
                 <span class="offer-item__price-currency">€</span>
-                <span class="offer-item__price-value">71</span>
+                <span class="offer-item__price-value">{{offerItem.price}}</span>
             </li>
             <li class="offer-item__detail offer-item__price-per-day">
                 <span class="offer-item__price-per-day-currency">€</span>
@@ -58,15 +57,15 @@
     <footer class="offer-item__editor">
         <div class="offer-item__actions">
             <!-- ! -->
-            <a routerLink="/cabinet/add/?id=4412&substep=9"
-               class="offer-item__action btn btn-secondary d-none">Редактировать</a>
+            <a routerLink="/cabinet/add/?id="
+               class="offer-item__action btn btn-secondary d-none" i18n>Редактировать</a>
             <!-- /! -->
-            <a routerLink="/add/?id=4412&substep=9"
+            <a routerLink="/add/?id="
                class="offer-item__action btn btn-warning"
                data-toggle="tooltip"
                data-placement="top"
                data-html="true"
-               title="Пройдено <b class='text-warning'>5</b> шагов из <b class='text-success'>11</b>">Продолжить добавление</a>
+               title="Пройдено <b class='text-warning'>5</b> шагов из <b class='text-success'>11</b>" i18n i18n-title>Продолжить добавление</a>
             <a
                class="offer-item__action btn btn-warning"
                data-toggle="tooltip"
@@ -82,10 +81,10 @@
         </div>
         <div class="offer-item__statuses">
             <!-- ! -->
-            <div class="offer-item__status offer-item__status_state_danger d-none">Заблокированно</div>
-            <div class="offer-item__status offer-item__status_state_warning d-none">На модерации</div>
+            <div class="offer-item__status offer-item__status_state_danger d-none" i18n>Заблокированно</div>
+            <div class="offer-item__status offer-item__status_state_warning d-none" i18n>На модерации</div>
             <!-- /! -->
-            <div class="offer-item__status offer-item__status_state_success">Публикуется</div>
+            <div class="offer-item__status offer-item__status_state_success" i18n>Публикуется</div>
         </div>
     </footer>
     <!-- /If the item belongs to the owner -->

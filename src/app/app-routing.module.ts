@@ -35,10 +35,10 @@ const routes: Routes = [
   { path: '', redirectTo: '/index', pathMatch: 'full' },
   { path: 'index', component: PageIndexComponent },
   { path: 'search', component: PageSearchComponent },
-  { path: 'offer', component: PageOfferComponent },
-  { path: 'complex', component: PageComplexComponent },
+  { path: 'offer/:id', component: PageOfferComponent },
+  { path: 'complex/:id', component: PageComplexComponent },
   { path: 'favorites', component: PageFavoritesComponent },
-  { path: 'article', component: PageArticleComponent },
+  { path: 'article/:slug', component: PageArticleComponent },
   { path: 'authorization', component: PageAuthorizationComponent },
 
   { path: 'rentacar', component: PageCarRentalComponent },

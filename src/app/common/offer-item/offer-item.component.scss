@@ -54,17 +54,13 @@
     filter: drop-shadow(rgba(0,0,0,.24) 0 0 1px);
   }
 }
-.offer-item__country {
-  flex: 1;
-}
-.offer-item__city {
-  max-width: 155px;
+.offer-item__address {
+  flex: 1 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.offer-item__country,
 .offer-item__numbers-of-rooms,
 .offer-item__type {
   position: relative;

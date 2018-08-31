@@ -5,22 +5,13 @@
     <button class="offer-item-carousel__arrow offer-item-carousel__arrow_slide_prev slick-prev slick-arrow"
             (click)="onActivate($event)"></button>
     <nav class="offer-item-carousel__images-list"
-         style="background-image: url(/assets/content/offers/previews/offer-item__preview-1.jpg)"
+         *ngIf="images"
+         [style.background-image]="'url(https://vput.ru' + images[0].image + ')'"
          data-slick>
-        <a href="javascript: void(0);" class="offer-item-carousel__link">
-            <img data-lazy="/assets/content/offers/previews/offer-item__preview-1.jpg"
-                 class="offer-item-carousel__image">
-        </a>
-        <a href="javascript: void(0);" class="offer-item-carousel__link">
-            <img data-lazy="/assets/content/offers/previews/offer-item__preview-1.jpg"
-                 class="offer-item-carousel__image">
-        </a>
-        <a href="javascript: void(0);" class="offer-item-carousel__link">
-            <img data-lazy="/assets/content/offers/previews/offer-item__preview-1.jpg"
-                 class="offer-item-carousel__image">
-        </a>
-        <a href="javascript: void(0);" class="offer-item-carousel__link">
-            <img data-lazy="/assets/content/offers/previews/offer-item__preview-1.jpg"
+        <a href="javascript: void(0);"
+           class="offer-item-carousel__link"
+           *ngFor="let imageItem of images">
+            <img [attr.data-lazy]="'https://vput.ru' + imageItem.image"
                  class="offer-item-carousel__image">
         </a>
     </nav>
