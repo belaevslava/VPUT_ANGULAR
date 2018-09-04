@@ -5,9 +5,9 @@ import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
-export class LatestReviewsService {
+export class ReviewsService {
     private apiUrl = {
-        latestReviews: 'api/latestReviews'
+        latestReviews: 'http://localhost:8000/v1/realties/latestReviews'
     };
 
     constructor(private http: HttpClient) { }

@@ -6,38 +6,10 @@
     </header>
     <div class="latest-offers__list-of-offers">
         <!-- List of offers -->
-        <ul class="list-of-offers row" data-slick-adaptive>
+        <ul class="list-of-offers row" data-slick-adaptive *ngIf="latestOffers">
             
-            <li class="col-md-6 col-lg-4 col-xl-3 mb-3">
-                <app-offer-item id="768"></app-offer-item>
-            </li>
-            
-            <li class="col-md-6 col-lg-4 col-xl-3 mb-3">
-                <app-offer-item id="768"></app-offer-item>
-            </li>
-            
-            <li class="col-md-6 col-lg-4 col-xl-3 mb-3">
-                <app-offer-item id="768"></app-offer-item>
-            </li>
-            
-            <li class="col-md-6 col-lg-4 col-xl-3 mb-3">
-                <app-offer-item id="768"></app-offer-item>
-            </li>
-            
-            <li class="col-md-6 col-lg-4 col-xl-3 mb-3">
-                <app-offer-item id="768"></app-offer-item>
-            </li>
-            
-            <li class="col-md-6 col-lg-4 col-xl-3 mb-3">
-                <app-offer-item id="768"></app-offer-item>
-            </li>
-            
-            <li class="col-md-6 col-lg-4 col-xl-3 mb-3">
-                <app-offer-item id="768"></app-offer-item>
-            </li>
-            
-            <li class="col-md-6 col-lg-4 col-xl-3 mb-3">
-                <app-offer-item id="768"></app-offer-item>
+            <li class="col-md-6 col-lg-4 col-xl-3 mb-3" *ngFor="let offer of latestOffers">
+                <app-offer-item [offer]="offer"></app-offer-item>
             </li>
             
         </ul>

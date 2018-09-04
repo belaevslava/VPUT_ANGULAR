@@ -1,21 +1,17 @@
-
-
-
 <!-- Common: review -->
-<figure class="review">
+<figure class="review" *ngIf="review">
     <figure class="review__user">
         <div class="review__user-avatar mb-2">
             <app-user-avatar></app-user-avatar>
         </div>
-        <figcaption class="user__description">Татьяна</figcaption>
+        <figcaption class="user__description">{{review.author.details.name}}</figcaption>
     </figure>
     <figcaption class="review__content">
-        <time class="review__created-at">2018-01-02 23:06:57</time>
+        <time class="review__created-at">{{review.date}}</time>
         <div class="review__review-rating">
-            <figure class="review-rating"
-                    data-rating="3"></figure>
+            <app-review-rating [rate]="review.rate"></app-review-rating>
         </div>
-        <div class="review__message">Замечательно отдохнули! Нас было 6 - 5 взрослых и один ребёнок 2 лет. Встретили, разместили, помогли сориентироваться на местности (где магазины, аптеки и т.п). Расположение выше всяких похвал! Засыпали и просыпались под шум прибоя! Спасибо Мине за прием! Отзывчивая и при этом не назойливая хозяйка! Все было СУПЕР!</div>
+        <div class="review__message">{{review.text}}</div>
     </figcaption>
 </figure>
 <!-- /Common: review -->

@@ -1,5 +1,5 @@
 <!-- Common: offer-item -->
-<figure class="offer-item" *ngIf="offerItem">
+<figure class="offer-item" *ngIf="offer">
     <app-icon name="heart"
               size="2"
               theme="light"
@@ -7,34 +7,34 @@
               data-toggle="button"
               aria-pressed="false"></app-icon>
     <div class="offer-item__offer-item-carousel">
-        <app-offer-item-carousel [images]="offerItem.images"></app-offer-item-carousel>
+        <app-offer-item-carousel [images]="offer.images"></app-offer-item-carousel>
     </div>
     <figcaption class="offer-item__description">
         <h3 class="offer-item__title">
-            <a routerLink="/offer/"
+            <a [routerLink]="'/offer/' + offer.id"
                _target="_blank"
                class="offer-item__link"
-               [attr.title]="offerItem.name">{{offerItem.name}}</a>
+               [attr.title]="offer.name.ru">{{offer.name.ru}}</a>
         </h3>
         <ul class="offer-item__details">
-            <li class="offer-item__detail offer-item__address">{{offerItem.address}}</li>
+            <li class="offer-item__detail offer-item__address">{{offer.address.city.country.name.ru}} | {{offer.address.city.name.ru}}</li>
             <br>
-            <li class="offer-item__detail offer-item__type">{{offerItem.category}}</li>
+            <li class="offer-item__detail offer-item__type">{{offer.categoryId}}</li>
             <li class="offer-item__detail offer-item__numbers-of-rooms">
                 <span class="offer-item__numbers-of-rooms-label" i18n>Комнат:</span>
-                <span class="offer-item__numbers-of-rooms-value">{{offerItem.rooms}}</span>
+                <span class="offer-item__numbers-of-rooms-value">{{offer.rooms}}</span>
             </li>
             <li class="offer-item__detail offer-item__numbers-of-guests">
                 <span class="offer-item__numbers-of-guests-label">Гостей:</span>
-                <span class="offer-item__numbers-of-guests-value">{{offerItem.guests}}</span>
+                <span class="offer-item__numbers-of-guests-value">{{offer.guests}}</span>
             </li>
             <li class="offer-item__detail offer-item__price">
                 <span class="offer-item__price-currency">€</span>
-                <span class="offer-item__price-value">{{offerItem.price}}</span>
+                <span class="offer-item__price-value">{{offer.price}}</span>
             </li>
             <li class="offer-item__detail offer-item__price-per-day">
                 <span class="offer-item__price-per-day-currency">€</span>
-                <span class="offer-item__price-per-day-value">16</span>
+                <span class="offer-item__price-per-day-value">{{offer.guestPrice}}</span>
                 <app-icon name="guest" size="1" class="ml-1"></app-icon>
             </li>
         </ul>

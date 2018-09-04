@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { OfferItemService } from './offer-item.service';
-import { OfferItem } from './offer-item';
+import { OfferService } from '../../services/offer.service';
+import { Offer } from '../../classes/offer';
 
 @Component({
   selector: 'app-offer-item',
@@ -9,20 +9,17 @@ import { OfferItem } from './offer-item';
   styleUrls: ['./offer-item.component.scss']
 })
 export class OfferItemComponent implements OnInit {
-  @Input() id: number;
-  offerItem: OfferItem;
-  constructor( private offerItemService: OfferItemService) { }
+  @Input() offer: Offer;
+  constructor( private offerService: OfferService) { }
 
   ngOnInit() {
-      this.getOfferItem(this.id);
+      if (typeof this.offer === 'number') {
+          const offerId = this.offer;
+          this.getOffer(offerId);
+      }
   }
 
-  getOfferItem(id: number): void {
-      if (id) {
-          this.offerItemService.getOfferItem(id).subscribe(result => {
-              this.offerItem = result['realties'][0];
-              console.log('offers', result['realties'][0]);
-          });
-      }
+  getOffer(id: number): void {
+      this.offerService.getOffer(id).subscribe(offer => this.offer = offer);
   }
 }

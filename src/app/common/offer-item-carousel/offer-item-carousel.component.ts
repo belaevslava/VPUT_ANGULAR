@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import $ from 'jquery';
 import * as slick from 'slick-carousel';
 
-import { OfferItemCarousel } from './offer-item-carousel';
+import { Image } from '../../classes/image';
 
 @Component({
   selector: 'app-offer-item-carousel',
@@ -10,7 +10,7 @@ import { OfferItemCarousel } from './offer-item-carousel';
   styleUrls: ['./offer-item-carousel.component.scss']
 })
 export class OfferItemCarouselComponent implements OnInit {
-  @Input() images: OfferItemCarousel[];
+  @Input() images: Image[];
   usedPlugins: Object;
   constructor() {
       this.usedPlugins = { slick: slick };
