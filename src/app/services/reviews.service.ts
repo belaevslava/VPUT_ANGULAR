@@ -4,6 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
+import { Review } from '../classes/review';
+
 @Injectable({ providedIn: 'root' })
 export class ReviewsService {
     private apiUrl = {
@@ -13,8 +15,8 @@ export class ReviewsService {
     constructor(private http: HttpClient) { }
 
     /** GET latest reviews from the server */
-    getLatestReviews(): Observable<Object[]> {
-        return this.http.get<Object[]>(this.apiUrl.latestReviews)
+    getLatestReviews(): Observable<Review[]> {
+        return this.http.get<Review[]>(this.apiUrl.latestReviews)
             .pipe(
                 catchError(this.handleError('getLatestReviews', []))
             );

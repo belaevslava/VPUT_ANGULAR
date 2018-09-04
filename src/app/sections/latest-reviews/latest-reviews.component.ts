@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Review } from '../../classes/review';
 import { ReviewsService } from '../../services/reviews.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { ReviewsService } from '../../services/reviews.service';
   styleUrls: ['./latest-reviews.component.scss']
 })
 export class LatestReviewsComponent implements OnInit {
-  latestReviews: Object[];
+  latestReviews: Review[];
   constructor(private latestReviewsService: ReviewsService) { }
 
   ngOnInit() {

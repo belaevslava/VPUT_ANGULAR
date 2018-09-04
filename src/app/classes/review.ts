@@ -7,4 +7,5 @@ export class Review {
             name: string;
         }
     };
+    owner: object;
 }
