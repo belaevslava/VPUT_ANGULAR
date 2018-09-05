@@ -6,12 +6,12 @@
             (click)="onActivate($event)"></button>
     <nav class="offer-item-carousel__images-list"
          *ngIf="images"
-         [style.background-image]="'url(https://vput.ru/' + images[0].imageUrl + ')'"
+         [style.background-image]="'url(https://vput.ru/api/image/realties/400x400/focus/' + images[0].id + '/)'"
          data-slick>
         <a href="javascript: void(0);"
            class="offer-item-carousel__link"
            *ngFor="let image of images">
-            <img [attr.data-lazy]="'https://vput.ru/' + image.imageUrl"
+            <img [attr.data-lazy]="'https://vput.ru/api/image/realties/400x400/focus/' + image.id + '/'"
                  class="offer-item-carousel__image">
         </a>
     </nav>

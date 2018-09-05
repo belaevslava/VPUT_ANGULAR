@@ -22,6 +22,10 @@
   color: $white;
 }
 
+app-icon {
+  display: inline-flex;
+}
+
 .page-preloader {
   position: fixed;
 }

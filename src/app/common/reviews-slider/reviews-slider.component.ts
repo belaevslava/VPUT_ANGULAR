@@ -1,4 +1,4 @@
-import { Component, OnChanges, Input } from '@angular/core';
+import {Component, OnChanges, Input} from '@angular/core';
 import $ from 'jquery';
 import * as slick from 'slick-carousel';
 
@@ -17,7 +17,6 @@ export class ReviewsSliderComponent implements OnChanges {
   }
 
   ngOnChanges() {
-    $('.reviews-slider[data-slick]').slick();
+    setTimeout(_ => $('.reviews-slider[data-slick]').slick(), 1);
   }
-
 }

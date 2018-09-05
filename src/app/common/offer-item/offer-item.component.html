@@ -34,7 +34,7 @@
             </li>
             <li class="offer-item__detail offer-item__price-per-day">
                 <span class="offer-item__price-per-day-currency">€</span>
-                <span class="offer-item__price-per-day-value">{{offer.guestPrice}}</span>
+                <span class="offer-item__price-per-day-value">{{ offer.price / offer.guests | number: '1.0-0' }}</span>
                 <app-icon name="guest" size="1" class="ml-1"></app-icon>
             </li>
         </ul>
