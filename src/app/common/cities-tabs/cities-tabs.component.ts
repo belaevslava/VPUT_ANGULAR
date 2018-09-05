@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { CityService } from './city.service';
+import { City } from '../../classes/city';
+import { CityService } from '../../services/city.service';
 
 @Component({
   selector: 'app-cities-tabs',
@@ -8,8 +9,8 @@ import { CityService } from './city.service';
   styleUrls: ['./cities-tabs.component.scss']
 })
 export class CitiesTabsComponent implements OnInit {
-  citiesOfBulgaria: Object[];
-  allCities: Object[];
+  citiesOfBulgaria: City[];
+  allCities: City[];
   countRealtyOfCitiesOfBulgaria: number;
   countRealtyOfAllCities: number;
   constructor(private cityService: CityService) {
@@ -23,25 +24,16 @@ export class CitiesTabsComponent implements OnInit {
   }
 
   getCitiesOfBulgaria(): void {
-      this.cityService.getCitiesOfBulgaria()
+      const bulgariaAlias = 'bulgaria';
+      this.cityService.getCitiesByCountryAlias(bulgariaAlias)
           .subscribe(citiesOfBulgaria => {
-            this.citiesOfBulgaria = citiesOfBulgaria;
-
-            for (let index in citiesOfBulgaria) {
-                this.countRealtyOfCitiesOfBulgaria += citiesOfBulgaria[index]['count_realty'];
-            }
+              this.citiesOfBulgaria = citiesOfBulgaria;
           });
   }
 
   getAllCities(): void {
       this.cityService.getAllCities()
-          .subscribe(allCities => {
-            this.allCities = allCities;
-
-            for(let index in allCities) {
-                this.countRealtyOfAllCities += allCities[index]['count_realty'];
-            }
-          });
+          .subscribe(allCities => this.allCities = allCities);
   }
 
 }

@@ -5,6 +5,7 @@ export class Review {
     author: {
         details: {
             name: string;
+            avatar: string;
         }
     };
     owner: object;

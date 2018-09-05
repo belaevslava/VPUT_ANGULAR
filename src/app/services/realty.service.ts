@@ -12,7 +12,7 @@ const httpOptions = {
 @Injectable({ providedIn: 'root' })
 export class RealtyService {
 
-    private realtyUrl = 'http://localhost:8000/v1/realties/';  // URL to web api
+    private realtyUrl = 'http://localhost:8000/v1/realty';  // URL to web api
 
     constructor(
         private http: HttpClient) { }
@@ -27,7 +27,7 @@ export class RealtyService {
     
     /** GET latest realty from the server */
     getLatestRealty(): Observable<Realty[]> {
-        const url = `${this.realtyUrl}latestRealties`;
+        const url = `${this.realtyUrl}/latest`;
         return this.http.get<Realty[]>(url)
             .pipe(
                 catchError(this.handleError('getLatestRealty', []))
@@ -36,7 +36,7 @@ export class RealtyService {
 
     /** GET best realty from the server */
     getBestRealty(): Observable<Realty[]> {
-        const url = `${this.realtyUrl}bestRealties`;
+        const url = `${this.realtyUrl}/best`;
         return this.http.get<Realty[]>(url)
             .pipe(
                 catchError(this.handleError('getBestRealty', []))

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Review } from '../../classes/review';
-import { ReviewsService } from '../../services/reviews.service';
+import { ReviewService } from '../../services/review.service';
 
 @Component({
   selector: 'app-latest-reviews',
@@ -10,14 +10,14 @@ import { ReviewsService } from '../../services/reviews.service';
 })
 export class LatestReviewsComponent implements OnInit {
   latestReviews: Review[];
-  constructor(private latestReviewsService: ReviewsService) { }
+  constructor(private reviewService: ReviewService) { }
 
   ngOnInit() {
     this.getLatestReviews();
   }
 
   getLatestReviews(): void {
-    this.latestReviewsService.getLatestReviews()
+    this.reviewService.getLatestReviews()
         .subscribe(latestReviews => {
           this.latestReviews = latestReviews;
           console.log('latestReviews', latestReviews);

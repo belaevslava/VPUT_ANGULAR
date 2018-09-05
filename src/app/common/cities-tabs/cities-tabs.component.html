@@ -23,10 +23,10 @@
             <a *ngFor="let city of citiesOfBulgaria"
                href="javascript: void(0);"
                data-id="{{city.id}}"
-               data-name="{{city.name}}"
+               data-name="{{city.name.ru}}"
                class="cities-tabs__link">
-                {{city.name}}
-                <span class="cities-tabs__count-realty badge badge-primary">{{city.count_realty}}</span>
+                {{city.name.ru}}
+                <!--<span class="cities-tabs__count-realty badge badge-primary">{{ city.count_realty}}</span>-->
             </a>
         </nav>
         <nav class="cities-tabs__nav cities-tabs__nav_country_all tab-pane fade"
@@ -34,10 +34,10 @@
             <a *ngFor="let city of allCities"
                href="javascript: void(0);"
                data-id="{{city.id}}"
-               data-name="{{city.name}}, {{city.country}}"
+               data-name="{{city.name}}, {{city.countryId}}"
                class="cities-tabs__link">
-                {{city.name}}, {{city.country}}
-                <span class="cities-tabs__count-realty badge badge-primary">{{city.count_realty}}</span>
+                {{city.name}}, {{city.countryId}}
+                <!--<span class="cities-tabs__count-realty badge badge-primary">{{city.count_realty}}</span>-->
             </a>
         </nav>
     </div>

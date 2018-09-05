@@ -1,39 +1,9 @@
-
-
 <!-- Common: list-of-realty -->
-<ul class="list-of-realty row" data-slick-adaptive>
-    
-    <li class="col-xl-3 col-lg-4 col-md-6 mb-3">
-        <app-realty-item [realty]="768"></app-realty-item>
+<ul class="list-of-realty row" data-slick-adaptive *ngIf="realty">
+
+    <li class="col-xl-3 col-lg-4 col-md-6 mb-3" *ngFor="let realtyItem of realty">
+        <app-realty-item [realtyItem]="realtyItem"></app-realty-item>
     </li>
-    
-    <li class="col-xl-3 col-lg-4 col-md-6 mb-3">
-        <app-realty-item [realty]="768"></app-realty-item>
-    </li>
-    
-    <li class="col-xl-3 col-lg-4 col-md-6 mb-3">
-        <app-realty-item [realty]="768"></app-realty-item>
-    </li>
-    
-    <li class="col-xl-3 col-lg-4 col-md-6 mb-3">
-        <app-realty-item [realty]="768"></app-realty-item>
-    </li>
-    
-    <li class="col-xl-3 col-lg-4 col-md-6 mb-3">
-        <app-realty-item [realty]="768"></app-realty-item>
-    </li>
-    
-    <li class="col-xl-3 col-lg-4 col-md-6 mb-3">
-        <app-realty-item [realty]="768"></app-realty-item>
-    </li>
-    
-    <li class="col-xl-3 col-lg-4 col-md-6 mb-3">
-        <app-realty-item [realty]="768"></app-realty-item>
-    </li>
-    
-    <li class="col-xl-3 col-lg-4 col-md-6 mb-3">
-        <app-realty-item [realty]="768"></app-realty-item>
-    </li>
-    
+
 </ul>
 <!-- /Common: list-of-realty -->

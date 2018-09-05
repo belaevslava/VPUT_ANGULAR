@@ -1,35 +1,25 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 import { Observable, of } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
 
-const httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
+import { Review } from '../classes/review';
 
 @Injectable({ providedIn: 'root' })
-export class CityService {
+
+export class ReviewService {
     private apiUrl = {
-        citiesOfBulgaria: 'api/citiesOfBulgaria',
-        allCities: 'api/allCities',
+        latestReviews: 'http://localhost:8000/v1/realties/latestReviews'
     };
 
     constructor(private http: HttpClient) { }
 
-    /** GET Bulgaria cities from the server */
-    getCitiesOfBulgaria(): Observable<Object[]> {
-        return this.http.get<Object[]>(this.apiUrl.citiesOfBulgaria)
+    /** GET latest reviews from the server */
+    getLatestReviews(): Observable<Review[]> {
+        return this.http.get<Review[]>(this.apiUrl.latestReviews)
             .pipe(
-                catchError(this.handleError('getCitiesOfBulgaria', []))
-            );
-    }
-
-    /** GET all cities from the server */
-    getAllCities(): Observable<Object[]> {
-        return this.http.get<Object[]>(this.apiUrl.allCities)
-            .pipe(
-                catchError(this.handleError('getAllCities', []))
+                catchError(this.handleError('getLatestReviews', []))
             );
     }
 
