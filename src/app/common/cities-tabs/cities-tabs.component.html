@@ -7,14 +7,14 @@
                data-toggle="tab"
                data-target=".cities-tabs__nav_country_bulgaria"
                role="tab"
-               aria-selected="true">Болгария ({{countOffersOfCitiesOfBulgaria}})</a>
+               aria-selected="true">Болгария ({{countRealtyOfCitiesOfBulgaria}})</a>
         </li>
         <li class="nav-item">
             <a href="javascript: void(0);" class="nav-link"
                data-toggle="tab"
                data-target=".cities-tabs__nav_country_all"
                role="tab"
-               aria-selected="true">Другие ({{countOffersOfAllCities}})</a>
+               aria-selected="true">Другие ({{countRealtyOfAllCities}})</a>
         </li>
     </ul>
     <div class="cities-tabs__content tab-content bg-white">
@@ -26,7 +26,7 @@
                data-name="{{city.name}}"
                class="cities-tabs__link">
                 {{city.name}}
-                <span class="cities-tabs__count-offers badge badge-primary">{{city.count_offers}}</span>
+                <span class="cities-tabs__count-realty badge badge-primary">{{city.count_realty}}</span>
             </a>
         </nav>
         <nav class="cities-tabs__nav cities-tabs__nav_country_all tab-pane fade"
@@ -37,7 +37,7 @@
                data-name="{{city.name}}, {{city.country}}"
                class="cities-tabs__link">
                 {{city.name}}, {{city.country}}
-                <span class="cities-tabs__count-offers badge badge-primary">{{city.count_offers}}</span>
+                <span class="cities-tabs__count-realty badge badge-primary">{{city.count_realty}}</span>
             </a>
         </nav>
     </div>

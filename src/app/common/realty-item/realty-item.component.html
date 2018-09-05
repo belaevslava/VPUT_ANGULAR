@@ -1,0 +1,92 @@
+<!-- Common: realty-item -->
+<figure class="realty-item" *ngIf="realty">
+    <app-icon name="heart"
+              size="2"
+              theme="light"
+              class="realty-item__toggle-favorites animated-heart"
+              data-toggle="button"
+              aria-pressed="false"></app-icon>
+    <div class="realty-item__realty-item-carousel">
+        <app-realty-item-carousel [images]="realty.images"></app-realty-item-carousel>
+    </div>
+    <figcaption class="realty-item__description">
+        <h3 class="realty-item__title">
+            <a [routerLink]="'/realty/' + realty.id"
+               _target="_blank"
+               class="realty-item__link"
+               [attr.title]="realty.name.ru">{{realty.name.ru}}</a>
+        </h3>
+        <ul class="realty-item__details">
+            <li class="realty-item__detail realty-item__address">{{realty.address.city.country.name.ru}} | {{realty.address.city.name.ru}}</li>
+            <br>
+            <li class="realty-item__detail realty-item__type">{{realty.categoryId}}</li>
+            <li class="realty-item__detail realty-item__numbers-of-rooms">
+                <span class="realty-item__numbers-of-rooms-label" i18n>Комнат:</span>
+                <span class="realty-item__numbers-of-rooms-value">{{realty.rooms}}</span>
+            </li>
+            <li class="realty-item__detail realty-item__numbers-of-guests">
+                <span class="realty-item__numbers-of-guests-label">Гостей:</span>
+                <span class="realty-item__numbers-of-guests-value">{{realty.guests}}</span>
+            </li>
+            <li class="realty-item__detail realty-item__price">
+                <span class="realty-item__price-currency">€</span>
+                <span class="realty-item__price-value">{{realty.price}}</span>
+            </li>
+            <li class="realty-item__detail realty-item__price-per-day">
+                <span class="realty-item__price-per-day-currency">€</span>
+                <span class="realty-item__price-per-day-value">{{ realty.price / realty.guests | number: '1.0-0' }}</span>
+                <app-icon name="guest" size="1" class="ml-1"></app-icon>
+            </li>
+        </ul>
+        <ul class="realty-item__special-details">
+            <li class="realty-item__detail realty-item__pets mr-3">
+                <app-icon name="pets" theme="light" class="ml-1"></app-icon>
+            </li>
+            <li class="realty-item__detail realty-item__tv mr-3">
+                <app-icon name="tv" theme="light" class="ml-1"></app-icon>
+            </li>
+            <li class="realty-item__detail realty-item__air-conditioner mr-3">
+                <app-icon name="air-conditioner" theme="light" class="ml-1"></app-icon>
+            </li>
+            <li class="realty-item__detail realty-item__reliable-host">
+                <app-icon name="reliable-host" size="2"></app-icon>
+            </li>
+        </ul>
+    </figcaption>
+    <!-- If the item belongs to the owner -->
+    <footer class="realty-item__editor">
+        <div class="realty-item__actions">
+            <!-- ! -->
+            <a routerLink="/cabinet/add/?id="
+               class="realty-item__action btn btn-secondary d-none" i18n>Редактировать</a>
+            <!-- /! -->
+            <a routerLink="/add/?id="
+               class="realty-item__action btn btn-warning"
+               data-toggle="tooltip"
+               data-placement="top"
+               data-html="true"
+               title="Пройдено <b class='text-warning'>5</b> шагов из <b class='text-success'>11</b>" i18n i18n-title>Продолжить добавление</a>
+            <a
+               class="realty-item__action btn btn-warning"
+               data-toggle="tooltip"
+               data-placement="top"
+               data-html="true"
+               title="Подтвердить актуальность календаря <div class='alert alert-warning alert-sm mb-0 mt-2'>Последнее обновление календаря: <b class='d-block'>26-06-2018 16:45:05</b></div><div class='alert alert-warning alert-sm mb-0 mt-2'>Календарь не актуален</div>"><app-icon name="calendar" size="1" theme="dark"></app-icon></a>
+            <button type="button"
+                    class="realty-item__action btn btn-light"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    data-html="true"
+                    title="Копировать ссылку на объект"><app-icon name="link" size="1" theme="dark"></app-icon></button>
+        </div>
+        <div class="realty-item__statuses">
+            <!-- ! -->
+            <div class="realty-item__status realty-item__status_state_danger d-none" i18n>Заблокированно</div>
+            <div class="realty-item__status realty-item__status_state_warning d-none" i18n>На модерации</div>
+            <!-- /! -->
+            <div class="realty-item__status realty-item__status_state_success" i18n>Публикуется</div>
+        </div>
+    </footer>
+    <!-- /If the item belongs to the owner -->
+</figure>
+<!-- /Common: realty-item -->

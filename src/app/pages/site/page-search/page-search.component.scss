@@ -1,24 +1,24 @@
 @import "../../../../assets/libraries/bootstrap/bootstrap-reboot";
 
-.page-search__form-search-offers {
-  .form-search-offers__main-fieldset {
+.page-search__form-search-realty {
+  .form-search-realty__main-fieldset {
     .form-group {
       flex: 1 20%;
     }
 
-    .form-search-offers__search-by-complexes-col,
-    .form-search-offers__cityId-col {
+    .form-search-realty__search-by-complexes-col,
+    .form-search-realty__cityId-col {
       flex: 1 35%;
     }
   }
 }
 
-.form-search-offers__show-booked {
+.form-search-realty__show-booked {
   margin-bottom: .5rem;
 }
 
-.page-search__form-search-offers {
-  .form-search-offers__show-booked {
+.page-search__form-search-realty {
+  .form-search-realty__show-booked {
     position: absolute;
     bottom: -20px;
     background-color: $white;
@@ -49,7 +49,7 @@
     bottom: 0;
     top: 0;
   }
-  .page-search__offers-on-the-map {
+  .page-search__realty-on-the-map {
     position: absolute;
     top: 0;
     bottom: 0;

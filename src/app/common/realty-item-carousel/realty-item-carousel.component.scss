@@ -1,0 +1,64 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.realty-item-carousel {
+  list-style: none;
+  padding-left: 0;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: $border-radius;
+  background-color: $dark;
+}
+
+.realty-item-carousel__image,
+.realty-item-carousel__link,
+.realty-item-carousel {
+  display: block;
+  height: 240px;
+}
+.realty-item-carousel__image {
+  margin: auto;
+}
+.realty-item-carousel__image.slick-slide,
+.realty-item-carousel__image,
+.realty-item-carousel__images-list {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.realty-item-carousel__images-list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: $dark;
+}
+.realty-item-carousel__image {
+  background-color: $dark;
+  transition: $transition-base;
+}
+
+@include media-breakpoint-up(lg) {
+  .realty-item-carousel {
+    &:hover {
+      .slick-prev,
+      .slick-next {
+        opacity: .5;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+    .slick-prev,
+    .slick-next {
+      opacity: 0;
+    }
+  }
+
+  .realty-item-carousel__image.slick-slide,
+  .realty-item-carousel {
+    height: 200px;
+  }
+}

@@ -197,7 +197,7 @@
                         <header class="text-center mb-4">
                             <h3>Regional Advertising</h3>
                         </header>
-                        <p>We invest heavily in advertising of our project in different countries analyzing the needs and situations in every region. Thanks to this flexible, individual approach, we encourage a larger number of bookings and focus attention of our potential customers on those offers that are of interest to this specific audience.</p>
+                        <p>We invest heavily in advertising of our project in different countries analyzing the needs and situations in every region. Thanks to this flexible, individual approach, we encourage a larger number of bookings and focus attention of our potential customers on those realty that are of interest to this specific audience.</p>
                     </section>
                 </li>
                 <li class="col-lg-6">

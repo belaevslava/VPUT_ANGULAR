@@ -1,0 +1,15 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.realty-reviews__title {
+  display: flex;
+  align-items: center;
+}
+.realty-reviews__total-rating {
+  display: inline-block;
+}
+
+@include media-breakpoint-down(sm) {
+  .realty-reviews__total-rating {
+    margin-left: auto;
+  }
+}

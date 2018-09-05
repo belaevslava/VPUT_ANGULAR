@@ -1,0 +1,22 @@
+<!-- Section: latest-realty -->
+<section class="latest-realty">
+    <header class="latest-realty__header mb-4 text-center">
+        <h2 class="latest-realty__title mb-0">Самые новые предложения</h2>
+        <div class="latest-realty__description lead text-muted">Последние предложения, поступившие на наш сайт</div>
+    </header>
+    <div class="latest-realty__list-of-realty">
+        <!-- List of realty -->
+        <ul class="list-of-realty row" data-slick-adaptive *ngIf="latestRealty">
+            
+            <li class="col-md-6 col-lg-4 col-xl-3 mb-3" *ngFor="let realty of latestRealty">
+                <app-realty-item [realty]="realty"></app-realty-item>
+            </li>
+            
+        </ul>
+        <!-- /List of realty -->
+    </div>
+    <div class="latest-realty__link-container mt-3 text-center">
+        <a routerLink="/search/" class="btn btn-primary btn-lg">Посмотреть больше предложений</a>
+    </div>
+</section>
+<!-- /Section: latest-realty -->

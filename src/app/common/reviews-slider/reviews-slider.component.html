@@ -1,8 +1,8 @@
 <!-- Common: reviews-slider -->
 <ul class="reviews-slider" data-slick *ngIf="reviews">
     <li class="reviews-slider__item" *ngFor="let review of reviews">
-        <div class="reviews-slider__offer-item">
-            <app-offer-item [offer]="review.owner"></app-offer-item>
+        <div class="reviews-slider__realty-item">
+            <app-realty-item [realty]="review.owner"></app-realty-item>
         </div>
         <div class="reviews-slider__review">
             <app-review [review]="review"></app-review>

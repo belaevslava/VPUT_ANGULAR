@@ -52,7 +52,7 @@
             The Company reserves the right to refuse access to V.P.U.T. at its sole discretion and subjective reasons. The Company has the right to delete accounts that are inactive for an extended period of time. Also, the Company may block or immediately remove User’s account without prior notice if it considers that it is in its interests or the interests of other Users.
         </p>
         <p>
-            Removal of offers from the website does not affect already completed bookings and does not relieve the User from the obligation to pay the fee according to already placed orders.
+            Removal of realty from the website does not affect already completed bookings and does not relieve the User from the obligation to pay the fee according to already placed orders.
         </p>
     </section>
 
@@ -85,7 +85,7 @@
             The User agrees and acknowledges that he is solely responsible (including criminal responsibility) for the content he posted and for the consequences arising after publication on the Website.
         </p>
         <p>
-            V.P.U.T. has the right to prohibit the User from placing the offer or to close access to the website in order to protect the interests of other Users or the reputation of the Company if:
+            V.P.U.T. has the right to prohibit the User from placing the realty or to close access to the website in order to protect the interests of other Users or the reputation of the Company if:
         </p>
         <ul>
             <li>the Landlord repeatedly received negative reviews;</li>
@@ -160,7 +160,7 @@
         <h2>The Process of Booking, Payment and Payment Data Security</h2>
 
         <p>
-            The ad published by the Landlord about the housing for rent and containing the description of accommodations is a public offer. In order for the said offer to be considered accepted by the User and the rental agreement - concluded between the two parties, the following is required:
+            The ad published by the Landlord about the housing for rent and containing the description of accommodations is a public realty. In order for the said realty to be considered accepted by the User and the rental agreement - concluded between the two parties, the following is required:
         </p>
         <ol>
             <li>the Renter and the Landlord have agreed on the terms and conditions of stay, the cost of rent for the entire period, and possible additional issues, in particular, non-refundable deposit, rental security deposit, check-in and so on.</li>
@@ -169,7 +169,7 @@
         </ol>
         <p>Or</p>
         <ol>
-            <li>the Renter has paid for the booking on the terms that the Landlord provided while posting the offer.</li>
+            <li>the Renter has paid for the booking on the terms that the Landlord provided while posting the realty.</li>
             <li>the Landlord has confirmed the booking and accepted the prepayment, and the Renter receives a notice in the form of email from V.P.U.T. confirming that. In the absence of such notice, the agreement between the Landlord and the Renter shall not enter into force and, as a consequence, the obligations of the parties do not come into force either.</li>
         </ol>
 

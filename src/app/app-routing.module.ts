@@ -25,7 +25,7 @@ import { PageReferralBookingsComponent } from './pages/cabinet/page-referral-boo
 import { PageTripsComponent } from './pages/cabinet/page-trips/page-trips.component';
 import { PageAboutComponent } from './pages/site/page-about/page-about.component';
 import { PageCleaningComponent } from './pages/site/page-cleaning/page-cleaning.component';
-import { PageOfferComponent } from './pages/site/page-offer/page-offer.component';
+import { PageRealtyComponent } from './pages/site/page-realty/page-realty.component';
 import { PageTrustComponent } from './pages/site/page-trust/page-trust.component';
 import { PageAddComponent } from './pages/cabinet/page-add/page-add.component';
 import { PageIndexComponent } from './pages/site/page-index/page-index.component';
@@ -35,7 +35,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/index', pathMatch: 'full' },
   { path: 'index', component: PageIndexComponent },
   { path: 'search', component: PageSearchComponent },
-  { path: 'offer/:id', component: PageOfferComponent },
+  { path: 'realty/:id', component: PageRealtyComponent },
   { path: 'complex/:id', component: PageComplexComponent },
   { path: 'favorites', component: PageFavoritesComponent },
   { path: 'article/:slug', component: PageArticleComponent },

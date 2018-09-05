@@ -1,0 +1,43 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.realty-interested-in {
+  position: relative;
+  overflow: hidden;
+  border: $secondary 1px solid;
+  border-radius: $border-radius;
+  &:hover {
+    .realty-interested-in__time {
+      transform: translateX(0);
+    }
+  }
+}
+
+.realty-interested-in__time,
+.realty-interested-in__how-much {
+  padding: $card-spacer-y $card-spacer-x;
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  margin-bottom: 0;
+  color: $dark;
+}
+.realty-interested-in__how-much-number {
+  color: $secondary;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.realty-interested-in__how-much-number,
+.realty-interested-in__time-icon {
+  margin-right: 1rem;
+}
+
+.realty-interested-in__time {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: all .5s ease;
+}

@@ -10,11 +10,11 @@ import { CityService } from './city.service';
 export class CitiesTabsComponent implements OnInit {
   citiesOfBulgaria: Object[];
   allCities: Object[];
-  countOffersOfCitiesOfBulgaria: number;
-  countOffersOfAllCities: number;
+  countRealtyOfCitiesOfBulgaria: number;
+  countRealtyOfAllCities: number;
   constructor(private cityService: CityService) {
-      this.countOffersOfCitiesOfBulgaria = 0;
-      this.countOffersOfAllCities = 0;
+      this.countRealtyOfCitiesOfBulgaria = 0;
+      this.countRealtyOfAllCities = 0;
   }
 
   ngOnInit() {
@@ -28,7 +28,7 @@ export class CitiesTabsComponent implements OnInit {
             this.citiesOfBulgaria = citiesOfBulgaria;
 
             for (let index in citiesOfBulgaria) {
-                this.countOffersOfCitiesOfBulgaria += citiesOfBulgaria[index]['count_offers'];
+                this.countRealtyOfCitiesOfBulgaria += citiesOfBulgaria[index]['count_realty'];
             }
           });
   }
@@ -39,7 +39,7 @@ export class CitiesTabsComponent implements OnInit {
             this.allCities = allCities;
 
             for(let index in allCities) {
-                this.countOffersOfAllCities += allCities[index]['count_offers'];
+                this.countRealtyOfAllCities += allCities[index]['count_realty'];
             }
           });
   }

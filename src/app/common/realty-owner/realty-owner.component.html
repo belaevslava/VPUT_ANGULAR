@@ -1,0 +1,34 @@
+
+
+<!-- Common: realty-owner -->
+<div class="realty-owner">
+    <figure class="realty-owner__about">
+        <div class="realty-owner__user-avatar">
+            <app-user-avatar></app-user-avatar>
+            <app-icon name="reliable-host" size="2" class="realty-owner__reliable-host"></app-icon>
+        </div>
+        <figcaption class="realty-owner__info">
+            <h4 class="realty-owner__info-title">Языки владельца:</h4>
+            <ul class="realty-owner__languages-list">
+                <li class="realty-owner__languages-list-item">english</li>
+                <li class="realty-owner__languages-list-item">russian</li>
+                <li class="realty-owner__languages-list-item">ukrainian</li>
+            </ul>
+            <a
+               class="realty-owner__contacts-link"
+               data-toggle="collapse"
+               data-target=".realty-owner__message-collapse">Мои контакты</a>
+            <div class="realty-owner__name">Алекс</div>
+        </figcaption>
+    </figure>
+    <div class="realty-owner__message-collapse collapse">
+        <div class="realty-owner__message mt-3">
+            <p>Я буду рад обсудить с вами любые вопросы внутри сервиса.</p>
+            <p>Мои прямые контакты вы получите после заключения сделки.</p>
+            <a routerLink="/user-agreement-ru/"
+               target="_blank"
+               class="realty-owner__message-link">Почему так?</a>
+        </div>
+    </div>
+</div>
+<!-- /Common: realty-owner -->

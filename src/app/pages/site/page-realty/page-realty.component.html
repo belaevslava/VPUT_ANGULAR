@@ -1,0 +1,128 @@
+
+
+
+<app-page-header></app-page-header>
+
+<!-- Page: page-realty -->
+
+
+
+<main class="page-realty">
+    <div class="container">
+        <!-- Common: breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript: void(0);">Главная</a></li>
+                <li class="breadcrumb-item"><a href="javascript: void(0);">Болгария</a></li>
+                <li class="breadcrumb-item"><a href="javascript: void(0);">Святой Влас</a></li>
+                <li class="breadcrumb-item active"
+                    aria-current="page">Студия - Форт Нокс Гранд Резорт</li>
+            </ol>
+        </nav>
+        <!-- /Common: breadcrumb -->
+
+        <div class="page-realty__image-slider">
+            <app-realty-image-slider></app-realty-image-slider>
+        </div>
+
+        <div class="row">
+            <div class="col-xl">
+                <article class="page-realty__article py-4">
+                    <header class="page-realty__header pb-3 border-bottom">
+                        <h1 class="page-realty__title">Студия - Форт Нокс Гранд Резорт</h1>
+                        <div class="page-realty__place lead">Болгария, Святой Влас, <a routerLink="/complex/" class="page-realty__complex">Комплекс Венера-палас</a></div>
+                    </header>
+
+                    <div class="page-realty__list-of-main-characteristics pt-4 border-bottom">
+                        <app-realty-main-characteristics></app-realty-main-characteristics>
+                    </div>
+
+                    <div class="page-realty__realty-bedrooms py-4 border-bottom">
+                        <app-realty-bedrooms></app-realty-bedrooms>
+                    </div>
+
+                    <div class="page-realty__realty-reviews py-4 border-bottom">
+                        <app-realty-reviews></app-realty-reviews>
+                    </div>
+
+                    <div class="page-realty__realty-facilities py-4 border-bottom">
+                        <app-realty-characteristics></app-realty-characteristics>
+                    </div>
+
+                    <div class="page-realty__realty-rules-of-residence py-4 border-bottom">
+                        <app-realty-rules-of-residence></app-realty-rules-of-residence>
+                    </div>
+
+                    <div class="page-realty__realty-facilities py-4 border-bottom">
+                        <app-realty-facilities></app-realty-facilities>
+                    </div>
+
+                    <div class="page-realty__realty-places-nearby py-4 border-bottom">
+                        <app-realty-places-nearby></app-realty-places-nearby>
+                    </div>
+
+                    <div class="page-realty__realty-prices-for-the-period py-4 border-bottom">
+                        <app-realty-prices-for-the-period></app-realty-prices-for-the-period>
+                    </div>
+
+                    <div class="page-realty__realty-short-description py-4 border-bottom">
+                        <app-realty-short-description></app-realty-short-description>
+                    </div>
+                </article>
+            </div>
+            <div class="page-realty__aside-wrapper col-xl-auto">
+                <a
+                   class="page-realty__modal-toggle btn btn-primary"
+                   data-target=".page-realty__modal"
+                   data-toggle="modal">
+                    <app-icon name="book" class="mr-2"></app-icon>
+                </a>
+                <div class="page-realty__modal"
+                     tabindex="-1"
+                     is-sticked>
+                    <div class="page-realty__modal-dialog">
+                        <aside class="page-realty__aside">
+                            <div class="page-realty__realty-employed-by mb-3">
+                                <app-realty-employed-by></app-realty-employed-by>
+                            </div>
+                            <div class="page-realty__form-booking mb-3">
+                                <app-form-booking></app-form-booking>
+                            </div>
+                            <div class="page-realty__realty-insterested-in mb-3">
+                                <app-realty-interested-in></app-realty-interested-in>
+                            </div>
+                            <div class="page-realty__realty-owner mb-3">
+                                <app-realty-owner></app-realty-owner>
+                            </div>
+                            <div class="page-realty__realty-share mb-3">
+                                <app-realty-share></app-realty-share>
+                            </div>
+                            <div class="page-realty__how-it-works">
+                                <app-how-it-works></app-how-it-works>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-realty__realty-location-map pt-4">
+        <app-realty-location></app-realty-location>
+    </div>
+    <div class="page-realty__complex bg-light pt-5 pb-3">
+        <div class="container">
+            <div class="page-realty__about-the-complex mb-4">
+                <app-about-the-complex></app-about-the-complex>
+            </div>
+            <div class="page-realty__complex-realty">
+                <app-complex-realty></app-complex-realty>
+            </div>
+        </div>
+    </div>
+    <div class="page-realty__similar-realty container py-5">
+        <app-similar-realty></app-similar-realty>
+    </div>
+</main>
+<!-- /Page: page-realty -->
+
+<app-page-footer></app-page-footer>

@@ -1,0 +1,15 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.realty-characteristic {
+  display: flex;
+  margin-bottom: .875rem;
+}
+.realty-characteristic__label {
+  margin-bottom: 0;
+  margin-right: .5rem;
+  display: inline;
+}
+.realty-characteristic__value {
+  color: $text-muted;
+  display: inline;
+}

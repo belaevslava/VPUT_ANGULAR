@@ -12,7 +12,7 @@
         <h2>How to do it?</h2>
         <section>
             <h3>Friends</h3>
-            <p>Make a list of friends and tell them about the affiliate program and the benefits of booking an apartment at V. P. U. T. to Include in the list those who are planning a trip to Bulgaria or who might be interested in this offer.</p>
+            <p>Make a list of friends and tell them about the affiliate program and the benefits of booking an apartment at V. P. U. T. to Include in the list those who are planning a trip to Bulgaria or who might be interested in this realty.</p>
         </section>
         <section>
             <h3>The social network</h3>

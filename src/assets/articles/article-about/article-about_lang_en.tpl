@@ -42,7 +42,7 @@
                     <h2 class="mx-4 mb-4 mb-lg-0">IDEA</h2>
                 </header>
                 <figcaption class="col-md">
-                    <p>Working in Bulgarian property market, we noticed a large increase in rent offers from hosts. The prices for such objects could often be cut in a half in comparison with similar offers from local hotels. There were no convenient online tools for rent at that time. Besides, most of the tourists from all over the world had a distorted picture of Bulgarian service and did not know what kinds of holidays they could have in this country. We decided to create the project that would help you not only rent a suitable housing, but also arrange your own vacation.</p>
+                    <p>Working in Bulgarian property market, we noticed a large increase in rent realty from hosts. The prices for such objects could often be cut in a half in comparison with similar realty from local hotels. There were no convenient online tools for rent at that time. Besides, most of the tourists from all over the world had a distorted picture of Bulgarian service and did not know what kinds of holidays they could have in this country. We decided to create the project that would help you not only rent a suitable housing, but also arrange your own vacation.</p>
                 </figcaption>
             </figure>
             <a name="goals"></a>
@@ -88,7 +88,7 @@
                         <img src="content/articles/article-about/article-about__entertainment.svg" alt="" class="mx-4 mb-4 mb-lg-0">
                         <figcaption>
                             <h3 class="card-title">Tours & Entertainment</h3>
-                            <p class="card-text">You will be able to book tours in advance. It will save both your money and time. So, pick up the most interesting offers.</p>
+                            <p class="card-text">You will be able to book tours in advance. It will save both your money and time. So, pick up the most interesting realty.</p>
                         </figcaption>
                     </figure>
                 </li>
@@ -150,7 +150,7 @@
                                 <h3 class="card-title">ANDREY ZHUMATY</h3>
                                 <p class="lead text-muted">Co-founder and advertising director</p>
                             </header>
-                            <p class="card-text">It is most likely that because of his team work you are now reading this text! Andrey is always open for any offers to cooperate with our project!</p>
+                            <p class="card-text">It is most likely that because of his team work you are now reading this text! Andrey is always open for any realty to cooperate with our project!</p>
                         </div>
                     </div>
                 </li>

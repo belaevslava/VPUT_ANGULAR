@@ -1,0 +1,21 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.list-of-realty-ratings {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.list-of-realty-ratings__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.list-of-realty-ratings__label {
+  flex: auto;
+  color: $text-muted;
+  margin-bottom: 0;
+  margin-right: 1rem;
+}
+.list-of-realty-ratings__rating {
+  margin-left: auto;
+}

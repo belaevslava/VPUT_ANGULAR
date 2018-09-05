@@ -9,18 +9,18 @@
   line-height: 1;
   font-size: 1.5rem;
 }
-.who-we-are__form-search-offers {
+.who-we-are__form-search-realty {
   background-color: $light;
   border-radius: $card-border-radius;
 }
-.who-we-are__form-search-offers,
+.who-we-are__form-search-realty,
 .who-we-are__popular-cities {
   max-width: 1024px;
   margin: auto;
 }
 
 @include media-breakpoint-up(md) {
-  .who-we-are__form-search-offers {
+  .who-we-are__form-search-realty {
     background-color: rgba(255,255,255,.3);
   }
   .who-we-are__title {
@@ -31,7 +31,7 @@
     font-weight: 400;
   }
 
-  .who-we-are__form-search-offers {
+  .who-we-are__form-search-realty {
     .custom-select {
       border-width: 0;
     }

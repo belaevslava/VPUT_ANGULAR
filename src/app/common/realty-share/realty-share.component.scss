@@ -1,0 +1,60 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.realty-share {
+  background-color: $white;
+  border: $border-color 1px solid;
+  border-radius: $border-radius;
+  padding: $card-spacer-x;
+  text-align: center;
+}
+.realty-share__add-to-favorites {
+  display: inline-block;
+  text-transform: uppercase;
+  color: $dark;
+  @include hover-focus {
+    color: $dark;
+  }
+  .icon {
+    filter: brightness(0) invert(.5);
+  }
+
+  .realty-share__add-to-favorites-label-minus { display: none; }
+  &.active {
+    .realty-share__add-to-favorites-label-plus { display: none; }
+    .realty-share__add-to-favorites-label-minus { display: inline-block; }
+    .icon {
+      filter: initial;
+    }
+  }
+}
+.realty-share__title {
+  position: relative;
+  display: block;
+  font-size: 1rem;
+  color: $text-muted;
+  margin-top: -12px;
+}
+.realty-share__socials-share {
+  border-top: $border-color 1px solid;
+}
+.realty-share__title-text {
+  z-index: 1;
+  background-color: $white;
+  padding-right: $card-spacer-x;
+  padding-left: $card-spacer-x;
+}
+.realty-share__social-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.realty-share__social-link {
+  transition: $transition-base;
+  opacity: 1;
+  &:hover {
+    opacity: .8;
+  }
+}

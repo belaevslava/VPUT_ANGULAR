@@ -1,0 +1,18 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.realty-main-characteristics__list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+.realty-main-characteristics__title {
+  font-size: 1.25rem;
+}
+.realty-main-characteristics__icon {
+  margin-bottom: 1rem;
+}
+.realty-main-characteristics__value {
+  font-size: 1.25rem;
+  color: $text-muted;
+}
