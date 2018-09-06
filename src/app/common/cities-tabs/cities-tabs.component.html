@@ -7,38 +7,42 @@
                data-toggle="tab"
                data-target=".cities-tabs__nav_country_bulgaria"
                role="tab"
-               aria-selected="true">Болгария ({{countRealtyOfCitiesOfBulgaria}})</a>
+               aria-selected="true">Болгария ({{numberOfRealtyInBulgaria}})</a>
         </li>
         <li class="nav-item">
             <a href="javascript: void(0);" class="nav-link"
                data-toggle="tab"
                data-target=".cities-tabs__nav_country_all"
                role="tab"
-               aria-selected="true">Другие ({{countRealtyOfAllCities}})</a>
+               aria-selected="true">Другие ({{numberOfRealtyInOtherCountries}})</a>
         </li>
     </ul>
     <div class="cities-tabs__content tab-content bg-white">
         <nav class="cities-tabs__nav cities-tabs__nav_country_bulgaria tab-pane fade active show"
              role="tabpanel">
-            <a *ngFor="let city of citiesOfBulgaria"
+            <ng-container *ngFor="let city of citiesOfBulgaria">
+            <a *ngIf="city.numberOfRealty > 0"
                href="javascript: void(0);"
                data-id="{{city.id}}"
                data-name="{{city.name.ru}}"
                class="cities-tabs__link">
                 {{city.name.ru}}
-                <!--<span class="cities-tabs__count-realty badge badge-primary">{{ city.count_realty}}</span>-->
+                <span class="cities-tabs__count-realty badge badge-primary">{{ city.numberOfRealty}}</span>
             </a>
+            </ng-container>
         </nav>
         <nav class="cities-tabs__nav cities-tabs__nav_country_all tab-pane fade"
              role="tabpanel">
-            <a *ngFor="let city of allCities"
-               href="javascript: void(0);"
-               data-id="{{city.id}}"
-               data-name="{{city.name}}, {{city.countryId}}"
-               class="cities-tabs__link">
-                {{city.name}}, {{city.countryId}}
-                <!--<span class="cities-tabs__count-realty badge badge-primary">{{city.count_realty}}</span>-->
-            </a>
+            <ng-container *ngFor="let city of citiesOfOtherCountries">
+                <a *ngIf="city.numberOfRealty > 0"
+                   href="javascript: void(0);"
+                   data-id="{{city.id}}"
+                   data-name="{{city.name}}, {{city.countryId}}"
+                   class="cities-tabs__link">
+                    {{city.name}}, {{city.countryId}}
+                    <span class="cities-tabs__count-realty badge badge-primary">{{city.numberOfRealty}}</span>
+                </a>
+            </ng-container>
         </nav>
     </div>
 </div>

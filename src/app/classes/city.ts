@@ -7,4 +7,5 @@ export class City {
         en: string;
         ua: string;
     };
+    numberOfRealty: number;
 }

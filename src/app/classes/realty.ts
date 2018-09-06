@@ -28,6 +28,5 @@ export class Realty {
     guests: number;
     guestPrice: number;
     price: number;
-
     categoryId: number;
 }

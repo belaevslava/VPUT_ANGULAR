@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Realty } from '../classes/realty';
+import { City } from '../classes/city';
 
 const httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -40,6 +41,15 @@ export class RealtyService {
         return this.http.get<Realty[]>(url)
             .pipe(
                 catchError(this.handleError('getBestRealty', []))
+            );
+    }
+
+    /** GET realty cities from the server */
+    getRealtyCitiesByCountryAlias(countryAlias): Observable<City[]> {
+        const url = `${this.realtyUrl}/cities/${countryAlias}`;
+        return this.http.get<City[]>(url)
+            .pipe(
+                catchError(this.handleError('getRealtyCitiesByCountryAlias', []))
             );
     }
 
