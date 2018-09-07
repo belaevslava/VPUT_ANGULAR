@@ -9,8 +9,7 @@ import { RealtyService } from '../../services/realty.service';
   styleUrls: ['./cities-tabs.component.scss']
 })
 export class CitiesTabsComponent implements OnInit {
-  citiesOfBulgaria: City[];
-  citiesOfOtherCountries: City[];
+  cities: City[];
   numberOfRealtyInBulgaria: number;
   numberOfRealtyInOtherCountries: number;
   constructor(private realtyService: RealtyService) {
@@ -19,31 +18,37 @@ export class CitiesTabsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getCitiesOfBulgaria();
-    this.getCitiesOfOtherCountries();
+    this.getRealtyCities();
   }
 
-  getCitiesOfBulgaria(): void {
-      const bulgariaAlias = 'bulgaria';
-      this.realtyService.getRealtyCitiesByCountryAlias(bulgariaAlias)
-          .subscribe(citiesOfBulgaria => {
-              this.citiesOfBulgaria = citiesOfBulgaria.sort((a, b) => {
-                  if (a.name.ru < b.name.ru)
-                      return -1;
-                  if (a.name.ru > b.name.ru)
-                      return 1;
-                  return 0;
-              });
-              this.citiesOfBulgaria.forEach(city => this.numberOfRealtyInBulgaria += city.numberOfRealty);
+  getRealtyCities(): void {
+      this.realtyService.getRealtyCities()
+          .subscribe(cities => {
+              this.cities = this.sortCitiesByName(cities);
+              this.calculateRealty();
           });
   }
 
-  getCitiesOfOtherCountries(): void {
-      // this.realtyService.getRealtyCitiesByCountryAlias()
-      //     .subscribe(citiesOfOtherCountries => {
-      //         this.citiesOfOtherCountries = citiesOfOtherCountries;
-      //         this.citiesOfOtherCountries.forEach(city => this.numberOfRealtyInOtherCountries += city.numberOfRealty);
-      //     });
+  sortCitiesByName(cities) {
+      cities = cities.sort((a, b) => {
+          if (a.name.ru < b.name.ru)
+              return -1;
+          if (a.name.ru > b.name.ru)
+              return 1;
+          return 0;
+      });
+
+      return cities;
+  }
+
+  calculateRealty() {
+      this.cities.forEach(city => {
+          if (city.country.alias === 'bulgaria') {
+              this.numberOfRealtyInBulgaria += city.numberOfRealty;
+          } else {
+              this.numberOfRealtyInOtherCountries += city.numberOfRealty;
+          }
+      });
   }
 
 }

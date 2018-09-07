@@ -5,6 +5,7 @@ import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Realty } from '../classes/realty';
 import { City } from '../classes/city';
+import { environment } from '../../environments/environment';
 
 const httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -12,8 +13,9 @@ const httpOptions = {
 
 @Injectable({ providedIn: 'root' })
 export class RealtyService {
-
-    private realtyUrl = 'http://localhost:8000/v1/realty';  // URL to web api
+    private API_URL = environment.API_URL;
+    private API_VERSION = environment.API_VERSION;
+    private realtyUrl =  `${this.API_URL}v${this.API_VERSION}/realty`;  // URL to web api
 
     constructor(
         private http: HttpClient) { }
@@ -45,11 +47,11 @@ export class RealtyService {
     }
 
     /** GET realty cities from the server */
-    getRealtyCitiesByCountryAlias(countryAlias): Observable<City[]> {
-        const url = `${this.realtyUrl}/cities/${countryAlias}`;
+    getRealtyCities(): Observable<City[]> {
+        const url = `${this.realtyUrl}/cities/`;
         return this.http.get<City[]>(url)
             .pipe(
-                catchError(this.handleError('getRealtyCitiesByCountryAlias', []))
+                catchError(this.handleError('getRealtyCities', []))
             );
     }
 

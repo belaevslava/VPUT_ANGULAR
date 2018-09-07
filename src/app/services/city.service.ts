@@ -24,15 +24,6 @@ export class CityService {
             );
     }
 
-    /** GET all cities from the server */
-    getAllCities(): Observable<City[]> {
-        const url = `${this.cityUrl}/`;
-        return this.http.get<City[]>(url)
-            .pipe(
-                catchError(this.handleError('getAllCities', []))
-            );
-    }
-
     /**
      * Handle Http operation that failed.
      * Let the app continue.
