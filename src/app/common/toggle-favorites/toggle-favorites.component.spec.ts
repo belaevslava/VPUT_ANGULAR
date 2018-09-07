@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AnimatedHeartComponent } from './animated-heart.component';
+import { ToggleFavoritesComponent } from './toggle-favorites.component';
 
-describe('AnimatedHeartComponent', () => {
-  let component: AnimatedHeartComponent;
-  let fixture: ComponentFixture<AnimatedHeartComponent>;
+describe('ToggleFavoritesComponent', () => {
+  let component: ToggleFavoritesComponent;
+  let fixture: ComponentFixture<ToggleFavoritesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AnimatedHeartComponent ]
+      declarations: [ ToggleFavoritesComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AnimatedHeartComponent);
+    fixture = TestBed.createComponent(ToggleFavoritesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,11 +1,7 @@
 <!-- Common: realty-item -->
 <figure class="realty-item" *ngIf="realtyItem">
-    <app-icon name="heart"
-              size="2"
-              theme="light"
-              class="realty-item__toggle-favorites animated-heart"
-              data-toggle="button"
-              aria-pressed="false"></app-icon>
+    <app-toggle-favorites [id]="realtyItem.id"
+                          class="realty-item__toggle-favorites"></app-toggle-favorites>
     <div class="realty-item__realty-item-carousel">
         <app-realty-item-carousel [images]="realtyItem.images"></app-realty-item-carousel>
     </div>

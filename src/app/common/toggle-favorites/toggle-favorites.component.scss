@@ -1,0 +1,19 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+@import "toggle-favorites.animation";
+
+.toggle-favorites {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 12px;
+  left: 12px;
+  opacity: .5;
+  z-index: 1;
+  outline: none;
+  cursor: pointer;
+  filter: drop-shadow(rgba(0,0,0,.24) 0 0 1px);
+  transition: $transition-base;
+  &:hover {
+    opacity: .72;
+  }
+}

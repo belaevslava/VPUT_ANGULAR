@@ -5,19 +5,21 @@ import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 import { Review } from '../classes/review';
+import { environment } from '../../environments/environment';
 
 @Injectable({ providedIn: 'root' })
 
 export class ReviewService {
-    private apiUrl = {
-        latestReviews: 'http://localhost:8000/v1/realties/latestReviews'
-    };
+    private API_URL = environment.API_URL;
+    private API_VERSION = environment.API_VERSION;
+    private reviewUrl = `${this.API_URL}/v${this.API_VERSION}/realties`;
 
     constructor(private http: HttpClient) { }
 
     /** GET latest reviews from the server */
     getLatestReviews(): Observable<Review[]> {
-        return this.http.get<Review[]>(this.apiUrl.latestReviews)
+        const url = `${this.reviewUrl}/latestReviews`;
+        return this.http.get<Review[]>(url)
             .pipe(
                 catchError(this.handleError('getLatestReviews', []))
             );

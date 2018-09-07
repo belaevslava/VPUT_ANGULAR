@@ -27,7 +27,7 @@ export class RealtyService {
                 catchError(this.handleError('getRealty', []))
             );
     }
-    
+
     /** GET latest realty from the server */
     getLatestRealty(): Observable<Realty[]> {
         const url = `${this.realtyUrl}/latest`;
@@ -67,10 +67,10 @@ export class RealtyService {
 
     /** GET realtyItem by id. Will 404 if id not found */
     getRealtyItem(id: number): Observable<Realty> {
-        const url = `${this.realtyUrl}${id}/show/`;
+        const url = `${this.realtyUrl}/item/${id}/`;
         return this.http.get<Realty>(url).pipe(
-                catchError(this.handleError<Realty>(`getRealtyItem id=${id}`))
-            );
+            catchError(this.handleError<Realty>(`getRealtyItem id=${id}`))
+        );
     }
 
     /* GET realty whose name contains search term */

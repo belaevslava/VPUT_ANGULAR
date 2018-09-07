@@ -96,7 +96,7 @@ $_precision: 10;
   border-width: $ext;
 }
 
-.animated-heart {
+.toggle-favorites {
   &:before, &:after {
     position: absolute;
     z-index: -1;
