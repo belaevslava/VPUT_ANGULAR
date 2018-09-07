@@ -6,9 +6,9 @@
         <div class="container py-4">
             <h1 class="page-favorites__title text-center mb-4" i18n>Список избранных вами предложений</h1>
             <!-- Common: list-of-realty -->
-            <ul class="list-of-realty row" *ngIf="favoritesIds.length > 0">
-                <li class="col-xl-3 col-lg-4 col-md-6 mb-3" *ngFor="let favoriteId of favoritesIds">
-                    <app-realty-item [realtyItem]="favoriteId"></app-realty-item>
+            <ul class="list-of-realty row" *ngIf="favorites">
+                <li class="col-xl-3 col-lg-4 col-md-6 mb-3" *ngFor="let favoriteItem of favorites">
+                    <app-realty-item [realtyItem]="favoriteItem"></app-realty-item>
                 </li>
             </ul>
             <!-- /Common: list-of-realty -->

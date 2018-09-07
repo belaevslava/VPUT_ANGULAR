@@ -65,11 +65,19 @@ export class RealtyService {
             );
     }
 
-    /** GET realtyItem by id. Will 404 if id not found */
+    /** GET realtyItem by id */
     getRealtyItem(id: number): Observable<Realty> {
         const url = `${this.realtyUrl}/item/${id}/`;
         return this.http.get<Realty>(url).pipe(
             catchError(this.handleError<Realty>(`getRealtyItem id=${id}`))
+        );
+    }
+
+    /** GET realtyItems by ids */
+    getRealtyItems(ids: number[]): Observable<Realty[]> {
+        const url = `${this.realtyUrl}/items/?ids=${ids.join(',')}`;
+        return this.http.get<Realty[]>(url).pipe(
+            catchError(this.handleError<Realty[]>(`getRealtyItems ids=${ids}`))
         );
     }
 
