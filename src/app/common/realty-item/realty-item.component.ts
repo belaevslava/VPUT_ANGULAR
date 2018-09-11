@@ -9,17 +9,17 @@ import { Realty } from '../../classes/realty';
   styleUrls: ['./realty-item.component.scss']
 })
 export class RealtyItemComponent implements OnInit {
-  @Input() realtyItem: Realty;
+  @Input() realty: Realty;
   constructor( private realtyService: RealtyService) { }
 
   ngOnInit() {
-      if (typeof this.realtyItem === 'number') {
-          const realtyItemId = this.realtyItem;
-          this.getRealtyItem(realtyItemId);
-      }
+      this.getRealty();
   }
 
-  getRealtyItem(id: number): void {
-      this.realtyService.getRealtyItem(id).subscribe(realtyItem => this.realtyItem = realtyItem);
+  getRealty(): void {
+      if (typeof this.realty === 'number') {
+          const id = this.realty;
+          this.realtyService.getRealty(id).subscribe(realty => this.realty = realty);
+      }
   }
 }

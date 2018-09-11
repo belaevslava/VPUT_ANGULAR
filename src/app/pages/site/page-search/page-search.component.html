@@ -1,12 +1,6 @@
-
-
-
 <app-page-header></app-page-header>
 
 <!-- Page: page-search -->
-
-
-
 <main class="page-search">
     <div class="container-fluid">
         <div class="row">
@@ -14,47 +8,14 @@
                 <div class="page-search__form-search-realty pt-4 pb-2 border-bottom">
                     <app-form-search-realty></app-form-search-realty>
                 </div>
-                <div class="page-search__list-of-realty py-4">
-                    <!-- List of realty -->
-                    <ul class="list-of-realty row">
-                        
-                        <li class="col-sm-6 col-xl-4 mb-3">
-                            <app-realty-item [realtyItem]="768"></app-realty-item>
-                        </li>
-                        
-                        <li class="col-sm-6 col-xl-4 mb-3">
-                            <app-realty-item [realtyItem]="768"></app-realty-item>
-                        </li>
-                        
-                        <li class="col-sm-6 col-xl-4 mb-3">
-                            <app-realty-item [realtyItem]="768"></app-realty-item>
-                        </li>
-                        
-                        <li class="col-sm-6 col-xl-4 mb-3">
-                            <app-realty-item [realtyItem]="768"></app-realty-item>
-                        </li>
-                        
-                        <li class="col-sm-6 col-xl-4 mb-3">
-                            <app-realty-item [realtyItem]="768"></app-realty-item>
-                        </li>
-                        
-                        <li class="col-sm-6 col-xl-4 mb-3">
-                            <app-realty-item [realtyItem]="768"></app-realty-item>
-                        </li>
-                        
-                        <li class="col-sm-6 col-xl-4 mb-3">
-                            <app-realty-item [realtyItem]="768"></app-realty-item>
-                        </li>
-                        
-                        <li class="col-sm-6 col-xl-4 mb-3">
-                            <app-realty-item [realtyItem]="768"></app-realty-item>
-                        </li>
-                        
-                    </ul>
-                    <!-- /List of realty -->
-                </div>
+                <ul class="page-search__list-of-realty py-4 row" *ngIf="searchResult">
+                    <li class="col-sm-6 col-xl-4 mb-3" *ngFor="let realty of searchResult.data">
+                        <app-realty-item [realty]="realty"></app-realty-item>
+                    </li>
+                </ul>
                 <nav class="page-search__pagination">
-                    <app-pagination></app-pagination>
+                    <app-pagination [currentPage]="searchResult.current_page"
+                                    [lastPage]="searchResult.last_page"></app-pagination>
                 </nav>
             </div>
             <div class="col-lg-4 page-search__map-container d-none d-lg-block">

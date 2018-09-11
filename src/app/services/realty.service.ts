@@ -6,6 +6,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 import { Realty } from '../classes/realty';
 import { City } from '../classes/city';
 import { environment } from '../../environments/environment';
+import { SearchRealty } from '../classes/search-realty';
 
 const httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -19,14 +20,6 @@ export class RealtyService {
 
     constructor(
         private http: HttpClient) { }
-
-    /** GET realty from the server */
-    getRealty(): Observable<Realty[]> {
-        return this.http.get<Realty[]>(this.realtyUrl)
-            .pipe(
-                catchError(this.handleError('getRealty', []))
-            );
-    }
 
     /** GET latest realty from the server */
     getLatestRealty(): Observable<Realty[]> {
@@ -55,56 +48,62 @@ export class RealtyService {
             );
     }
 
-    /** GET realtyItem by id. Return `undefined` when id not found */
-    getRealtyItemNo404<Data>(id: number): Observable<Realty> {
+    getListOfRealty(ids: number[]): Observable<Realty[]> {
+        const url = `${this.realtyUrl}/items/?ids=${ids.join(',')}`;
+        return this.http.get<Realty[]>(url)
+            .pipe(
+                    catchError(this.handleError('getListOfRealty', []))
+            );
+    }
+
+    /** GET realty by id. Return `undefined` when id not found */
+    getRealtyNo404<Data>(id: number): Observable<Realty> {
         const url = `${this.realtyUrl}/?id=${id}`;
         return this.http.get<Realty[]>(url)
             .pipe(
                 map(realty => realty[0]), // returns a {0|1} element array
-                catchError(this.handleError<Realty>(`getRealtyItem id=${id}`))
+                catchError(this.handleError<Realty>(`getRealty id=${id}`))
             );
     }
 
-    /** GET realtyItem by id */
-    getRealtyItem(id: number): Observable<Realty> {
-        const url = `${this.realtyUrl}/item/${id}/`;
+    /** GET realty by id */
+    getRealty (id: number): Observable<Realty> {
+        const url = `${this.realtyUrl}/${id}`;
         return this.http.get<Realty>(url).pipe(
-            catchError(this.handleError<Realty>(`getRealtyItem id=${id}`))
+            catchError(this.handleError<Realty>(`getRealty id=${id}`))
         );
     }
 
-    /** GET realtyItems by ids */
-    getRealtyItems(ids: number[]): Observable<Realty[]> {
-        const url = `${this.realtyUrl}/items/?ids=${ids.join(',')}`;
-        return this.http.get<Realty[]>(url).pipe(
-            catchError(this.handleError<Realty[]>(`getRealtyItems ids=${ids}`))
+    /** GET realty by id */
+    searchRealty (): Observable<SearchRealty> {
+        const url = `${this.realtyUrl}/search/`;
+        return this.http.get<SearchRealty>(url).pipe(
+            catchError(this.handleError<SearchRealty>('searchRealty'))
         );
     }
-
-    /* GET realty whose name contains search term */
-    searchRealty(term: string): Observable<Realty[]> {
-        if (!term.trim()) {
-            // if not search term, return empty realtyItem array.
-            return of([]);
-        }
-        return this.http.get<Realty[]>(`${this.realtyUrl}/?name=${term}`).pipe(
-            catchError(this.handleError<Realty[]>('searchHeroes', []))
-        );
-    }
-
     //////// Save methods //////////
 
-    /** POST: add a new realtyItem to the server */
-    addRealty (realtyItem: Object): Observable<Realty> {
-        return this.http.post<Realty>(this.realtyUrl, realtyItem, httpOptions).pipe(
-            catchError(this.handleError<Realty>('addHero'))
+    /** POST: add a new realty to the server */
+    addRealty (realty: Realty): Observable<Realty> {
+        return this.http.post<Realty>(this.realtyUrl, realty, httpOptions).pipe(
+            catchError(this.handleError<Realty>('addRealty'))
         );
     }
 
-    /** PUT: update the realtyItem on the server */
-    updateRealty (realtyItem: Realty): Observable<any> {
-        return this.http.put(this.realtyUrl, realtyItem, httpOptions).pipe(
-            catchError(this.handleError<any>('updateHero'))
+    /** DELETE: delete the hero from the server */
+    deleteRealty (realty: Realty | number): Observable<Realty> {
+        const id = typeof realty === 'number' ? realty : realty.id;
+        const url = `${this.realtyUrl}/${id}`;
+
+        return this.http.delete<Realty>(url, httpOptions).pipe(
+            catchError(this.handleError<Realty>('deleteRealty'))
+        );
+    }
+
+    /** PUT: update the realty on the server */
+    updateRealty (realty: Realty): Observable<any> {
+        return this.http.put(this.realtyUrl, realty, httpOptions).pipe(
+            catchError(this.handleError<any>('updateRealty'))
         );
     }
 

@@ -1,11 +1,23 @@
-
-
 <!-- Block: pagination -->
 <ul class="pagination">
-    <li class="page-item"><a href="javascript: void(0);" class="page-link">Предыдущая</a></li>
-    <li class="page-item active"><a href="javascript: void(0);" class="page-link">1</a></li>
-    <li class="page-item"><a href="javascript: void(0);" class="page-link">2</a></li>
-    <li class="page-item"><a href="javascript: void(0);" class="page-link">3</a></li>
-    <li class="page-item"><a href="javascript: void(0);" class="page-link">Следующая</a></li>
+    <li class="page-item" *ngIf="currentPage > 1">
+        <a href="javascript: void(0);"
+           (click)="switchToPrev()"
+           class="page-link">Предыдущая</a>
+    </li>
+    <ng-container *ngIf="pages">
+        <li class="page-item"
+            [class.active]="currentPage == page"
+            *ngFor="let page of pages">
+            <a  href="javascript: void(0);"
+                (click)="switchPage(page)"
+               class="page-link">{{page}}</a>
+        </li>
+    </ng-container>
+    <li class="page-item" *ngIf="currentPage < lastPage">
+        <a href="javascript: void(0);"
+           (click)="switchToNext()"
+           class="page-link">Следующая</a>
+    </li>
 </ul>
 <!-- /Block: pagination -->

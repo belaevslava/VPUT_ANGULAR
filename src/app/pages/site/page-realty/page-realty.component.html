@@ -1,12 +1,6 @@
-
-
-
 <app-page-header></app-page-header>
 
 <!-- Page: page-realty -->
-
-
-
 <main class="page-realty">
     <div class="container">
         <!-- Common: breadcrumb -->
@@ -16,21 +10,25 @@
                 <li class="breadcrumb-item"><a href="javascript: void(0);">Болгария</a></li>
                 <li class="breadcrumb-item"><a href="javascript: void(0);">Святой Влас</a></li>
                 <li class="breadcrumb-item active"
-                    aria-current="page">Студия - Форт Нокс Гранд Резорт</li>
+                    aria-current="page">{{realty.name.ru}}</li>
             </ol>
         </nav>
         <!-- /Common: breadcrumb -->
 
         <div class="page-realty__image-slider">
-            <app-realty-image-slider></app-realty-image-slider>
+            <app-realty-image-slider [images]="realty.images"></app-realty-image-slider>
         </div>
 
         <div class="row">
             <div class="col-xl">
                 <article class="page-realty__article py-4">
                     <header class="page-realty__header pb-3 border-bottom">
-                        <h1 class="page-realty__title">Студия - Форт Нокс Гранд Резорт</h1>
-                        <div class="page-realty__place lead">Болгария, Святой Влас, <a routerLink="/complex/" class="page-realty__complex">Комплекс Венера-палас</a></div>
+                        <h1 class="page-realty__title">{{realty.name.ru}}</h1>
+                        <div class="page-realty__place lead">
+                            {{realty.address.city.country.name.ru}},
+                            {{realty.address.city.name.ru}},
+                            <a routerLink="/complex/" class="page-realty__complex">?Комплекс Венера-палас</a>
+                        </div>
                     </header>
 
                     <div class="page-realty__list-of-main-characteristics pt-4 border-bottom">
@@ -107,7 +105,7 @@
         </div>
     </div>
     <div class="page-realty__realty-location-map pt-4">
-        <app-realty-location></app-realty-location>
+        <app-realty-location [realty]="realty"></app-realty-location>
     </div>
     <div class="page-realty__complex bg-light pt-5 pb-3">
         <div class="container">

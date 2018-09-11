@@ -1,7 +1,6 @@
 <!-- Form: form-search-realty -->
-<form action="/search/"
-      _action="https://vput.ru/search/"
-      class="form-search-realty"
+<form class="form-search-realty"
+      (ngSubmit)="onSubmit()"
       [class.form-search-realty__is_short]="layout == 'short'">
 
     <fieldset class="form-search-realty__main-fieldset">
@@ -17,11 +16,7 @@
                        data-target=".form-search-realty__cities-tabs">
             </li>
             <li class="form-search-realty__dateRange-col form-group col">
-                <input name="filters[startDate]"
-                       daterangepicker
-                       autocomplete="off"
-                       placeholder="Заезд"
-                       class="custom-select custom-select-lg">
+                <nz-range-picker [nzSize]="'large'"></nz-range-picker>
             </li>
             <li class="form-group col d-none">
                 <input name="filters[endDate]"

@@ -22,6 +22,6 @@ export class PageFavoritesComponent implements OnInit {
 
   getFavorites() {
       this.favoritesIds = this.favoriteService.getFavorites();
-      this.realtyService.getRealtyItems(this.favoritesIds).subscribe(favorites => this.favorites = favorites);
+      this.realtyService.getListOfRealty(this.favoritesIds).subscribe(favorites => this.favorites = favorites);
   }
 }

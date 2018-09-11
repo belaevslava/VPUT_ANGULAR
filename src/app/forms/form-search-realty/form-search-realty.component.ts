@@ -13,4 +13,7 @@ export class FormSearchRealtyComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSubmit() {
+    console.log('search form was submit');
+  }
 }

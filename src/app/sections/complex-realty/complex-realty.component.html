@@ -3,8 +3,8 @@
     <h2 class="complex-realty__title mb-3" i18n>Другие предложения из этого комплекса</h2>
     <ul class="complex-realty__list row">
 
-        <li class="complex-realty__list-item col-md-6 col-lg-4 col-xl-3 mb-3" *ngFor="let realtyItem of complexRealty">
-            <app-realty-item [realtyItem]="realtyItem"></app-realty-item>
+        <li class="complex-realty__list-item col-md-6 col-lg-4 col-xl-3 mb-3" *ngFor="let realty of complexRealty">
+            <app-realty-item [realty]="realty"></app-realty-item>
         </li>
 
     </ul>

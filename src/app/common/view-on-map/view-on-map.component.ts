@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-view-on-map',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-on-map.component.scss']
 })
 export class ViewOnMapComponent implements OnInit {
-
+  @Input() longitude: number | string;
+  @Input() latitude: number | string;
   constructor() { }
 
   ngOnInit() {

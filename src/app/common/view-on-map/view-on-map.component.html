@@ -1,6 +1,3 @@
-
-
-
 <!-- Block: view-on-map -->
 <div class="view-on-map">
     <iframe class="view-on-map__iframe"
@@ -8,7 +5,7 @@
             height="450"
             frameborder="0"
             allowfullscreen
-            src="https://maps.google.com/maps?q=42.69955610242388,27.7021554442872&output=embed">
+            [src]="'https://maps.google.com/maps?q=' + this.latitude + ',' + this.longitude + '&output=embed' | safe">
     </iframe>
 </div>
 <!-- /Block: view-on-map -->

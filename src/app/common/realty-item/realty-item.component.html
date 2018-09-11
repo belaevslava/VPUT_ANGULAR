@@ -1,36 +1,36 @@
 <!-- Common: realty-item -->
-<figure class="realty-item" *ngIf="realtyItem">
-    <app-toggle-favorites [id]="realtyItem.id"
+<figure class="realty-item" *ngIf="realty">
+    <app-toggle-favorites [id]="realty.id"
                           class="realty-item__toggle-favorites"></app-toggle-favorites>
     <div class="realty-item__realty-item-carousel">
-        <app-realty-item-carousel [images]="realtyItem.images"></app-realty-item-carousel>
+        <app-realty-item-carousel [images]="realty.images"></app-realty-item-carousel>
     </div>
     <figcaption class="realty-item__description">
         <h3 class="realty-item__title">
-            <a [routerLink]="'/realty/' + realtyItem.id"
+            <a [routerLink]="'/realty/' + realty.id"
                _target="_blank"
                class="realty-item__link"
-               [attr.title]="realtyItem.name.ru">{{realtyItem.name.ru}}</a>
+               [attr.title]="realty.name.ru">{{realty.name.ru}}</a>
         </h3>
         <ul class="realty-item__details">
-            <li class="realty-item__detail realty-item__address">{{realtyItem.address.city.country.name.ru}} | {{realtyItem.address.city.name.ru}}</li>
+            <li class="realty-item__detail realty-item__address">{{realty.address.city.country.name.ru}} | {{realty.address.city.name.ru}}</li>
             <br>
-            <li class="realty-item__detail realty-item__type">{{realtyItem.categoryId}}</li>
+            <li class="realty-item__detail realty-item__type">{{realty.categoryId}}</li>
             <li class="realty-item__detail realty-item__numbers-of-rooms">
                 <span class="realty-item__numbers-of-rooms-label" i18n>Комнат:</span>
-                <span class="realty-item__numbers-of-rooms-value">{{realtyItem.rooms}}</span>
+                <span class="realty-item__numbers-of-rooms-value">{{realty.rooms}}</span>
             </li>
             <li class="realty-item__detail realty-item__numbers-of-guests">
                 <span class="realty-item__numbers-of-guests-label">Гостей:</span>
-                <span class="realty-item__numbers-of-guests-value">{{realtyItem.guests}}</span>
+                <span class="realty-item__numbers-of-guests-value">{{realty.guests}}</span>
             </li>
             <li class="realty-item__detail realty-item__price">
                 <span class="realty-item__price-currency">€</span>
-                <span class="realty-item__price-value">{{realtyItem.price}}</span>
+                <span class="realty-item__price-value">{{realty.price}}</span>
             </li>
             <li class="realty-item__detail realty-item__price-per-day">
                 <span class="realty-item__price-per-day-currency">€</span>
-                <span class="realty-item__price-per-day-value">{{ realtyItem.price / realtyItem.guests | number: '1.0-0' }}</span>
+                <span class="realty-item__price-per-day-value">{{ realty.price / realty.guests | number: '1.0-0' }}</span>
                 <app-icon name="guest" size="1" class="ml-1"></app-icon>
             </li>
         </ul>

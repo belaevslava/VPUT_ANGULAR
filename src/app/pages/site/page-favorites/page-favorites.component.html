@@ -8,7 +8,7 @@
             <!-- Common: list-of-realty -->
             <ul class="list-of-realty row" *ngIf="favorites">
                 <li class="col-xl-3 col-lg-4 col-md-6 mb-3" *ngFor="let favoriteItem of favorites">
-                    <app-realty-item [realtyItem]="favoriteItem"></app-realty-item>
+                    <app-realty-item [realty]="favoriteItem"></app-realty-item>
                 </li>
             </ul>
             <!-- /Common: list-of-realty -->

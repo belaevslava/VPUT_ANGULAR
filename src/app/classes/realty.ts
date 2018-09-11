@@ -1,4 +1,4 @@
-import {Image} from './image';
+import { Image } from './image';
 
 export class Realty {
     images: Image[];
@@ -17,6 +17,8 @@ export class Realty {
                 }
             };
         };
+        latitude: number | string;
+        longitude: number | string;
     };
     id: number;
     name: {
