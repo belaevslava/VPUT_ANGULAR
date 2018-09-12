@@ -10,7 +10,9 @@ import { CategoryProperties } from './category-properties';
 export class RealtyPropertiesComponent implements OnInit {
   @Input() properties: Property[];
   propertiesByCategory: CategoryProperties[];
-  constructor() {}
+  constructor() {
+    this.propertiesByCategory = [];
+  }
 
   ngOnInit() {
     this.getPropertiesByCategory();
@@ -34,5 +36,6 @@ export class RealtyPropertiesComponent implements OnInit {
             properties: propertiesByCategory[categoryId]
         });
     });
+    console.log('this.propertiesByCategory', this.propertiesByCategory);
   }
 }
