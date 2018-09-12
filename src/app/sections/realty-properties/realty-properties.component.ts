@@ -36,6 +36,5 @@ export class RealtyPropertiesComponent implements OnInit {
             properties: propertiesByCategory[categoryId]
         });
     });
-    console.log('this.propertiesByCategory', this.propertiesByCategory);
   }
 }

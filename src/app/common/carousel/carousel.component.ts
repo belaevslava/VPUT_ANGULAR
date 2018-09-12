@@ -10,6 +10,7 @@ import { Image } from '../../classes/image';
 })
 export class CarouselComponent implements OnChanges {
   @Input() images: Image[];
+  @Input() maxHeight: number;
   usedPlugins: Object;
   constructor() {
       this.usedPlugins = { slick: slick };
@@ -18,10 +19,10 @@ export class CarouselComponent implements OnChanges {
   ngOnChanges() {
     if (this.images) {
       setTimeout(_ => {
-          $('.carousel__images[data-slick]').slick({
+          $('.carousel [data-slick]').slick({
               asNavFor: '.carousel__nav'
           });
-          $('.carousel__nav[data-slick-nav]').slick({
+          $('.carousel [data-slick-nav]').slick({
               slidesToShow: 8,
               arrows: false,
               asNavFor: '.carousel__images',
