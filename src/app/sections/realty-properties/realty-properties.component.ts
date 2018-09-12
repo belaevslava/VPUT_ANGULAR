@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Property } from '../../classes/property';
+import { CategoryProperties } from './category-properties';
 
 @Component({
   selector: 'app-realty-properties',
@@ -8,10 +9,8 @@ import { Property } from '../../classes/property';
 })
 export class RealtyPropertiesComponent implements OnInit {
   @Input() properties: Property[];
-  propertiesByCategory: any[];
-  constructor() {
-    this.propertiesByCategory = [];
-  }
+  propertiesByCategory: CategoryProperties[];
+  constructor() {}
 
   ngOnInit() {
     this.getPropertiesByCategory();
