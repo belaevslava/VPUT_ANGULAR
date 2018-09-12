@@ -1,19 +1,13 @@
+import { Multilanguage } from './multilanguage';
+
 export class City {
     id: number;
     alias: string;
     country: {
       id: number;
       alias: string;
-      name: {
-          ru: string;
-          en: string;
-          ua: string;
-      }
+      name: Multilanguage;
     };
-    name: {
-        ru: string;
-        en: string;
-        ua: string;
-    };
+    name: Multilanguage;
     numberOfRealty: number;
 }

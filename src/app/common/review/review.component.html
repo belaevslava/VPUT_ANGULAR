@@ -8,8 +8,8 @@
     </figure>
     <figcaption class="review__content">
         <time class="review__created-at">{{review.date}}</time>
-        <div class="review__review-rating">
-            <app-review-rating [rate]="review.rate"></app-review-rating>
+        <div class="review__rating">
+            <app-rating [rate]="review.rate"></app-rating>
         </div>
         <div class="review__message">{{review.text}}</div>
     </figcaption>

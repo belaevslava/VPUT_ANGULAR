@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Realty } from '../../classes/realty';
 
 @Component({
   selector: 'app-realty-places-nearby',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./realty-places-nearby.component.scss']
 })
 export class RealtyPlacesNearbyComponent implements OnInit {
-
+  @Input() realty: Realty;
   constructor() { }
 
   ngOnInit() {

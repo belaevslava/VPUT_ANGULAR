@@ -1,0 +1,15 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.property {
+  display: flex;
+  margin-bottom: .875rem;
+}
+.property__label {
+  margin-bottom: 0;
+  margin-right: .5rem;
+  display: inline;
+}
+.property__value {
+  color: $text-muted;
+  display: inline;
+}

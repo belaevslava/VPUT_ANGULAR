@@ -1,0 +1,10 @@
+<ul class="reviews-carousel" data-slick *ngIf="reviews">
+    <li class="reviews-carousel__item" *ngFor="let review of reviews">
+        <div class="reviews-carousel__realty-item">
+            <app-realty-item [realty]="review.owner"></app-realty-item>
+        </div>
+        <div class="reviews-carousel__review">
+            <app-review [review]="review"></app-review>
+        </div>
+    </li>
+</ul>

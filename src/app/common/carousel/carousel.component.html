@@ -1,0 +1,26 @@
+<div class="carousel">
+    <ul class="carousel__images"
+        *ngIf="images"
+        data-slick>
+        <li class="carousel__slide"
+            *ngFor="let image of images">
+            <a data-fancybox="carousel"
+               [attr.href]="'https://vput.ru/api/image/realties/1300x800/focus/' + image.id"
+               [style.background-image]="'url(https://vput.ru/api/image/realties/1300x800/focus/' + image.id + ')'"
+               class="carousel__slide-link">
+                <img [attr.src]="'https://vput.ru/api/image/realties/1300x800/focus/' + image.id"
+                     alt=""
+                     class="d-none">
+            </a>
+        </li>
+    </ul>
+    <ul class="carousel__nav"
+        data-slick-nav
+        *ngIf="images">
+        <li class="carousel__nav-item"
+            *ngFor="let image of images">
+            <a class="carousel__thumbnail"
+               [style.background-image]="'url(https://vput.ru/api/image/realties/400x400/focus/' + image.id + ')'"></a>
+        </li>
+    </ul>
+</div>

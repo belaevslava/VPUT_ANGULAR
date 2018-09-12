@@ -1,0 +1,9 @@
+<section class="realty-bedrooms" *ngIf="properties">
+  <h2 class="realty-bedrooms__title mb-4" *ngIf="title">{{title}}</h2>
+  <ul class="properties row">
+    <li class="properties__item col-md-6"
+        *ngFor="let property of properties">
+      <app-property [property]="property"></app-property>
+    </li>
+  </ul>
+</section>

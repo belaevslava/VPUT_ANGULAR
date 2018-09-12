@@ -1,0 +1,18 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.main-properties__list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+.main-properties__title {
+  font-size: 1.25rem;
+}
+.main-properties__icon {
+  margin-bottom: 1rem;
+}
+.main-properties__value {
+  font-size: 1.25rem;
+  color: $text-muted;
+}

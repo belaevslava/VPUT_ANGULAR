@@ -1,0 +1,29 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.rating {
+  width: 132px;
+  height: 24px;
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  margin-bottom: 0;
+}
+.rating:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(/assets/images/common/rating/rating_style_filling.svg);
+  background-size: auto 100%;
+}
+.rating {
+  position: relative;
+  background-image: url(/assets/images/common/rating/rating.svg);
+  &[data-rating="5"]:before { width: 132px; }
+  &[data-rating="4"]:before { width: 108px; }
+  &[data-rating="3"]:before { width: 81px; }
+  &[data-rating="2"]:before { width: 54px; }
+  &[data-rating="1"]:before { width: 27px; }
+}

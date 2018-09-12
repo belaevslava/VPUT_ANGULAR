@@ -16,7 +16,7 @@
         <!-- /Common: breadcrumb -->
 
         <div class="page-realty__image-slider">
-            <app-realty-image-slider [images]="realty.images"></app-realty-image-slider>
+            <app-carousel [images]="realty.images"></app-carousel>
         </div>
 
         <div class="row">
@@ -31,32 +31,18 @@
                         </div>
                     </header>
 
-                    <div class="page-realty__list-of-main-characteristics pt-4 border-bottom">
-                        <app-realty-main-characteristics></app-realty-main-characteristics>
+                    <div class="page-realty__main-properties pt-4 border-bottom">
+                        <app-main-properties [realty]="realty"></app-main-properties>
                     </div>
 
-                    <div class="page-realty__realty-bedrooms py-4 border-bottom">
-                        <app-realty-bedrooms></app-realty-bedrooms>
-                    </div>
+                    <app-realty-properties [properties]="realty.properties"></app-realty-properties>
 
-                    <div class="page-realty__realty-reviews py-4 border-bottom">
+                    <div class="page-realty__reviews py-4 border-bottom">
                         <app-realty-reviews></app-realty-reviews>
                     </div>
 
                     <div class="page-realty__realty-facilities py-4 border-bottom">
-                        <app-realty-characteristics></app-realty-characteristics>
-                    </div>
-
-                    <div class="page-realty__realty-rules-of-residence py-4 border-bottom">
-                        <app-realty-rules-of-residence></app-realty-rules-of-residence>
-                    </div>
-
-                    <div class="page-realty__realty-facilities py-4 border-bottom">
                         <app-realty-facilities></app-realty-facilities>
-                    </div>
-
-                    <div class="page-realty__realty-places-nearby py-4 border-bottom">
-                        <app-realty-places-nearby></app-realty-places-nearby>
                     </div>
 
                     <div class="page-realty__realty-prices-for-the-period py-4 border-bottom">

@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {Realty} from '../../classes/realty';
 
 @Component({
-  selector: 'app-realty-characteristics',
-  templateUrl: './realty-characteristics.component.html',
-  styleUrls: ['./realty-characteristics.component.scss']
+  selector: 'app-properties',
+  templateUrl: './properties.component.html',
+  styleUrls: ['./properties.component.scss']
 })
-export class RealtyCharacteristicsComponent implements OnInit {
-
+export class PropertiesComponent implements OnInit {
+  @Input() realty: Realty;
   constructor() { }
 
   ngOnInit() {
