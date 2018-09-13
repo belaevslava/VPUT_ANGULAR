@@ -1,0 +1,54 @@
+<!-- Section: realty-main-properties -->
+<div class="realty-main-properties" *ngIf="realty">
+    <ul class="realty-main-properties__list row">
+        <li class="realty-main-properties__list-item col-6 col-md">
+            <figure class="realty-main-properties__item">
+                <app-icon [name]="'guest'"
+                          [size]="2"
+                          [theme]="'dark'"
+                          class="mb-3"></app-icon>
+                <figcaption class="realty-main-properties__caption">
+                    <h3 class="realty-main-properties__title" i18n>Вмещает гостей</h3>
+                    <div class="realty-main-properties__value">{{realty.guests}}</div>
+                </figcaption>
+            </figure>
+        </li>
+        <li class="realty-main-properties__list-item col-6 col-md">
+            <figure class="realty-main-properties__item">
+                <app-icon [name]="'door'"
+                          [size]="2"
+                          [theme]="'dark'"
+                          class="mb-3"></app-icon>
+                <figcaption class="realty-main-properties__caption">
+                    <h3 class="realty-main-properties__title" i18n>Кол-во комнат</h3>
+                    <div class="realty-main-properties__value">{{realty.rooms}}</div>
+                </figcaption>
+            </figure>
+        </li>
+        <li class="realty-main-properties__list-item col-6 col-md">
+            <figure class="realty-main-properties__item">
+                <app-icon [name]="'bathroom'"
+                          [size]="2"
+                          [theme]="'dark'"
+                          class="mb-3"></app-icon>
+                <figcaption class="realty-main-properties__caption">
+                    <h3 class="realty-main-properties__title" i18n>Ванные</h3>
+                    <div class="realty-main-properties__value">{{realty.bathRooms}}</div>
+                </figcaption>
+            </figure>
+        </li>
+        <li class="realty-main-properties__list-item col-6 col-md">
+            <figure class="realty-main-properties__item">
+                <app-icon [name]="'air-conditioner'"
+                          [size]="2"
+                          [theme]="'dark'"
+                          class="mb-3"></app-icon>
+                <figcaption class="realty-main-properties__caption">
+                    <h3 class="realty-main-properties__title" i18n>Кондиционер</h3>
+                    <div class="realty-main-properties__value">{{hasAirConditioner ? 'Есть' : 'Нет'}}</div>
+                </figcaption>
+            </figure>
+        </li>
+    </ul>
+</div>
+<!-- /Section: realty-main-properties -->

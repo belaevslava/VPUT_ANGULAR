@@ -2,11 +2,11 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Realty } from '../../classes/realty';
 
 @Component({
-  selector: 'app-main-properties',
-  templateUrl: './main-properties.component.html',
-  styleUrls: ['./main-properties.component.scss']
+  selector: 'app-realty-main-properties',
+  templateUrl: './realty-main-properties.component.html',
+  styleUrls: ['./realty-main-properties.component.scss']
 })
-export class MainPropertiesComponent implements OnInit {
+export class RealtyMainPropertiesComponent implements OnInit {
   @Input() realty: Realty;
   hasAirConditioner: boolean;
   constructor() {

@@ -17,6 +17,7 @@ export class Realty {
     };
     id: number;
     name: Multilanguage;
+    description: Multilanguage;
     rooms: number;
     bathRooms: number;
     guests: number;

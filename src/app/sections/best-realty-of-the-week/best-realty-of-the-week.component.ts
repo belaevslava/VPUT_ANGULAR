@@ -13,10 +13,12 @@ export class BestRealtyOfTheWeekComponent implements OnInit {
   constructor(private realtyService: RealtyService) { }
 
   ngOnInit() {
-    this.getBestRealty();
+      this.getBestRealty();
   }
 
   getBestRealty(): void {
-    this.realtyService.getBestRealty().subscribe(bestRealty => this.bestRealty = bestRealty);
+    this.realtyService.getBestRealty().subscribe(bestRealty => {
+      this.bestRealty = bestRealty;
+    });
   }
 }
