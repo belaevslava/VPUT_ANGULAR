@@ -2,28 +2,22 @@ import { Image } from './image';
 import { Parameter } from './parameter';
 import { Property } from './property';
 import { Multilanguage } from './multilanguage';
+import { Price } from './price';
+import { Address } from './address';
 
 export class Realty {
-    images: Image[];
-    address: {
-        city: {
-            name: Multilanguage;
-            country: {
-                name: Multilanguage
-            };
-        };
-        latitude: number | string;
-        longitude: number | string;
-    };
     id: number;
-    name: Multilanguage;
-    description: Multilanguage;
     rooms: number;
     bathRooms: number;
     guests: number;
     guestPrice: number;
     price: number;
     categoryId: number;
+    name: Multilanguage;
+    description: Multilanguage;
+    address: Address;
+    images: Image[];
+    prices: Price[];
     parameters: Parameter[];
     properties: Property[];
 }

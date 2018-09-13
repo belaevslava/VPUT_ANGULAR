@@ -1,0 +1,20 @@
+<section class="realty-prices" *ngIf="prices">
+    <h2 class="realty-prices__title mb-3" i18n>Цены за период:</h2>
+    <table class="table table-bordered table-adaptive text-center">
+        <thead>
+        <tr>
+            <th scope="col" i18n>Период</th>
+            <th scope="col" i18n>Цена за ночь</th>
+        </tr>
+        </thead>
+        <tbody class="text-muted">
+        <tr *ngFor="let price of prices">
+            <td>
+                <span class="realty-prices__date">{{price.startMonth + '-' + price.startDay + '-' + fullYear | date }}</span> -
+                <span class="realty-prices__date">{{price.endMonth + '-' + price.endDay + '-' + fullYear | date }}</span>
+            </td>
+            <td>€{{price.dayPrice + price.dayCommission}}</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
