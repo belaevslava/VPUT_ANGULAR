@@ -1,7 +1,6 @@
-<!-- Common: realty-item -->
 <figure class="realty-item" *ngIf="realty">
-    <app-toggle-favorites [id]="realty.id"
-                          class="realty-item__toggle-favorites"></app-toggle-favorites>
+    <app-toggle-favorite [id]="realty.id"
+                          class="realty-item__toggle-favorite"></app-toggle-favorite>
     <div class="realty-item__realty-item-carousel">
         <app-realty-item-carousel [images]="realty.images"></app-realty-item-carousel>
     </div>
@@ -15,7 +14,7 @@
         <ul class="realty-item__details">
             <li class="realty-item__detail realty-item__address">{{realty.address.city.country.name.ru}} | {{realty.address.city.name.ru}}</li>
             <br>
-            <li class="realty-item__detail realty-item__type">{{realty.categoryId}}</li>
+            <li class="realty-item__detail realty-item__type">{{realty.category.name.ru}}</li>
             <li class="realty-item__detail realty-item__numbers-of-rooms">
                 <span class="realty-item__numbers-of-rooms-label" i18n>Комнат:</span>
                 <span class="realty-item__numbers-of-rooms-value">{{realty.rooms}}</span>
@@ -85,4 +84,3 @@
     </footer>
     <!-- /If the item belongs to the owner -->
 </figure>
-<!-- /Common: realty-item -->

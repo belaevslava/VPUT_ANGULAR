@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UserAvatarComponent } from './user-avatar.component';
+import { ToggleFavoriteComponent } from './toggle-favorite.component';
 
-describe('UserAvatarComponent', () => {
-  let component: UserAvatarComponent;
-  let fixture: ComponentFixture<UserAvatarComponent>;
+describe('ToggleFavoriteComponent', () => {
+  let component: ToggleFavoriteComponent;
+  let fixture: ComponentFixture<ToggleFavoriteComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UserAvatarComponent ]
+      declarations: [ ToggleFavoriteComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UserAvatarComponent);
+    fixture = TestBed.createComponent(ToggleFavoriteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

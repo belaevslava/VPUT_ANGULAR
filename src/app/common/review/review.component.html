@@ -1,8 +1,8 @@
 <!-- Common: review -->
 <figure class="review" *ngIf="review">
     <figure class="review__user">
-        <div class="review__user-avatar mb-2">
-            <app-user-avatar [avatar]="review.author.details.avatar"></app-user-avatar>
+        <div class="review__avatar mb-2">
+            <app-avatar [avatar]="review.author.details.avatar"></app-avatar>
         </div>
         <figcaption class="user__description">{{review.author.details.name}}</figcaption>
     </figure>

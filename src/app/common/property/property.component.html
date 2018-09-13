@@ -2,6 +2,6 @@
   <app-icon [name]="'property_id_' + property.property_value.id" class="mr-3"></app-icon>
   <figcaption class="property__caption">
     <label class="property__label">{{property.property_value.value.ru}}:</label>
-    <div class="property__value">{{property.value}}</div>
+    <div class="property__value">{{property.value}} {{property.measurement.shortName}}</div>
   </figcaption>
 </figure>

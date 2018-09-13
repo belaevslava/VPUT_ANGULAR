@@ -4,6 +4,7 @@ import { Property } from './property';
 import { Multilanguage } from './multilanguage';
 import { Price } from './price';
 import { Address } from './address';
+import { RealtyCategory } from './realty-category';
 
 export class Realty {
     id: number;
@@ -15,6 +16,7 @@ export class Realty {
     categoryId: number;
     name: Multilanguage;
     description: Multilanguage;
+    category: RealtyCategory;
     address: Address;
     images: Image[];
     prices: Price[];

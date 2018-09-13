@@ -96,7 +96,7 @@ $_precision: 10;
   border-width: $ext;
 }
 
-.toggle-favorites {
+.toggle-favorite {
   &:before, &:after {
     position: absolute;
     z-index: -1;
