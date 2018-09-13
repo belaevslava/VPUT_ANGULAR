@@ -2,6 +2,16 @@
   <app-icon [name]="'property_id_' + property.property_value.id" class="mr-3"></app-icon>
   <figcaption class="property__caption">
     <label class="property__label">{{property.property_value.value.ru}}:</label>
-    <div class="property__value">{{property.value}} {{property.measurement.shortName}}</div>
+    <div class="property__value">
+      {{property.value}}
+      {{property.measurement.shortName}}
+      <app-icon *ngIf="property.property_value.description"
+                [name]="'information'"
+                [title]="property.property_value.description"
+                class="ml-2"
+                data-toggle="tooltip"
+                data-placement="right"
+                data-html="true"></app-icon>
+    </div>
   </figcaption>
 </figure>
