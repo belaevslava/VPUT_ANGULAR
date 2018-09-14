@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { City } from '../classes/city';
+import {environment} from '../../environments/environment';
 
 const httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -11,7 +12,9 @@ const httpOptions = {
 
 @Injectable({ providedIn: 'root' })
 export class CityService {
-    private cityUrl = 'http://localhost:8000/v1/cities';
+    private API_URL = environment.API_URL;
+    private API_VERSION = environment.API_VERSION;
+    private cityUrl =  `${this.API_URL}v${this.API_VERSION}/cities`;  // URL to web api
 
     constructor(private http: HttpClient) { }
 
@@ -20,7 +23,16 @@ export class CityService {
         const url = `${this.cityUrl}/${countryAlias}`;
         return this.http.get<City[]>(url)
             .pipe(
-                catchError(this.handleError('getCitiesOfBulgaria', []))
+                catchError(this.handleError('getCitiesByCountryAlias', []))
+            );
+    }
+
+    /** GET realty cities from the server */
+    getCitiesWithRealty(): Observable<City[]> {
+        const url = `${this.cityUrl}/withRealty`;
+        return this.http.get<City[]>(url)
+            .pipe(
+                catchError(this.handleError('getCitiesWithRealty', []))
             );
     }
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { City } from '../../classes/city';
-import { RealtyService } from '../../services/realty.service';
+import { CityService } from '../../services/city.service';
 
 @Component({
   selector: 'app-cities-tabs',
@@ -12,17 +12,17 @@ export class CitiesTabsComponent implements OnInit {
   cities: City[];
   numberOfRealtyInBulgaria: number;
   numberOfRealtyInOtherCountries: number;
-  constructor(private realtyService: RealtyService) {
+  constructor(private cityService: CityService) {
       this.numberOfRealtyInBulgaria = 0;
       this.numberOfRealtyInOtherCountries = 0;
   }
 
   ngOnInit() {
-    this.getRealtyCities();
+    this.getCitiesWithRealty();
   }
 
-  getRealtyCities(): void {
-      this.realtyService.getRealtyCities()
+  getCitiesWithRealty(): void {
+      this.cityService.getCitiesWithRealty()
           .subscribe(cities => {
               this.cities = this.sortCitiesByName(cities);
               this.calculateRealty();

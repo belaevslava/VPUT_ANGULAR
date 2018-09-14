@@ -4,7 +4,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Realty } from '../classes/realty';
-import { City } from '../classes/city';
 import { environment } from '../../environments/environment';
 import { SearchRealty } from '../classes/search-realty';
 
@@ -36,15 +35,6 @@ export class RealtyService {
         return window['bestRealty'] ? window['bestRealty'] : this.http.get<Realty[]>(url)
             .pipe(
                 catchError(this.handleError('getBestRealty', []))
-            );
-    }
-
-    /** GET realty cities from the server */
-    getRealtyCities(): Observable<City[]> {
-        const url = `${this.realtyUrl}/cities/`;
-        return this.http.get<City[]>(url)
-            .pipe(
-                catchError(this.handleError('getRealtyCities', []))
             );
     }
 
