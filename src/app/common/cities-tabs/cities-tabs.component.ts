@@ -30,15 +30,11 @@ export class CitiesTabsComponent implements OnInit {
   }
 
   sortCitiesByName(cities) {
-      cities = cities.sort((a, b) => {
-          if (a.name.ru < b.name.ru)
-              return -1;
-          if (a.name.ru > b.name.ru)
-              return 1;
+      return cities.sort((a, b) => {
+          if (a.name.ru < b.name.ru) { return -1; }
+          if (a.name.ru > b.name.ru) { return 1; }
           return 0;
       });
-
-      return cities;
   }
 
   calculateRealty() {
