@@ -1,50 +1,59 @@
 <figure class="realty-item" *ngIf="realty">
     <app-toggle-favorite [id]="realty.id"
-                          class="realty-item__toggle-favorite"></app-toggle-favorite>
+                         class="realty-item__toggle-favorite"></app-toggle-favorite>
     <div class="realty-item__realty-item-carousel">
         <app-realty-item-carousel [images]="realty.images"></app-realty-item-carousel>
     </div>
     <figcaption class="realty-item__description">
         <h3 class="realty-item__title">
             <a [routerLink]="'/realty/' + realty.id"
-               _target="_blank"
-               class="realty-item__link"
-               [attr.title]="realty.name.ru">{{realty.name.ru}}</a>
+               [attr.title]="realty.name.ru"
+               class="realty-item__link">{{realty.name.ru}}</a>
         </h3>
+        <address class="realty-item__address">{{realty.address.city.country.name.ru}} | {{realty.address.city.name.ru}}</address>
         <ul class="realty-item__details">
-            <li class="realty-item__detail realty-item__address">{{realty.address.city.country.name.ru}} | {{realty.address.city.name.ru}}</li>
-            <br>
             <li class="realty-item__detail realty-item__type">{{realty.category.name.ru}}</li>
-            <li class="realty-item__detail realty-item__numbers-of-rooms">
-                <span class="realty-item__numbers-of-rooms-label" i18n>Комнат:</span>
-                <span class="realty-item__numbers-of-rooms-value">{{realty.rooms}}</span>
+            <li class="realty-item__detail realty-item__rooms">
+                <span class="realty-item__rooms-label" i18n>Комнат: </span>
+                <span class="realty-item__rooms-value">{{realty.rooms}}</span>
             </li>
-            <li class="realty-item__detail realty-item__numbers-of-guests">
-                <span class="realty-item__numbers-of-guests-label">Гостей:</span>
-                <span class="realty-item__numbers-of-guests-value">{{realty.guests}}</span>
+            <li class="realty-item__detail realty-item__guests">
+                <span class="realty-item__guests-label" i18n>Гостей: </span>
+                <span class="realty-item__guests-value">{{realty.guests}}</span>
             </li>
-            <li class="realty-item__detail realty-item__price">
+        </ul>
+        <ul class="realty-item__prices">
+            <li class="realty-item__price">
                 <span class="realty-item__price-currency">€</span>
                 <span class="realty-item__price-value">{{realty.price}}</span>
             </li>
-            <li class="realty-item__detail realty-item__price-per-day">
+            <li class="realty-item__price-per-day">
                 <span class="realty-item__price-per-day-currency">€</span>
-                <span class="realty-item__price-per-day-value">{{ realty.price / realty.guests | number: '1.0-0' }}</span>
-                <app-icon name="guest" size="1" class="ml-1"></app-icon>
+                <span class="realty-item__price-per-day-value">{{realty.price / realty.guests | number: '1.0-0'}}</span>
+                <app-icon [name]="'guest'"
+                          [size]="1"
+                          class="ml-1"></app-icon>
             </li>
         </ul>
-        <ul class="realty-item__special-details">
-            <li class="realty-item__detail realty-item__pets mr-3">
-                <app-icon name="pets" theme="light" class="ml-1"></app-icon>
+        <ul class="realty-item__properties">
+            <li class="realty-item__property realty-item__pets mr-3" *ngIf="realty.allowPets">
+                <app-icon [name]="'pets'"
+                          [theme]="'light'"
+                          class="ml-1"></app-icon>
             </li>
-            <li class="realty-item__detail realty-item__tv mr-3">
-                <app-icon name="tv" theme="light" class="ml-1"></app-icon>
+            <li class="realty-item__property mr-3" *ngIf="realty.hasTV">
+                <app-icon [name]="'tv'"
+                          [theme]="'light'"
+                          class="ml-1"></app-icon>
             </li>
-            <li class="realty-item__detail realty-item__air-conditioner mr-3">
-                <app-icon name="air-conditioner" theme="light" class="ml-1"></app-icon>
+            <li class="realty-item__property realty-item__air-conditioner mr-3" *ngIf="realty.hasAirConditioner">
+                <app-icon [name]="'air-conditioner'"
+                          [theme]="'light'"
+                          class="ml-1"></app-icon>
             </li>
-            <li class="realty-item__detail realty-item__reliable-host">
-                <app-icon name="reliable-host" size="2"></app-icon>
+            <li class="realty-item__property realty-item__reliable-host">
+                <app-icon [name]="'reliable-host'"
+                          [size]="2"></app-icon>
             </li>
         </ul>
     </figcaption>

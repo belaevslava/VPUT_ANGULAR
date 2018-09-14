@@ -8,13 +8,9 @@ import { Realty } from '../../classes/realty';
 })
 export class RealtyMainPropertiesComponent implements OnInit {
   @Input() realty: Realty;
-  hasAirConditioner: boolean;
-  constructor() {
-    this.hasAirConditioner = false;
-  }
+  constructor() {}
 
   ngOnInit() {
-      this.hasAirConditioner = this.realty.parameters.filter(item => item.parameter_value.id === 243).length ? true : false;
   }
 
 }

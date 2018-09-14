@@ -8,8 +8,9 @@
   position: relative;
   padding: .75rem 0;
 }
+.realty-item__prices,
 .realty-item__details,
-.realty-item__special-details {
+.realty-item__properties {
   list-style: none;
   padding: 0;
 }
@@ -22,10 +23,14 @@
 .realty-item__detail {
   display: inline-block;
   vertical-align: middle;
+  position: relative;
+  &:not(:last-child):after {
+    content: "|";
+    padding-left: .25rem;
+    padding-right: .25rem;
+  }
 }
-.realty-item__special-details {
-  list-style: none;
-  padding: 0;
+.realty-item__properties {
   position: absolute;
   display: flex;
   align-items: flex-end;
@@ -38,20 +43,10 @@
   }
 }
 .realty-item__address {
-  flex: 1 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.realty-item__numbers-of-rooms,
-.realty-item__type {
-  position: relative;
-  &:after {
-    content: "|";
-    padding-left: .25rem;
-    padding-right: .25rem;
-  }
+  margin-bottom: 0;
 }
 
 .realty-item__link {
@@ -111,12 +106,12 @@
   margin-top: 5px;
 }
 .realty-item__price {
-  top: -1rem;
+  top: .75rem;
   color: $secondary;
   font-size: 2.25rem;
 }
 .realty-item__price-per-day {
-  bottom: 0;
+  bottom: .875rem;
   color: $gray-700;
   font-size: 1.125rem;
 }

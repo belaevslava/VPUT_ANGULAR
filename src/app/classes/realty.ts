@@ -14,6 +14,9 @@ export class Realty {
     guestPrice: number;
     price: number;
     categoryId: number;
+    hasTV: boolean;
+    hasAirConditioner: boolean;
+    allowPets: boolean;
     name: Multilanguage;
     description: Multilanguage;
     category: RealtyCategory;

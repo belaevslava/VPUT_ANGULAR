@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./who-we-are.component.scss']
 })
 export class WhoWeAreComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
