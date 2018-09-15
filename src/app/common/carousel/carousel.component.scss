@@ -1,95 +1,42 @@
 @import "../../../assets/libraries/bootstrap/bootstrap-reboot";
 
 .carousel {
-  position: relative;
-  border-radius: $border-radius;
   background-color: $dark;
-  overflow: hidden;
-  .slick-next {
-    right: 24px;
-  }
-  .slick-prev {
-    left: 24px;
-  }
-}
-
-.carousel__slide-link,
-.carousel {
-  height: 360px;
-}
-
-.carousel__nav,
-.carousel__images {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 0;
-}
-
-.carousel__nav {
-  transform: translateY(120px);
-  transition: $transition-base;
-  z-index: 1;
-  &.slick-slider {
-    position: absolute;
-    bottom: 12px;
-    left: 12px;
-    right: 12px;
-  }
-}
-.carousel__thumbnail {
-  display: block;
-  height: 80px;
-  background-color: $light;
-  background-position: center;
-  background-size: cover;
   border-radius: $border-radius;
-  margin-right: .5rem;
-  margin-left: .5rem;
-  margin-bottom: 0;
-  cursor: pointer;
 }
-
-.carousel__slide-link {
-  display: block;
-  background-size: auto 100%;
+.carousel__slides {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+.carousel__slide {
   background-repeat: no-repeat;
+  background-image: url("/assets/images/common/preloader/preloader.svg");
+  background-size: 3rem;
   background-position: center;
 }
-
-.carousel__nav {
-  opacity: .6;
-  transition: $transition-base;
-  &:hover {
-    opacity: 1;
-  }
+.carousel__image {
+  width: 100%;
 }
-
-@include media-breakpoint-up(md) {
-  .carousel {
-    &:focus,
-    &:hover {
-      .carousel__nav {
-        transform: translateY(0);
-      }
-    }
-  }
-
-  .carousel__slide-link,
-  .carousel {
-    height: 480px;
-  }
+.carousel__button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3rem;
+  height: 3rem;
+  margin: auto;
+  background-color: transparent;
+  border-width: 0;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
 }
-@include media-breakpoint-up(lg) {
-  .carousel__slide-link,
-  .carousel {
-    height: 700px;
-    height: calc(100vh - 48px);
-  }
+.carousel__button_direction_next {
+  right: 1rem;
+  background-image: url(/assets/libraries/slick-carousel/slick-carousel__arrow-right.svg);
 }
-@include media-breakpoint-down(md) {
-  .carousel {
-    margin-left: -($grid-gutter-width / 2);
-    margin-right: -($grid-gutter-width / 2);
-    border-radius: 0;
-  }
+.carousel__button_direction_prev {
+  left: 1rem;
+  background-image: url(/assets/libraries/slick-carousel/slick-carousel__arrow-left.svg);
 }

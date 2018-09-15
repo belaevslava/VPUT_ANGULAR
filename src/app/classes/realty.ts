@@ -17,8 +17,8 @@ export class Realty {
     hasTV: boolean;
     hasAirConditioner: boolean;
     allowPets: boolean;
-    name: Multilanguage;
-    description: Multilanguage;
+    name?: Multilanguage;
+    description?: Multilanguage;
     category: RealtyCategory;
     address: Address;
     images: Image[];

@@ -50,7 +50,7 @@ export class Property {
             id: number;
             imagePath: string;
             measurementId: number;
-            name: Multilanguage;
+            name?: Multilanguage;
             priority: number;
             statusId: number;
         };
@@ -58,7 +58,7 @@ export class Property {
         imagePath: string;
         measurementId: number;
         propertyId: number;
-        value: Multilanguage;
+        value?: Multilanguage;
     };
     value: number | string;
 }

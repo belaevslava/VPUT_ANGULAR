@@ -1,5 +1,5 @@
 export class Multilanguage {
-    ru: string;
-    en: string;
-    ua: string;
+    ru?: string;
+    en?: string;
+    ua?: string;
 }

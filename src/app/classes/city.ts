@@ -6,8 +6,8 @@ export class City {
     country: {
       id: number;
       alias: string;
-      name: Multilanguage;
+      name?: Multilanguage;
     };
-    name: Multilanguage;
+    name?: Multilanguage;
     numberOfRealty: number;
 }

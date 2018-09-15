@@ -1,6 +1,4 @@
-import { Component, OnChanges, Input } from '@angular/core';
-import $ from 'jquery';
-import * as slick from 'slick-carousel';
+import { Component, OnInit, Input } from '@angular/core';
 import { Image } from '../../classes/image';
 
 @Component({
@@ -8,28 +6,23 @@ import { Image } from '../../classes/image';
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss']
 })
-export class CarouselComponent implements OnChanges {
+export class CarouselComponent implements OnInit {
   @Input() images: Image[];
-  @Input() maxHeight: number;
-  usedPlugins: Object;
+  @Input() maxHeight: number | string;
+  options: object;
   constructor() {
-      this.usedPlugins = { slick: slick };
   }
 
-  ngOnChanges() {
-    if (this.images) {
-      setTimeout(_ => {
-          $('.carousel [data-slick]').slick({
-              asNavFor: '.carousel__nav'
-          });
-          $('.carousel [data-slick-nav]').slick({
-              slidesToShow: 8,
-              arrows: false,
-              asNavFor: '.carousel__images',
-              centerMode: true,
-              focusOnSelect: true
-          });
-      }, 1);
-    }
+  ngOnInit() {
+      this.maxHeight = typeof this.maxHeight === 'string' ? this.maxHeight : this.maxHeight + 'px';
+      this.options = {
+          lazy: {
+              loadPrevNext: true
+          },
+          navigation: {
+              nextEl: '.carousel__button_direction_next',
+              prevEl: '.carousel__button_direction_prev',
+          },
+      };
   }
 }

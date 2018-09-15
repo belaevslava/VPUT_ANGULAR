@@ -2,9 +2,9 @@ import { Multilanguage } from './multilanguage';
 
 export class Address {
     city: {
-        name: Multilanguage;
+        name?: Multilanguage;
         country: {
-            name: Multilanguage
+            name?: Multilanguage
         };
     };
     latitude: number | string;

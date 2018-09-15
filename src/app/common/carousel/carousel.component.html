@@ -1,27 +1,13 @@
-<div class="carousel"
-     [style.max-height]="maxHeight + 'px'">
-    <ul class="carousel__images"
-        *ngIf="images"
-        data-slick>
-        <li class="carousel__slide"
-            *ngFor="let image of images">
-            <a data-fancybox="carousel"
-               [attr.href]="'https://vput.ru/api/image/realties/1300x800/focus/' + image.id"
-               [style.max-height]="maxHeight + 'px'"
-               [style.background-image]="'url(https://vput.ru/api/image/realties/1300x800/focus/' + image.id + ')'"
-               class="carousel__slide-link">
-                <img [attr.src]="'https://vput.ru/api/image/realties/1300x800/focus/' + image.id"
-                     alt=""
-                     class="d-none">
-            </a>
+<div class="carousel swiper-container"
+     [style.max-height]="maxHeight"
+     [swiper]="options">
+    <ul class="carousel__slides swiper-wrapper"
+        *ngIf="images">
+        <li class="carousel__slide swiper-slide" *ngFor="let image of images">
+            <img [attr.data-src]="'https://vput.ru/api/image/realties/1300x800/focus/' + image.id"
+                 class="carousel__image swiper-lazy">
         </li>
     </ul>
-    <ul class="carousel__nav"
-        data-slick-nav>
-        <li class="carousel__nav-item"
-            *ngFor="let image of images">
-            <a class="carousel__thumbnail"
-               [style.background-image]="'url(https://vput.ru/api/image/realties/115x64/focus/' + image.id + ')'"></a>
-        </li>
-    </ul>
+    <button class="carousel__button carousel__button_direction_prev"></button>
+    <button class="carousel__button carousel__button_direction_next"></button>
 </div>

@@ -1,18 +1,25 @@
 <figure class="realty-item" *ngIf="realty">
     <app-toggle-favorite [id]="realty.id"
                          class="realty-item__toggle-favorite"></app-toggle-favorite>
-    <div class="realty-item__realty-item-carousel">
-        <app-realty-item-carousel [images]="realty.images"></app-realty-item-carousel>
+    <div class="realty-item__realty-carousel">
+        <app-carousel [images]="realty.images"
+                      [maxHeight]="200"></app-carousel>
+
     </div>
     <figcaption class="realty-item__description">
         <h3 class="realty-item__title">
             <a [routerLink]="'/realty/' + realty.id"
-               [attr.title]="realty.name.ru"
+               [attr.title]="realty?.name.ru "
                class="realty-item__link">{{realty.name.ru}}</a>
         </h3>
-        <address class="realty-item__address">{{realty.address.city.country.name.ru}} | {{realty.address.city.name.ru}}</address>
+        <address class="realty-item__address">
+            {{realty.address.city.country.name.ru}} |
+            {{realty.address.city.name.ru}}
+        </address>
         <ul class="realty-item__details">
-            <li class="realty-item__detail realty-item__type">{{realty.category.name.ru}}</li>
+            <li class="realty-item__detail realty-item__type">
+                {{realty.category.name.ru}}
+            </li>
             <li class="realty-item__detail realty-item__rooms">
                 <span class="realty-item__rooms-label" i18n>Комнат: </span>
                 <span class="realty-item__rooms-value">{{realty.rooms}}</span>

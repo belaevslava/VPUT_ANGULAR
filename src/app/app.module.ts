@@ -5,11 +5,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
 import { AppComponent } from './app.component';
 
+import { SwiperModule } from 'ngx-swiper-wrapper';
+import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+
+const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
+    direction: 'horizontal',
+    slidesPerView: 'auto'
+};
+
 import {RealtyDescriptionComponent} from './sections/realty-description/realty-description.component';
 import {FormAuthorizationComponent} from './forms/form-authorization/form-authorization.component';
 import {AskForHelpComponent} from './common/ask-for-help/ask-for-help.component';
 import {ApartmentsInTheComplexComponent} from './sections/apartments-in-the-complex/apartments-in-the-complex.component';
-import {RealtyItemCarouselComponent} from './common/realty-item-carousel/realty-item-carousel.component';
 import {PaginationComponent} from './common/pagination/pagination.component';
 import {PagePartnershipComponent} from './pages/cabinet/page-partnership/page-partnership.component';
 import {LatestRealtyComponent} from './sections/latest-realty/latest-realty.component';
@@ -126,14 +134,15 @@ import { SafePipe } from './pipes/safe.pipe';
 
 @NgModule({
   declarations: [
-      AppComponent, AskForHelpComponent, BookingItemComponent, CabinetNavigationComponent, CitiesTabsComponent, ComplexItemComponent, ComplexTabsComponent, IconComponent, ListOfComplexesComponent, RealtyRatingsComponent, ListOfRealtyComponent, RealtyEmployedByComponent, CarouselComponent, RealtyItemComponent, RealtyOwnerComponent, RealtyOnTheMapComponent, PageFooterComponent, PaginationComponent, PopularCitiesComponent, PreloaderComponent, ReviewComponent, RatingComponent, SocialAuthorizationComponent, AvatarComponent, FormAuthorizationComponent, FormBookingComponent, FormCarRentalComponent, FormChangeLanguagesComponent, FormChangePersonalDataComponent, FormChangeProfilePictureComponent, FormFeedbackComponent, FormRecoveryComponent, FormRegistrationComponent, FormRentingComponent, FormSearchRealtyComponent, FormSubscribeComponent, FormSupportComponent, ModalPasswordRecoveryComponent, ModalRegistrationComponent, PageBalanceComponent, PageBookingComponent, PagePartnershipComponent, PageRealtiesComponent, PageReviewsComponent, PageTransfersComponent, PageArticleComponent, PageAuthorizationComponent, PageCarRentalComponent, PageCommissionComponent, PageComplexComponent, PageContactsComponent, PageFavoritesComponent, PageManagementComponent, PageSearchComponent, PageSupportComponent, PageTransferComponent, PageWithdrawComponent, AboutTheComplexComponent, ApartmentsInTheComplexComponent, AuthorizationComponent, CharacteristicsOfTheComplexComponent, ComplexRealtyComponent, DescriptionOfTheComplexComponent, FeedbackComponent, HowItWorksComponent, LatestRealtyComponent, MostPopularCitiesComponent, RealtyFacilitiesComponent, RealtyLocationComponent, RealtyMainPropertiesComponent, RealtyPricesComponent, RealtyReviewsComponent, RealtyDescriptionComponent, PhotosOfTheComplexComponent, ServicesComponent, SimilarRealtyComponent, WhoWeAreComponent, RealtyInterestedInComponent, RealtyItemCarouselComponent, PageHeaderComponent, ViewOnMapComponent, FormChangePasswordComponent, FormEditTransferComponent, FormRealtiesFilterComponent, FormServiceSettingsComponent, ModalAuthorizationComponent, PageBookingsComponent, PageProfileComponent, PageReferralBookingsComponent, PageTripsComponent, PageAboutComponent, PageCleaningComponent, PageRealtyComponent, PageTrustComponent, BestRealtyOfTheWeekComponent, ComplexOnTheMapComponent, GuaranteesComponent, LatestReviewsComponent, OurServicesComponent, PropertyComponent, ReviewsCarouselComponent, FormBookingsFilterComponent, PageAddComponent, PageIndexComponent, NearestComplexesComponent, PropertiesComponent, ReviewsComponent, RealtyShareComponent, PageEscortComponent, PropertiesComponent, ToggleFavoriteComponent, SafePipe, RealtyPropertiesComponent
+      AppComponent, AskForHelpComponent, BookingItemComponent, CabinetNavigationComponent, CitiesTabsComponent, ComplexItemComponent, ComplexTabsComponent, IconComponent, ListOfComplexesComponent, RealtyRatingsComponent, ListOfRealtyComponent, RealtyEmployedByComponent, CarouselComponent, RealtyItemComponent, RealtyOwnerComponent, RealtyOnTheMapComponent, PageFooterComponent, PaginationComponent, PopularCitiesComponent, PreloaderComponent, ReviewComponent, RatingComponent, SocialAuthorizationComponent, AvatarComponent, FormAuthorizationComponent, FormBookingComponent, FormCarRentalComponent, FormChangeLanguagesComponent, FormChangePersonalDataComponent, FormChangeProfilePictureComponent, FormFeedbackComponent, FormRecoveryComponent, FormRegistrationComponent, FormRentingComponent, FormSearchRealtyComponent, FormSubscribeComponent, FormSupportComponent, ModalPasswordRecoveryComponent, ModalRegistrationComponent, PageBalanceComponent, PageBookingComponent, PagePartnershipComponent, PageRealtiesComponent, PageReviewsComponent, PageTransfersComponent, PageArticleComponent, PageAuthorizationComponent, PageCarRentalComponent, PageCommissionComponent, PageComplexComponent, PageContactsComponent, PageFavoritesComponent, PageManagementComponent, PageSearchComponent, PageSupportComponent, PageTransferComponent, PageWithdrawComponent, AboutTheComplexComponent, ApartmentsInTheComplexComponent, AuthorizationComponent, CharacteristicsOfTheComplexComponent, ComplexRealtyComponent, DescriptionOfTheComplexComponent, FeedbackComponent, HowItWorksComponent, LatestRealtyComponent, MostPopularCitiesComponent, RealtyFacilitiesComponent, RealtyLocationComponent, RealtyMainPropertiesComponent, RealtyPricesComponent, RealtyReviewsComponent, RealtyDescriptionComponent, PhotosOfTheComplexComponent, ServicesComponent, SimilarRealtyComponent, WhoWeAreComponent, RealtyInterestedInComponent, PageHeaderComponent, ViewOnMapComponent, FormChangePasswordComponent, FormEditTransferComponent, FormRealtiesFilterComponent, FormServiceSettingsComponent, ModalAuthorizationComponent, PageBookingsComponent, PageProfileComponent, PageReferralBookingsComponent, PageTripsComponent, PageAboutComponent, PageCleaningComponent, PageRealtyComponent, PageTrustComponent, BestRealtyOfTheWeekComponent, ComplexOnTheMapComponent, GuaranteesComponent, LatestReviewsComponent, OurServicesComponent, PropertyComponent, ReviewsCarouselComponent, FormBookingsFilterComponent, PageAddComponent, PageIndexComponent, NearestComplexesComponent, PropertiesComponent, ReviewsComponent, RealtyShareComponent, PageEscortComponent, PropertiesComponent, ToggleFavoriteComponent, SafePipe, RealtyPropertiesComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    NgZorroAntdModule
+    NgZorroAntdModule,
+    SwiperModule
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
@@ -143,7 +152,8 @@ import { SafePipe } from './pipes/safe.pipe';
     // )
   ],
   providers: [
-    { provide: NZ_I18N, useValue: en_US }
+    { provide: NZ_I18N, useValue: en_US },
+    { provide: SWIPER_CONFIG, useValue: DEFAULT_SWIPER_CONFIG }
   ],
   bootstrap: [AppComponent]
 })
