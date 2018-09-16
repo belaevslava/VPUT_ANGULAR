@@ -1,8 +1,10 @@
-<app-page-header theme="dark"></app-page-header>
-
+<app-page-header [theme]="'dark'"></app-page-header>
 <!-- Page: page-article -->
 <main class="page-article">
+    <article class="container">
+        <h1>{{article.h1.ru}}</h1>
+        <div [innerHTML]="article.text.ru"></div>
+    </article>
 </main>
 <!-- /Page: page-article -->
-
 <app-page-footer></app-page-footer>

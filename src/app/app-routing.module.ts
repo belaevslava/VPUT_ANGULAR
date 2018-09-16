@@ -38,7 +38,7 @@ const routes: Routes = [
   { path: 'realty/:id', component: PageRealtyComponent },
   { path: 'complex/:id', component: PageComplexComponent },
   { path: 'favorites', component: PageFavoritesComponent },
-  { path: 'article/:slug', component: PageArticleComponent },
+  { path: 'article/:alias', component: PageArticleComponent },
   { path: 'authorization', component: PageAuthorizationComponent },
 
   { path: 'rentacar', component: PageCarRentalComponent },
