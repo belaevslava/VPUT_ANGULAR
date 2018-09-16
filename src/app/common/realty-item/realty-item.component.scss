@@ -4,9 +4,14 @@
   position: relative;
   margin-bottom: 0;
 }
+.realty-item__toggle-favorite {
+  position: absolute;
+  z-index: 2;
+}
 .realty-item__description {
   position: relative;
   padding: .75rem 0;
+  z-index: 1;
 }
 .realty-item__prices,
 .realty-item__details,

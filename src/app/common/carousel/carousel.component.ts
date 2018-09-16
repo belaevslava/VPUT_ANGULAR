@@ -23,6 +23,10 @@ export class CarouselComponent implements OnInit {
               nextEl: '.carousel__button_direction_next',
               prevEl: '.carousel__button_direction_prev',
           },
+          pagination: {
+              el: '.carousel__pagination',
+              type: 'fraction'
+          },
       };
   }
 }
