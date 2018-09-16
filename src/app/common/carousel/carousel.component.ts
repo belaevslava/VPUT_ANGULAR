@@ -14,6 +14,7 @@ export class CarouselComponent implements OnInit {
   }
 
   ngOnInit() {
+      console.log('images:', this.images);
       this.maxHeight = typeof this.maxHeight === 'string' ? this.maxHeight : this.maxHeight + 'px';
       this.options = {
           lazy: {

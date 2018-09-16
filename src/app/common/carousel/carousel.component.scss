@@ -34,6 +34,7 @@
   margin-bottom: 0;
 }
 .carousel__slide {
+  background-color: $dark;
   background-repeat: no-repeat;
   background-image: url("/assets/images/common/preloader/preloader.svg");
   background-size: 3rem;
@@ -41,6 +42,10 @@
   width: 100%;
 }
 .carousel__image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
   height: 100%;
 }
 .carousel__button {
@@ -58,6 +63,7 @@
   z-index: 1;
   opacity: 0;
   transition: $transition-base;
+  cursor: pointer;
 }
 .carousel__button_direction_next {
   right: 1rem;
