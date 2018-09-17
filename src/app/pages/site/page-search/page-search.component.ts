@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
 import {RealtyService} from '../../../services/realty.service';
-import {SearchRealty} from '../../../classes/search-realty';
+import {RealtySearchResult} from '../../../classes/realty-search-result';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-page-search',
@@ -9,16 +9,19 @@ import {SearchRealty} from '../../../classes/search-realty';
   styleUrls: ['./page-search.component.scss']
 })
 export class PageSearchComponent implements OnInit {
-  searchResult: SearchRealty;
-  constructor(private realtyService: RealtyService) { }
+  realtySearchResult: RealtySearchResult;
+  constructor(private route: ActivatedRoute,
+              private realtyService: RealtyService) { }
 
   ngOnInit() {
     this.searchRealty();
   }
 
   searchRealty(): void {
-    this.realtyService.searchRealty().subscribe(searchResult => {
-      this.searchResult = searchResult;
+    this.route.queryParams.subscribe(params => {
+        this.realtyService.searchRealty(params).subscribe(realtySearchResult => {
+            this.realtySearchResult = realtySearchResult;
+        });
     });
   }
 }

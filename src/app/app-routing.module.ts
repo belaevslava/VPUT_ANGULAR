@@ -65,7 +65,7 @@ const routes: Routes = [
   { path: 'cabinet/transfers', component: PageTransfersComponent },
   { path: 'cabinet/trips', component: PageTripsComponent },
 ];
- 
+
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],
   exports: [ RouterModule ],

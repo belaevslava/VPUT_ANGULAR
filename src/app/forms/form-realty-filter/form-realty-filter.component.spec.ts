@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormRealtiesFilterComponent } from './form-realties-filter.component';
+import { FormRealtyFilterComponent } from './form-realty-filter.component';
 
-describe('FormRealtiesFilterComponent', () => {
-  let component: FormRealtiesFilterComponent;
-  let fixture: ComponentFixture<FormRealtiesFilterComponent>;
+describe('FormRealtyFilterComponent', () => {
+  let component: FormRealtyFilterComponent;
+  let fixture: ComponentFixture<FormRealtyFilterComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FormRealtiesFilterComponent ]
+      declarations: [ FormRealtyFilterComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FormRealtiesFilterComponent);
+    fixture = TestBed.createComponent(FormRealtyFilterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

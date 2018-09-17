@@ -5,7 +5,7 @@ import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Realty } from '../classes/realty';
 import { environment } from '../../environments/environment';
-import { SearchRealty } from '../classes/search-realty';
+import { RealtySearchResult } from '../classes/realty-search-result';
 
 const httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -64,11 +64,11 @@ export class RealtyService {
         );
     }
 
-    /** GET realty by id */
-    searchRealty (): Observable<SearchRealty> {
-        const url = `${this.realtyUrl}/search/`;
-        return this.http.get<SearchRealty>(url).pipe(
-            catchError(this.handleError<SearchRealty>('searchRealty'))
+    /** GET realty by search params */
+    searchRealty (params: any = { page: 1 }): Observable<RealtySearchResult> {
+        const url = `${this.realtyUrl}/search/?page=${params.page}`;
+        return this.http.get<RealtySearchResult>(url).pipe(
+            catchError(this.handleError<RealtySearchResult>('searchRealty'))
         );
     }
     //////// Save methods //////////

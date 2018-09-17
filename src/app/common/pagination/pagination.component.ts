@@ -1,5 +1,6 @@
 import { Location } from '@angular/common';
 import { Component, OnInit, Input } from '@angular/core';
+import {Router, NavigationExtras} from '@angular/router';
 
 @Component({
   selector: 'app-pagination',
@@ -11,7 +12,8 @@ export class PaginationComponent implements OnInit {
   @Input() lastPage: number;
   @Input() countPages: number;
   pages: number[];
-  constructor(private locationService: Location) {
+  constructor(private router: Router,
+              private locationService: Location) {
     this.countPages = this.countPages ? this.countPages : 6;
   }
 
@@ -44,7 +46,14 @@ export class PaginationComponent implements OnInit {
         pages.push(page);
     }
     this.pages = pages;
-    console.log(this.locationService.path());
+    this.updateNavigator();
   }
-
+  updateNavigator() {
+    const navigationExtras: NavigationExtras = {
+        queryParams: {
+            page: this.currentPage
+        }
+    };
+    this.router.navigate([], navigationExtras);
+  }
 }
