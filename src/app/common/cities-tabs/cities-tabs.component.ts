@@ -38,8 +38,9 @@ export class CitiesTabsComponent implements OnInit {
   }
 
   calculateRealty() {
+      const BulgariaId = 428;
       this.cities.forEach(city => {
-          if (city.country.alias === 'bulgaria') {
+          if (city.country.id === BulgariaId) {
               this.numberOfRealtyInBulgaria += city.numberOfRealty;
           } else {
               this.numberOfRealtyInOtherCountries += city.numberOfRealty;

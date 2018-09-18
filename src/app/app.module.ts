@@ -2,9 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
 import { AppComponent } from './app.component';
 
+
+import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
+import { AgmCoreModule } from '@agm/core';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
@@ -142,7 +144,10 @@ import { SafePipe } from './pipes/safe.pipe';
     AppRoutingModule,
     HttpClientModule,
     NgZorroAntdModule,
-    SwiperModule
+    SwiperModule,
+    AgmCoreModule.forRoot({
+        apiKey: 'AIzaSyC7pOhu1cO-w45MQgUQ9Sv6XNWEbsaY7GM'
+    })
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.

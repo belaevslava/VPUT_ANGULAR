@@ -8,8 +8,8 @@
                     <app-form-search-realty></app-form-search-realty>
                 </div>
                 <ul class="page-search__list-of-realty py-4 row" *ngIf="realtySearchResult">
-                    <li class="col-sm-6 col-xl-4 mb-3" *ngFor="let realtyItem of realtySearchResult.data">
-                        <app-realty-item [realty]="realtyItem"></app-realty-item>
+                    <li class="col-sm-6 col-xl-4 mb-3" *ngFor="let realty of realtySearchResult.data">
+                        <app-realty-item [realty]="realty"></app-realty-item>
                     </li>
                 </ul>
                 <app-pagination [currentPage]="realtySearchResult.current_page"
@@ -18,7 +18,14 @@
             </div>
             <div class="col-lg-4 page-search__map-container d-none d-lg-block">
                 <div class="page-search__realty-on-the-map">
-                    <app-realty-on-the-map></app-realty-on-the-map>
+                    <agm-map [latitude]="42.70703948337048"
+                             [longitude]="27.774349376531973"
+                             class="h-100"
+                             *ngIf="realtySearchResult">
+                            <agm-marker [latitude]="realty.address.latitude"
+                                        [longitude]="realty.address.longitude"
+                                        *ngFor="let realty of realtySearchResult.data"></agm-marker>
+                    </agm-map>
                 </div>
             </div>
         </div>
