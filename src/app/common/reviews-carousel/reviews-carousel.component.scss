@@ -1,13 +1,17 @@
 @import "../../../assets/libraries/bootstrap/bootstrap-reboot";
 
-app-reviews-carousel {
+.reviews-carousel {
+  position: relative;
+}
+.reviews-carousel__slide {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.reviews-carousel__images {
   display: block;
 }
-.reviews-carousel {
+.reviews-carousel__slides {
   list-style: none;
   margin-bottom: 0;
   padding-left: 0;
-  .realty-item__details {
-    display: none;
-  }
 }

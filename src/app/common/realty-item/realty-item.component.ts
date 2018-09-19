@@ -10,6 +10,7 @@ import { Realty } from '../../classes/realty';
 })
 export class RealtyItemComponent implements OnInit {
   @Input() realty: Realty;
+  @Input() hideDetails: boolean;
   constructor( private realtyService: RealtyService) { }
 
   ngOnInit() {

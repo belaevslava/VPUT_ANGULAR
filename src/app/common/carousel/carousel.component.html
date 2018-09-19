@@ -1,14 +1,15 @@
 <div class="carousel swiper-container"
-     [style.height]="maxHeight"
-     [swiper]="options">
+     [style.height]="height"
+     [swiper]="swiperOptions">
     <ul class="carousel__slides swiper-wrapper"
         *ngIf="images">
-        <li class="carousel__slide swiper-slide" *ngFor="let image of images">
+        <li class="carousel__slide swiper-slide"
+            *ngFor="let image of images">
             <img [attr.data-src]="'https://vput.ru/api/image/realties/1300x800/focus/' + image.id"
                  class="carousel__image swiper-lazy">
         </li>
     </ul>
     <div class="carousel__pagination"></div>
-    <app-icon [name]="'arrow-left'" [size]="2.6" class="carousel__button carousel__button_direction_prev"></app-icon>
-    <app-icon [name]="'arrow-right'" [size]="2.6" class="carousel__button carousel__button_direction_next"></app-icon>
+    <a class="carousel__button carousel__button_to_prev swiper-button-prev"></a>
+    <a class="carousel__button carousel__button_to_next swiper-button-next"></a>
 </div>

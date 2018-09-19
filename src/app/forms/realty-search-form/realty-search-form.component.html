@@ -1,29 +1,29 @@
-<!-- Form: form-search-realty -->
-<form class="form-search-realty"
+<!-- Form: realty-search-form -->
+<form class="realty-search-form"
       (ngSubmit)="onSubmit()"
-      [class.form-search-realty__is_short]="layout == 'short'">
+      [class.realty-search-form_is_short]="layout == 'short'">
 
-    <fieldset class="form-search-realty__main-fieldset">
+    <fieldset class="realty-search-form__main-fieldset">
         <ul class="form-row">
-            <li class="form-search-realty__cityId-col form-group col">
+            <li class="realty-search-form__cityId-col form-group col">
                 <input type="hidden"
-                       name="filters[cityId]">
-                <input class="form-search-realty__cities-tabs-toggle custom-select disabled custom-select-lg collapsed"
+                       name="filter[cityId]">
+                <input class="realty-search-form__cities-tabs-toggle custom-select disabled custom-select-lg collapsed"
                        readonly
                        onfocus="this.blur()"
                        placeholder="Куда вы собираетесь поехать?"
                        data-toggle="collapse"
-                       data-target=".form-search-realty__cities-tabs">
+                       data-target=".realty-search-form__cities-tabs">
             </li>
-            <li class="form-search-realty__dateRange-col form-group col">
+            <li class="realty-search-form__dateRange-col form-group col">
                 <nz-range-picker [nzSize]="'large'"></nz-range-picker>
             </li>
             <li class="form-group col d-none">
-                <input name="filters[endDate]"
+                <input name="filter[endDate]"
                        class="custom-select custom-select-lg"
                        placeholder="Выезд">
             </li>
-            <li class="form-search-realty__guests-col form-group col">
+            <li class="realty-search-form__guests-col form-group col">
                 <select name="filters[guests]"
                         id="guests"
                         class="custom-select custom-select-lg">
@@ -50,71 +50,53 @@
                     
                 </select>
             </li>
-            <li class="form-search-realty__search-by-complexes-col form-group col">
+            <li class="realty-search-form__search-by-complexes-col form-group col">
                 <button type="submit"
-                        class="form-search-realty__search-by-complexes-button btn btn-outline-primary btn-lg w-100">Искать по комплексам</button>
+                        class="realty-search-form__search-by-complexes-button btn btn-outline-primary btn-lg w-100">Искать по комплексам</button>
             </li>
-            <li class="form-search-realty__other-filters-col form-group col">
+            <li class="realty-search-form__other-filters-col form-group col">
                 <a
-                   class="form-search-realty__other-filters-toggle-button btn btn-outline-primary btn-lg w-100 collapsed"
+                   class="realty-search-form__other-filters-toggle-button btn btn-outline-primary btn-lg w-100 collapsed"
                    data-toggle="collapse"
-                   data-target=".form-search-realty__other-filters">Ещё фильтры</a>
+                   data-target=".realty-search-form__other-filters">Ещё фильтры</a>
             </li>
-            <li class="form-search-realty__id-col form-group col">
+            <li class="realty-search-form__id-col form-group col">
                 <input type="number"
                        name="filters[id]"
                        class="form-control form-control-lg"
                        placeholder="ID">
             </li>
-            <li class="form-search-realty__search-col form-group col">
+            <li class="realty-search-form__search-col form-group col">
                 <button type="submit"
-                        class="form-search-realty__search-button btn btn-secondary btn-lg w-100">Найти</button>
+                        class="realty-search-form__search-button btn btn-secondary btn-lg w-100">Найти</button>
             </li>
         </ul>
     </fieldset>
 
-    <div class="form-search-realty__show-booked custom-control custom-checkbox">
+    <div class="realty-search-form__show-booked custom-control custom-checkbox">
         <input type="checkbox"
-               class="form-search-realty__show-booked-control custom-control-input"
-               id="form-search-realty__show-booked-control"
+               class="realty-search-form__show-booked-control custom-control-input"
+               id="realty-search-form__show-booked-control"
                name="filters[doNotShowBooked]">
         <label class="custom-control-label"
-               for="form-search-realty__show-booked-control">Не показывать забронированные</label>
+               for="realty-search-form__show-booked-control">Не показывать забронированные</label>
     </div>
 
-    <div class="form-search-realty__cities-tabs collapse">
+    <div class="realty-search-form__cities-tabs collapse">
         <app-cities-tabs></app-cities-tabs>
     </div>
 
     <!-- Other filters -->
-    <div class="form-search-realty__other-filters collapse">
-        <fieldset class="form-search-realty__fieldset">
+    <div class="realty-search-form__other-filters collapse">
+        <fieldset class="realty-search-form__fieldset">
             <div class="form-row align-items-center">
-                <legend class="form-search-realty__legend col-md-3 text-center text-md-left mb-md-0 mt-md-3">Цена в сутки</legend>
-                <ul class="form-search-realty__options-list col-md-9">
-                    <li class="form-group d-none">
-                        <input type="number"
-                               name="filters[prices][minPrice]"
-                               class="form-control"
-                               placeholder="Мин. цена">
-                    </li>
-                    <li class="form-group d-none">
-                        <input type="number"
-                               name="filters[prices][maxPrice]"
-                               class="form-control"
-                               placeholder="Макс. цена">
-                    </li>
-                    <li class="form-group mb-0 mb-4 mt-md-5">
-                        <div class="form-search-realty__slider"
-                             data-min="0"
-                             data-max="768"></div>
-                    </li>
-                </ul>
+                <legend class="realty-search-form__legend col-md-3 text-center text-md-left mb-md-0 mt-md-3">Цена в сутки</legend>
+                <nz-slider nzRange [nzDefaultValue]="[0, 768]" class="d-block col-md"></nz-slider>
             </div>
         </fieldset>
 
-        <fieldset class="form-search-realty__fieldset pt-3">
-            <ul class="form-search-realty__options-list form-row">
+        <fieldset class="realty-search-form__fieldset pt-3">
+            <ul class="realty-search-form__options-list form-row">
                 <li class="form-group col-xl-3 col-sm-6">
                     <!-- Input Group -->
                     <div class="input-group">
@@ -123,16 +105,16 @@
                                 <app-icon name="home"></app-icon>
                             </div>
                         </div>
-                        <label for="form-search-realty__home"
+                        <label for="realty-search-form__home"
                                class="form-control">Дом</label>
                         <div class="input-group-append">
                             <div class="custom-control custom-checkbox input-group-text">
                                 <input type="checkbox"
                                        name="filters[realtyTypes][2]"
                                        class="custom-control-input"
-                                       id="form-search-realty__home">
+                                       id="realty-search-form__home">
                                 <label class="custom-control-label"
-                                       for="form-search-realty__home"></label>
+                                       for="realty-search-form__home"></label>
                             </div>
                         </div>
                     </div>
@@ -146,16 +128,16 @@
                                 <app-icon name="building"></app-icon>
                             </div>
                         </div>
-                        <label for="form-search-realty__apartment"
+                        <label for="realty-search-form__apartment"
                                class="form-control">Квартира</label>
                         <div class="input-group-append">
                             <div class="custom-control custom-checkbox input-group-text">
                                 <input type="checkbox"
                                        name="filters[realtyTypes][1]"
                                        class="custom-control-input"
-                                       id="form-search-realty__apartment">
+                                       id="realty-search-form__apartment">
                                 <label class="custom-control-label"
-                                       for="form-search-realty__apartment"></label>
+                                       for="realty-search-form__apartment"></label>
                             </div>
                         </div>
                     </div>
@@ -166,16 +148,16 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text"><span class="icon icon__room"></span></div>
                         </div>
-                        <label for="form-search-realty__room"
+                        <label for="realty-search-form__room"
                                class="form-control">Комната</label>
                         <div class="input-group-append">
                             <div class="custom-control custom-checkbox input-group-text">
                                 <input type="checkbox"
                                        name="filters[realtyTypes][28]"
                                        class="custom-control-input"
-                                       id="form-search-realty__room">
+                                       id="realty-search-form__room">
                                 <label class="custom-control-label"
-                                       for="form-search-realty__room"></label>
+                                       for="realty-search-form__room"></label>
                             </div>
                         </div>
                     </div>
@@ -188,16 +170,16 @@
                                 <app-icon name="hotel"></app-icon>
                             </div>
                         </div>
-                        <label for="form-search-realty__hotel"
+                        <label for="realty-search-form__hotel"
                                class="form-control">Гостиница</label>
                         <div class="input-group-append">
                             <div class="custom-control custom-checkbox input-group-text">
                                 <input type="checkbox"
                                        name="filters[realtyTypes][31]"
                                        class="custom-control-input"
-                                       id="form-search-realty__hotel">
+                                       id="realty-search-form__hotel">
                                 <label class="custom-control-label"
-                                       for="form-search-realty__hotel"></label>
+                                       for="realty-search-form__hotel"></label>
                             </div>
                         </div>
                     </div>
@@ -205,8 +187,8 @@
             </ul>
         </fieldset>
 
-        <fieldset class="form-search-realty__fieldset pt-3">
-            <ul class="form-search-realty__options-list form-row">
+        <fieldset class="realty-search-form__fieldset pt-3">
+            <ul class="realty-search-form__options-list form-row">
                 <li class="form-group col-xl-3 col-sm-6">
                     <div class="input-group">
                         <div class="input-group-prepend">
@@ -315,19 +297,19 @@
             </ul>
         </fieldset>
 
-        <ul class="form-search-realty__fieldset-list row pt-3">
+        <ul class="realty-search-form__fieldset-list row pt-3">
             <li class="col-xl-3 col-sm-6 mb-3">
-                <fieldset class="form-search-realty__fieldset">
-                    <legend class="form-search-realty__legend">Удобства</legend>
-                    <ul class="form-search-realty__options-list">
+                <fieldset class="realty-search-form__fieldset">
+                    <legend class="realty-search-form__legend">Удобства</legend>
+                    <ul class="realty-search-form__options-list">
                         <li class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox"
                                        name="filters[parameters][266]"
                                        class="custom-control-input"
-                                       id="form-search-realty__parking">
+                                       id="realty-search-form__parking">
                                 <label class="custom-control-label"
-                                       for="form-search-realty__parking">Паркинг</label>
+                                       for="realty-search-form__parking">Паркинг</label>
                             </div>
                         </li>
                         <li class="form-group">
@@ -335,9 +317,9 @@
                                 <input type="checkbox"
                                        name="filters[parameters][254]"
                                        class="custom-control-input"
-                                       id="form-search-realty__pool">
+                                       id="realty-search-form__pool">
                                 <label class="custom-control-label"
-                                       for="form-search-realty__pool">Бассейн</label>
+                                       for="realty-search-form__pool">Бассейн</label>
                             </div>
                         </li>
                         <li class="form-group">
@@ -345,9 +327,9 @@
                                 <input type="checkbox"
                                        name="filters[parameters][259]"
                                        class="custom-control-input"
-                                       id="form-search-realty__spa">
+                                       id="realty-search-form__spa">
                                 <label class="custom-control-label"
-                                       for="form-search-realty__spa">СПА</label>
+                                       for="realty-search-form__spa">СПА</label>
                             </div>
                         </li>
                         <li class="form-group">
@@ -355,26 +337,26 @@
                                 <input type="checkbox"
                                        name="filters[parameters][245]"
                                        class="custom-control-input"
-                                       id="form-search-realty__lift">
+                                       id="realty-search-form__lift">
                                 <label class="custom-control-label"
-                                       for="form-search-realty__lift">Лифт</label>
+                                       for="realty-search-form__lift">Лифт</label>
                             </div>
                         </li>
                     </ul>
                 </fieldset>
             </li>
             <li class="col-xl-3 col-sm-6 mb-3">
-                <fieldset class="form-search-realty__fieldset">
-                    <legend class="form-search-realty__legend">Оборудование</legend>
-                    <ul class="form-search-realty__options-list">
+                <fieldset class="realty-search-form__fieldset">
+                    <legend class="realty-search-form__legend">Оборудование</legend>
+                    <ul class="realty-search-form__options-list">
                         <li class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox"
                                        name="filters[parameters][243]"
                                        class="custom-control-input"
-                                       id="form-search-realty__air-conditioning">
+                                       id="realty-search-form__air-conditioning">
                                 <label class="custom-control-label"
-                                       for="form-search-realty__air-conditioning">Кондиционер</label>
+                                       for="realty-search-form__air-conditioning">Кондиционер</label>
                             </div>
                         </li>
                         <li class="form-group">
@@ -382,9 +364,9 @@
                                 <input type="checkbox"
                                        name="filters[parameters][271]"
                                        class="custom-control-input"
-                                       id="form-search-realty__cooker">
+                                       id="realty-search-form__cooker">
                                 <label class="custom-control-label"
-                                       for="form-search-realty__cooker">Плита</label>
+                                       for="realty-search-form__cooker">Плита</label>
                             </div>
                         </li>
                         <li class="form-group">
@@ -392,9 +374,9 @@
                                 <input type="checkbox"
                                        name="filters[parameters][270]"
                                        class="custom-control-input"
-                                       id="form-search-realty__refrigerator">
+                                       id="realty-search-form__refrigerator">
                                 <label class="custom-control-label"
-                                       for="form-search-realty__refrigerator">Холодильник</label>
+                                       for="realty-search-form__refrigerator">Холодильник</label>
                             </div>
                         </li>
                         <li class="form-group">
@@ -402,8 +384,8 @@
                                 <input type="checkbox"
                                        name="filters[parameters][287]"
                                        class="custom-control-input"
-                                       id="form-search-realty__tv">
-                                <label class="custom-control-label" for="form-search-realty__tv">Телевизор</label>
+                                       id="realty-search-form__tv">
+                                <label class="custom-control-label" for="realty-search-form__tv">Телевизор</label>
                             </div>
                         </li>
                         <li class="form-group">
@@ -412,25 +394,25 @@
                                        name="filters[parameters][280]"
                                        value="280"
                                        class="custom-control-input"
-                                       id="form-search-realty__washer">
-                                <label class="custom-control-label" for="form-search-realty__washer">Стиральная машина</label>
+                                       id="realty-search-form__washer">
+                                <label class="custom-control-label" for="realty-search-form__washer">Стиральная машина</label>
                             </div>
                         </li>
                     </ul>
                 </fieldset>
             </li>
             <li class="col-xl-3 col-sm-6 mb-3">
-                <fieldset class="form-search-realty__fieldset">
-                    <legend class="form-search-realty__legend">Правила дома</legend>
-                    <ul class="form-search-realty__options-list">
+                <fieldset class="realty-search-form__fieldset">
+                    <legend class="realty-search-form__legend">Правила дома</legend>
+                    <ul class="realty-search-form__options-list">
                         <li class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox"
                                        name="filters[parameters][247]"
                                        class="custom-control-input"
-                                       id="form-search-realty__smoking">
+                                       id="realty-search-form__smoking">
                                 <label class="custom-control-label"
-                                       for="form-search-realty__smoking">Курить</label>
+                                       for="realty-search-form__smoking">Курить</label>
                             </div>
                         </li>
                         <li class="form-group">
@@ -438,9 +420,9 @@
                                 <input type="checkbox"
                                        name="filters[parameters][80]"
                                        class="custom-control-input"
-                                       id="form-search-realty__children">
+                                       id="realty-search-form__children">
                                 <label class="custom-control-label"
-                                       for="form-search-realty__children">С детьми</label>
+                                       for="realty-search-form__children">С детьми</label>
                             </div>
                         </li>
                         <li class="form-group">
@@ -448,26 +430,26 @@
                                 <input type="checkbox"
                                        name="filters[parameters][240]"
                                        class="custom-control-input"
-                                       id="form-search-realty__pets">
+                                       id="realty-search-form__pets">
                                 <label class="custom-control-label"
-                                       for="form-search-realty__pets">Домашние питомцы</label>
+                                       for="realty-search-form__pets">Домашние питомцы</label>
                             </div>
                         </li>
                     </ul>
                 </fieldset>
             </li>
             <li class="col-xl-3 col-sm-6 mb-3">
-                <fieldset class="form-search-realty__fieldset">
-                    <legend class="form-search-realty__legend">Сортировка</legend>
-                    <ul class="form-search-realty__options-list">
+                <fieldset class="realty-search-form__fieldset">
+                    <legend class="realty-search-form__legend">Сортировка</legend>
+                    <ul class="realty-search-form__options-list">
                         <li class="form-group">
                             <div class="custom-control custom-radio">
                                 <input type="radio"
                                        name="filters[sorting]"
                                        class="custom-control-input"
-                                       id="form-search-realty__sorting_from_cheap-to-expensive">
+                                       id="realty-search-form__sorting_from_cheap-to-expensive">
                                 <label class="custom-control-label"
-                                       for="form-search-realty__sorting_from_cheap-to-expensive">От дешевого к дорогому</label>
+                                       for="realty-search-form__sorting_from_cheap-to-expensive">От дешевого к дорогому</label>
                             </div>
                         </li>
 
@@ -476,9 +458,9 @@
                                 <input type="radio"
                                        name="filters[sorting]"
                                        class="custom-control-input"
-                                       id="form-search-realty__sorting_from_expensive-to-cheap">
+                                       id="realty-search-form__sorting_from_expensive-to-cheap">
                                 <label class="custom-control-label"
-                                       for="form-search-realty__sorting_from_expensive-to-cheap">От дорогого к дешевому</label>
+                                       for="realty-search-form__sorting_from_expensive-to-cheap">От дорогого к дешевому</label>
                             </div>
                         </li>
                     </ul>
@@ -488,4 +470,4 @@
     </div>
     <!-- /Other filters -->
 </form>
-<!-- /Form: form-search-realty -->
+<!-- /Form: realty-search-form -->

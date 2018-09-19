@@ -15,6 +15,17 @@
 // FilePond
 @import "~filepond/dist/filepond";
 
+.swiper-button-prev,
+.swiper-button-next {
+  background-size: auto 100%;
+  filter: drop-shadow(rgba(0,0,0,.12) 0 0 1px);
+}
+.swiper-button-prev {
+  background-image: url(/assets/images/common/icon/icon__arrow-left.svg);
+}
+.swiper-button-next {
+  background-image: url(/assets/images/common/icon/icon__arrow-right.svg);
+}
 
 ::selection {
   background: $primary;

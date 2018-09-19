@@ -1,6 +1,4 @@
-import {Component, OnChanges, Input} from '@angular/core';
-import $ from 'jquery';
-import * as slick from 'slick-carousel';
+import {Component, OnInit, Input} from '@angular/core';
 
 import { Review } from '../../classes/review';
 
@@ -9,14 +7,18 @@ import { Review } from '../../classes/review';
   templateUrl: './reviews-carousel.component.html',
   styleUrls: ['./reviews-carousel.component.scss']
 })
-export class ReviewsCarouselComponent implements OnChanges {
+export class ReviewsCarouselComponent implements OnInit {
   @Input() reviews: Review[];
-  usedPlugins: Object;
+  swiperOptions: object;
   constructor() {
-      this.usedPlugins = { slick: slick };
+      this.swiperOptions = {
+          navigation: {
+              nextEl: '.reviews-carousel__button_to_next',
+              prevEl: '.reviews-carousel__button_to_prev',
+          }
+      };
   }
 
-  ngOnChanges() {
-    setTimeout(_ => $('.reviews-carousel[data-slick]').slick(), 1);
+  ngOnInit() {
   }
 }

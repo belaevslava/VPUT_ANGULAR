@@ -1,10 +1,17 @@
-<ul class="reviews-carousel" data-slick *ngIf="reviews">
-    <li class="reviews-carousel__item" *ngFor="let review of reviews">
-        <div class="reviews-carousel__realty-item">
-            <app-realty-item [realty]="review.owner"></app-realty-item>
-        </div>
-        <div class="reviews-carousel__review">
-            <app-review [review]="review"></app-review>
-        </div>
-    </li>
-</ul>
+<div class="reviews-carousel swiper-container"
+     [swiper]="swiperOptions"
+     *ngIf="reviews">
+    <ul class="reviews-carousel__slides swiper-wrapper">
+        <li class="reviews-carousel__slide swiper-slide"
+            *ngFor="let review of reviews">
+            <app-realty-item [realty]="review.owner"
+                             [hideDetails]="true"
+                             class="reviews-carousel__realty-item mb-4"></app-realty-item>
+            <app-review [review]="review"
+                        [maxLength]="200"
+                        class="reviews-carousel__review"></app-review>
+        </li>
+    </ul>
+    <a class="reviews-carousel__button reviews-carousel__button_to_next swiper-button-next"></a>
+    <a class="reviews-carousel__button reviews-carousel__button_to_prev swiper-button-prev"></a>
+</div>

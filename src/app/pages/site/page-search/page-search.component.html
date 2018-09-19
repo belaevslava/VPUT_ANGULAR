@@ -4,8 +4,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-8 page-search__search-container">
-                <div class="page-search__form-search-realty pt-4 pb-2 border-bottom">
-                    <app-form-search-realty></app-form-search-realty>
+                <div class="page-search__realty-search-form pt-4 pb-2 border-bottom">
+                    <app-realty-search-form></app-realty-search-form>
                 </div>
                 <ul class="page-search__list-of-realty py-4 row" *ngIf="realtySearchResult">
                     <li class="col-sm-6 col-xl-4 mb-3" *ngFor="let realty of realtySearchResult.data">

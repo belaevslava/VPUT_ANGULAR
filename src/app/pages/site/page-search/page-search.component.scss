@@ -1,24 +1,24 @@
 @import "../../../../assets/libraries/bootstrap/bootstrap-reboot";
 
-.page-search__form-search-realty {
-  .form-search-realty__main-fieldset {
+.page-search__realty-search-form {
+  .realty-search-form__main-fieldset {
     .form-group {
       flex: 1 20%;
     }
 
-    .form-search-realty__search-by-complexes-col,
-    .form-search-realty__cityId-col {
+    .realty-search-form__search-by-complexes-col,
+    .realty-search-form__cityId-col {
       flex: 1 35%;
     }
   }
 }
 
-.form-search-realty__show-booked {
+.realty-search-form__show-booked {
   margin-bottom: .5rem;
 }
 
-.page-search__form-search-realty {
-  .form-search-realty__show-booked {
+.page-search__realty-search-form {
+  .realty-search-form__show-booked {
     position: absolute;
     bottom: -20px;
     background-color: $white;

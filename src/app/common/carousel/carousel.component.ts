@@ -8,25 +8,25 @@ import { Image } from '../../classes/image';
 })
 export class CarouselComponent implements OnInit {
   @Input() images: Image[];
-  @Input() maxHeight: number | string;
-  options: object;
+  @Input() height: number | string;
+  swiperOptions: object;
   constructor() {
-  }
-
-  ngOnInit() {
-      this.maxHeight = typeof this.maxHeight === 'string' ? this.maxHeight : this.maxHeight + 'px';
-      this.options = {
+      this.height = typeof this.height === 'string' ? this.height : this.height + 'px';
+      this.swiperOptions = {
           lazy: {
               loadPrevNext: true
           },
           navigation: {
-              nextEl: '.carousel__button_direction_next',
-              prevEl: '.carousel__button_direction_prev',
+              nextEl: '.carousel__button_to_next',
+              prevEl: '.carousel__button_to_prev',
           },
           pagination: {
               el: '.carousel__pagination',
               type: 'fraction'
           },
       };
+  }
+
+  ngOnInit() {
   }
 }

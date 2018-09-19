@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormSearchRealtyComponent } from './form-search-realty.component';
+import { RealtySearchFormComponent } from './realty-search-form.component';
 
-describe('FormSearchRealtyComponent', () => {
-  let component: FormSearchRealtyComponent;
-  let fixture: ComponentFixture<FormSearchRealtyComponent>;
+describe('RealtySearchFormComponent', () => {
+  let component: RealtySearchFormComponent;
+  let fixture: ComponentFixture<RealtySearchFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FormSearchRealtyComponent ]
+      declarations: [ RealtySearchFormComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FormSearchRealtyComponent);
+    fixture = TestBed.createComponent(RealtySearchFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

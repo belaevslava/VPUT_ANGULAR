@@ -3,25 +3,26 @@
                          class="realty-item__toggle-favorite"></app-toggle-favorite>
     <div class="realty-item__realty-carousel">
         <app-carousel [images]="realty.images"
-                      [maxHeight]="200"></app-carousel>
+                      [height]="200"></app-carousel>
 
     </div>
     <figcaption class="realty-item__description">
         <h3 class="realty-item__title">
             <a [routerLink]="'/realty/' + realty.id"
                [attr.title]="realty.name.ru "
+               *ngIf="realty.name?.ru"
                class="realty-item__link">{{realty.name.ru}}</a>
         </h3>
-        <address class="realty-item__address">
-            <ng-container *ngIf="realty.address && realty.address.city">
+        <address class="realty-item__address" *ngIf="!hideDetails">
+            <ng-container *ngIf="realty.address?.city">
                 {{realty.address.city.country.name.ru}} |
                 {{realty.address.city.name.ru}}
             </ng-container>
             &nbsp;
         </address>
-        <ul class="realty-item__details">
-            <li class="realty-item__detail realty-item__type">
-                {{realty.category.name.ru}}
+        <ul class="realty-item__details" *ngIf="!hideDetails">
+            <li class="realty-item__detail realty-item__type" *ngIf="realty.category">
+                {{realty.category.name?.ru}}
             </li>
             <li class="realty-item__detail realty-item__rooms">
                 <span class="realty-item__rooms-label" i18n>Комнат: </span>
@@ -32,7 +33,7 @@
                 <span class="realty-item__guests-value">{{realty.guests}}</span>
             </li>
         </ul>
-        <ul class="realty-item__prices">
+        <ul class="realty-item__prices" *ngIf="!hideDetails">
             <li class="realty-item__price">
                 <span class="realty-item__price-currency">€</span>
                 <span class="realty-item__price-value">{{realty.price}}</span>

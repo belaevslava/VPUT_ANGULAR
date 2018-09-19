@@ -11,7 +11,13 @@
         <div class="review__rating">
             <app-rating [rate]="review.rate"></app-rating>
         </div>
-        <div class="review__message">{{review.text}}</div>
+        <div class="review__message">
+            <ng-container *ngIf="maxLength">
+                {{review.text | slice:0:maxLength}}
+                <span *ngIf="review.text.length > maxLength">...</span>
+            </ng-container>
+            <ng-container *ngIf="!maxLength">{{review.text}}</ng-container>
+        </div>
     </figcaption>
 </figure>
 <!-- /Common: review -->

@@ -9,7 +9,8 @@ import { Review } from '../../classes/review';
 })
 export class ReviewComponent implements OnInit {
   @Input() review: Review;
-  constructor() { }
+  @Input() maxLength: number;
+  constructor() {}
 
   ngOnInit() {
   }

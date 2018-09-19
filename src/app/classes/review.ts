@@ -1,3 +1,5 @@
+import {Realty} from './realty';
+
 export class Review {
     text: string;
     rate: number;
@@ -8,5 +10,5 @@ export class Review {
             avatar: string;
         }
     };
-    owner: object;
+    owner: Realty;
 }
