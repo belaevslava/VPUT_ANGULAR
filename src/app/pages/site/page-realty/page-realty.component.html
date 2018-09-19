@@ -1,7 +1,8 @@
 <app-page-header></app-page-header>
 
 <!-- Page: page-realty -->
-<main class="page-realty">
+<main class="page-realty"
+      *ngIf="realty">
     <div class="container">
         <!-- Common: breadcrumb -->
         <nav aria-label="breadcrumb">
@@ -16,7 +17,8 @@
         <!-- /Common: breadcrumb -->
 
         <div class="page-realty__image-slider">
-            <app-carousel [images]="realty.images" [height]="'90vh'"></app-carousel>
+            <app-carousel [images]="realty.images"
+                          [height]="'90vh'"></app-carousel>
         </div>
 
         <div class="row">
@@ -69,8 +71,8 @@
                             <div class="page-realty__realty-employed-by mb-3">
                                 <app-realty-employed-by></app-realty-employed-by>
                             </div>
-                            <div class="page-realty__form-booking mb-3">
-                                <app-form-booking></app-form-booking>
+                            <div class="page-realty__booking-form mb-3">
+                                <app-booking-form></app-booking-form>
                             </div>
                             <div class="page-realty__realty-insterested-in mb-3">
                                 <app-realty-interested-in></app-realty-interested-in>

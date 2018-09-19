@@ -1,4 +1,5 @@
-<ul class="realty-properties list-unstyled" *ngIf="propertiesByCategory">
+<ul class="realty-properties list-unstyled"
+    *ngIf="properties && propertiesByCategory">
   <li class="realty-properties__item pt-4 pb-3 border-bottom"
       *ngFor="let category of propertiesByCategory">
     <app-properties [properties]="category.properties"

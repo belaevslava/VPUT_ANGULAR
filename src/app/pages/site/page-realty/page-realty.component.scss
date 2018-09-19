@@ -75,11 +75,11 @@
 }
 @include media-breakpoint-down(xs) {
   .page-realty {
-    .form-booking {
+    .booking-form {
       padding: 0;
       background-color: initial;
     }
-    .form-booking__table {
+    .booking-form__table {
       background-color: $light;
     }
   }

@@ -21,11 +21,11 @@ export class RealtyPropertiesComponent implements OnInit {
   getPropertiesByCategory() {
     const propertiesByCategory = {};
     this.properties.forEach(item => {
-      if (item.property_value && item.property_value.propertyId) {
-        const categoryId = item.property_value.propertyId;
-          propertiesByCategory[categoryId] = (typeof propertiesByCategory[categoryId] === 'object') ? propertiesByCategory[categoryId] : [];
-          propertiesByCategory[categoryId].push(item);
-      }
+        if (item.property_value && item.property_value.propertyId) {
+            const categoryId = item.property_value.propertyId;
+            propertiesByCategory[categoryId] = (typeof propertiesByCategory[categoryId] === 'object') ? propertiesByCategory[categoryId] : [];
+            propertiesByCategory[categoryId].push(item);
+        }
     });
     const categories = Object.keys(propertiesByCategory);
 

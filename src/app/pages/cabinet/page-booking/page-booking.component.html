@@ -19,8 +19,8 @@
                     </ol>
                 </div>
 
-                <!-- form-booking-item__modal-confirm-reservation-info -->
-                <div class="form-booking-item__modal-confirm-reservation-info modal fade"
+                <!-- booking-form-item__modal-confirm-reservation-info -->
+                <div class="booking-form-item__modal-confirm-reservation-info modal fade"
                      tabindex="-1"
                      role="dialog"
                      aria-hidden="true">
@@ -43,18 +43,18 @@
                         </div>
                     </div>
                 </div>
-                <!-- /form-booking-item__modal-confirm-reservation-info -->
+                <!-- /booking-form-item__modal-confirm-reservation-info -->
 
-                <ul class="accordion form-booking-item__accordion">
+                <ul class="accordion booking-form-item__accordion">
                     <li class="accordion-item">
                         <form action=""
                               class="accordion-section">
                             <legend class="accordion-header collapsed"
                                 data-toggle="collapse"
-                                data-target=".form-booking-item__confirm-reservation-and-invoice"
+                                data-target=".booking-form-item__confirm-reservation-and-invoice"
                                 aria-expanded="false">Подтвердить бронирование и выставить счет</legend>
-                            <div class="accordion-item-collapse form-booking-item__confirm-reservation-and-invoice collapse"
-                                 data-parent=".form-booking-item__accordion">
+                            <div class="accordion-item-collapse booking-form-item__confirm-reservation-and-invoice collapse"
+                                 data-parent=".booking-form-item__accordion">
                                 <div class="accordion-content">
                                     <table class="table table-bordered">
                                         <thead class="bg-white font-weight-bold">
@@ -92,7 +92,7 @@
                                         <h4>Вы можете заработать - <span class="text-secondary">€320</span></h4>
                                         <a
                                            data-toggle="modal"
-                                           data-target=".form-booking-item__modal-confirm-reservation-info"
+                                           data-target=".booking-form-item__modal-confirm-reservation-info"
                                            class="lead nav-link_style_dashed collapsed">Что произойдет, когда я нажму «Подтвердить бронирование и выставить счет»?</a>
                                     </section>
                                 </div>
@@ -103,10 +103,10 @@
                         <section class="accordion-section">
                             <h3 class="accordion-header collapsed"
                                 data-toggle="collapse"
-                                data-target=".form-booking-item__change-prepayment-amount"
+                                data-target=".booking-form-item__change-prepayment-amount"
                                 aria-expanded="false">Изменить сумму предоплаты</h3>
-                            <div class="accordion-item-collapse form-booking-item__change-prepayment-amount collapse"
-                                 data-parent=".form-booking-item__accordion">
+                            <div class="accordion-item-collapse booking-form-item__change-prepayment-amount collapse"
+                                 data-parent=".booking-form-item__accordion">
                                 <div class="accordion-content">
                                     <table class="table table-bordered">
                                         <thead class="bg-white font-weight-bold">
@@ -187,7 +187,7 @@
                                         </div>
                                         <a
                                            data-toggle="modal"
-                                           data-target=".form-booking-item__modal-confirm-reservation-info"
+                                           data-target=".booking-form-item__modal-confirm-reservation-info"
                                            class="lead nav-link_style_dashed collapsed">Что произойдет, когда я нажму «Изменить сумму предоплаты и выставить счет»?</a>
                                     </section>
                                 </div>
@@ -198,10 +198,10 @@
                         <section class="accordion-section">
                             <h3 class="accordion-header text-success collapsed"
                                 data-toggle="collapse"
-                                data-target=".form-booking-item__set-discount-or-surcharge"
+                                data-target=".booking-form-item__set-discount-or-surcharge"
                                 aria-expanded="false">Установить скидку/доплату</h3>
-                            <div class="accordion-item-collapse form-booking-item__set-discount-or-surcharge collapse"
-                                 data-parent=".form-booking-item__accordion">
+                            <div class="accordion-item-collapse booking-form-item__set-discount-or-surcharge collapse"
+                                 data-parent=".booking-form-item__accordion">
                                 <div class="accordion-content">
 
                                     <div class="text-center mb-3">
@@ -209,7 +209,7 @@
                                              data-toggle="buttons">
                                             <label class="btn btn-outline-success collapsed"
                                                    data-toggle="collapse"
-                                                   data-target=".form-booking-item__discount-collapse">
+                                                   data-target=".booking-form-item__discount-collapse">
                                                 <input type="radio"
                                                        name="pricetype"
                                                        value="discount"
@@ -217,7 +217,7 @@
                                             </label>
                                             <label class="btn btn-outline-success collapsed"
                                                    data-toggle="collapse"
-                                                   data-target=".form-booking-item__surcharge-collapse">
+                                                   data-target=".booking-form-item__surcharge-collapse">
                                                 <input type="radio"
                                                        name="pricetype"
                                                        value="surcharge"
@@ -226,8 +226,8 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="form-booking-item__discount-collapse collapse mw-320px mx-auto"
-                                         data-parent=".form-booking-item__set-discount-or-surcharge">
+                                    <div class="booking-form-item__discount-collapse collapse mw-320px mx-auto"
+                                         data-parent=".booking-form-item__set-discount-or-surcharge">
                                         <div class="form-group input-group">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text text-secondary"
@@ -251,8 +251,8 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-booking-item__surcharge-collapse collapse mw-320px mx-auto"
-                                         data-parent=".form-booking-item__set-discount-or-surcharge">
+                                    <div class="booking-form-item__surcharge-collapse collapse mw-320px mx-auto"
+                                         data-parent=".booking-form-item__set-discount-or-surcharge">
                                         <div class="form-group input-group">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text text-secondary"
@@ -285,10 +285,10 @@
                         <section class="accordion-section">
                             <h3 class="accordion-header text-danger collapsed"
                                 data-toggle="collapse"
-                                data-target=".form-booking-item__refuse"
+                                data-target=".booking-form-item__refuse"
                                 aria-expanded="false">Отказать</h3>
-                            <div class="accordion-item-collapse form-booking-item__refuse collapse"
-                                 data-parent=".form-booking-item__accordion">
+                            <div class="accordion-item-collapse booking-form-item__refuse collapse"
+                                 data-parent=".booking-form-item__accordion">
                                 <div class="accordion-content">
 
                                     <div class="text-center mb-3">
@@ -296,7 +296,7 @@
                                              data-toggle="buttons">
                                             <label class="btn btn-outline-danger collapsed"
                                                    data-toggle="collapse"
-                                                   data-target=".form-booking-item__refuse-collapse">
+                                                   data-target=".booking-form-item__refuse-collapse">
                                                 <input type="radio"
                                                        name="pricetype"
                                                        value="discount"
@@ -304,7 +304,7 @@
                                             </label>
                                             <label class="btn btn-outline-danger collapsed"
                                                    data-toggle="collapse"
-                                                   data-target=".form-booking-item__refuse-and-check-dates-collapse">
+                                                   data-target=".booking-form-item__refuse-and-check-dates-collapse">
                                                 <input type="radio"
                                                        name="pricetype"
                                                        value="surcharge"
@@ -313,14 +313,14 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-booking-item__refuse-collapse collapse text-center"
-                                         data-parent=".form-booking-item__refuse">
+                                    <div class="booking-form-item__refuse-collapse collapse text-center"
+                                         data-parent=".booking-form-item__refuse">
                                         <button type="submit"
                                                 class="btn btn-lg btn-primary">Подтвердить</button>
                                     </div>
 
-                                    <div class="form-booking-item__refuse-and-check-dates-collapse collapse"
-                                         data-parent=".form-booking-item__refuse">
+                                    <div class="booking-form-item__refuse-and-check-dates-collapse collapse"
+                                         data-parent=".booking-form-item__refuse">
                                         <ul class="row">
                                             <li class="col">
                                                 <div class="form-group">
@@ -480,8 +480,8 @@
                         </tbody>
                     </table>
 
-                    <div class="page-booking__form-edit-transfer form-edit-transfer_orientation_vertical">
-                        <app-form-edit-transfer></app-form-edit-transfer>
+                    <div class="page-booking__transfer-form transfer-form_orientation_vertical">
+                        <app-transfer-form></app-transfer-form>
                     </div>
                 </aside>
             </div>
