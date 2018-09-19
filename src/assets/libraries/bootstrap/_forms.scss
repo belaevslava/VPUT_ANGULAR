@@ -253,8 +253,8 @@ select.form-control-lg {
 // pseudo-classes but also includes `.is-invalid` and `.is-valid` classes for
 // server side validation.
 
-@include form-validation-state("valid", $form-feedback-valid-color);
-@include form-validation-state("invalid", $form-feedback-invalid-color);
+@include form-validation-state("valid", $feedback-form-valid-color);
+@include form-validation-state("invalid", $feedback-form-invalid-color);
 
 // Inline forms
 //

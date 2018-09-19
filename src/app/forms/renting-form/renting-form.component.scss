@@ -1,0 +1,20 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.renting-form__form-group-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  align-items: center;
+}
+.renting-form__form-group-list-item {
+  min-width: 235px;
+}
+.renting-form__size-select {
+  max-width: 70px;
+}
+
+.renting-form__accordion-item_number_7 {
+  .form-group {
+    margin-bottom: .5rem;
+  }
+}

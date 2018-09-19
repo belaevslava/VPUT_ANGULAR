@@ -1,0 +1,22 @@
+<div class="registration-modal modal fade"
+     tabindex="-1"
+     role="dialog"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm"
+         role="document">
+        <div class="registration-modal__content modal-content">
+            <a
+               data-dismiss="modal"
+               class="close"><app-icon name="close" theme="light"></app-icon></a>
+            <div class="modal-body">
+                <app-registration-form></app-registration-form>
+            </div>
+            <div class="registration-modal__footer modal-footer">
+                <a href="javascript: void(0);" class="registration-modal__authorization-link"
+                   data-toggle="modal"
+                   data-dismiss="modal"
+                   data-target=".authorization-modal">Войти</a>
+            </div>
+        </div>
+    </div>
+</div>

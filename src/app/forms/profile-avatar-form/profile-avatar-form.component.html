@@ -1,0 +1,17 @@
+<form class="profile-avatar-form card bg-gray-50">
+    <div class="card-body text-center">
+        <app-avatar class="profile-avatar-form__picture"></app-avatar>
+    </div>
+    <footer class="card-footer d-flex justify-content-between">
+        <label class="btn btn-primary btn-sm mb-0">Изменить
+            <input type="file"
+                   class="filepond"
+                   name="data[photos]"
+                   multiple
+                   hidden
+                   data-max-file-size="5MB"
+                   data-max-files="3"/>
+        </label>
+        <button class="btn btn-danger btn-sm">Удалить</button>
+    </footer>
+</form>

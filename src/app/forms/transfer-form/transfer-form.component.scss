@@ -1,0 +1,92 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.transfer-form__id {
+  font-weight: normal;
+}
+.transfer-form__price {
+  color: $secondary;
+}
+.transfer-form__buttons {
+  white-space: nowrap;
+  text-align: right;
+}
+.transfer-form__from {
+  &::after {
+    content: "→";
+    display: inline-block;
+    margin-left: .5rem;
+    margin-right: .5rem;
+  }
+}
+.transfer-form__buttons-editable {
+  display: none;
+}
+
+.transfer-form_state_edit {
+  .transfer-form__buttons-default {
+    display: none;
+  }
+  .transfer-form__buttons-editable {
+    display: block;
+  }
+}
+
+.transfer-form__col  {
+  min-width: 240px;
+}
+
+@mixin transfer-form_orientation_vertical {
+  .transfer-form__title {
+    position: relative;
+    flex: 100%;
+    order: 1;
+    margin-bottom: -$card-spacer-y;
+    margin-top: $card-spacer-y;
+    text-align: center;
+  }
+  .transfer-form__from,
+  .transfer-form__to {
+    display: block;
+    border-top: $card-border-width solid $card-border-color;
+    padding: ($card-spacer-y / 1.5) $card-spacer-x;
+    margin-left: -$card-spacer-x;
+    margin-right: -$card-spacer-x;
+  }
+  .transfer-form__from {
+    &::after {
+      height: $font-size-base;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      transform: rotate(90deg);
+    }
+  }
+
+  .transfer-form__status {
+    margin-bottom: 1rem;
+  }
+  .transfer-form__buttons,
+  .transfer-form__footer {
+    text-align: center;
+  }
+  .transfer-form__footer-col {
+    flex: 100%;
+  }
+}
+
+.transfer-form_orientation_vertical {
+  @include transfer-form_orientation_vertical;
+}
+
+@include media-breakpoint-up(lg) {
+  .transfer-form__col  {
+    min-width: 200px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  @include transfer-form_orientation_vertical;
+}

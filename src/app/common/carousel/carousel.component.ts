@@ -11,7 +11,6 @@ export class CarouselComponent implements OnInit {
   @Input() height: number | string;
   swiperOptions: object;
   constructor() {
-      this.height = typeof this.height === 'string' ? this.height : this.height + 'px';
       this.swiperOptions = {
           lazy: {
               loadPrevNext: true
@@ -28,5 +27,6 @@ export class CarouselComponent implements OnInit {
   }
 
   ngOnInit() {
+      this.height = typeof this.height === 'string' ? this.height : this.height + 'px';
   }
 }

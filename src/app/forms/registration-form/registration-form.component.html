@@ -1,0 +1,50 @@
+<form action="/clients/ajaxAdd/"
+      method="post"
+      class="registration-form">
+    <h2 class="registration-form__title">Новый аккаунт</h2>
+    <fieldset class="registration-modal__fieldset">
+        <legend class="registration-modal__legend">через</legend>
+        <!-- Common: social-authorization -->
+        <nav class="social-authorization">
+            <a href="#" class="social-authorization__item">
+                <app-icon name="facebook" size="3"></app-icon>
+            </a>
+            <a href="#" class="social-authorization__item">
+                <app-icon name="vk" size="3"></app-icon>
+            </a>
+            <a href="#" class="social-authorization__item">
+                <app-icon name="ok" size="3"></app-icon>
+            </a>
+        </nav>
+        <!-- /Common: social-authorization -->
+    </fieldset>
+    <fieldset class="registration-modal__fieldset">
+        <legend class="registration-modal__legend mb-3">или</legend>
+        <div class="form-group">
+            <input type="email"
+                   name="login"
+                   class="form-control form-control-lg"
+                   required
+                   placeholder="E-mail">
+        </div>
+        <div class="form-group mb-3">
+            <input type="password"
+                   name="password"
+                   class="form-control form-control-lg"
+                   required
+                   placeholder="Пароль">
+        </div>
+        <div class="custom-control custom-checkbox mb-3">
+            <input type="checkbox"
+                   checked
+                   name="newsSubscribed"
+                   class="custom-control-input"
+                   id="newsSubscribed"
+                   required>
+            <label class="custom-control-label"
+                   for="newsSubscribed">Подписаться на спец. предложения</label>
+        </div>
+    </fieldset>
+    <button type="submit"
+            class="btn btn-primary btn-lg w-100">Регистрация</button>
+</form>

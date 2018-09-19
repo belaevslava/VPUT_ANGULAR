@@ -18,13 +18,13 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
 };
 
 import {RealtyDescriptionComponent} from './sections/realty-description/realty-description.component';
-import {FormAuthorizationComponent} from './forms/form-authorization/form-authorization.component';
-import {AskForHelpComponent} from './common/ask-for-help/ask-for-help.component';
+import {AuthorizationFormComponent} from './forms/authorization-form/authorization-form.component';
+import {AskForHelpComponent} from './notifications/ask-for-help/ask-for-help.component';
 import {ApartmentsInTheComplexComponent} from './sections/apartments-in-the-complex/apartments-in-the-complex.component';
 import {PaginationComponent} from './common/pagination/pagination.component';
 import {PagePartnershipComponent} from './pages/cabinet/page-partnership/page-partnership.component';
 import {LatestRealtyComponent} from './sections/latest-realty/latest-realty.component';
-import {FormServiceSettingsComponent} from './forms/form-service-settings/form-service-settings.component';
+import {ServiceSettingsFormComponent} from './forms/service-settings-form/service-settings-form.component';
 import {PageFavoritesComponent} from './pages/site/page-favorites/page-favorites.component';
 import {GuaranteesComponent} from './sections/guarantees/guarantees.component';
 import {PageReferralBookingsComponent} from './pages/cabinet/page-referral-bookings/page-referral-bookings.component';
@@ -34,13 +34,13 @@ import {PageFooterComponent} from './common/page-footer/page-footer.component';
 import {RealtyInterestedInComponent} from './common/realty-interested-in/realty-interested-in.component';
 import {PageCommissionComponent} from './pages/site/page-commission/page-commission.component';
 import {LatestReviewsComponent} from './sections/latest-reviews/latest-reviews.component';
-import {ModalAuthorizationComponent} from './modals/modal-authorization/modal-authorization.component';
+import {AuthorizationModalComponent} from './modals/authorization-modal/authorization-modal.component';
 import {RatingComponent} from './common/rating/rating.component';
 import {RealtyPricesComponent} from './sections/realty-prices/realty-prices.component';
-import {FormBookingComponent} from './forms/form-booking/form-booking.component';
+import {BookingFormComponent} from './forms/booking-form/booking-form.component';
 import {PageIndexComponent} from './pages/site/page-index/page-index.component';
 import {PageRealtiesComponent} from './pages/cabinet/page-realties/page-realties.component';
-import {FormBookingsFilterComponent} from './forms/form-bookings-filter/form-bookings-filter.component';
+import {BookingsFilterFormComponent} from './forms/bookings-filter-form/bookings-filter-form.component';
 import {PageBookingsComponent} from './pages/cabinet/page-bookings/page-bookings.component';
 import {ServicesComponent} from './sections/services/services.component';
 import {PageBalanceComponent} from './pages/cabinet/page-balance/page-balance.component';
@@ -66,9 +66,9 @@ import {ComplexTabsComponent} from './common/complex-tabs/complex-tabs.component
 import {PageAboutComponent} from './pages/site/page-about/page-about.component';
 import {ReviewsComponent} from './common/reviews/reviews.component';
 import {CarouselComponent} from './common/carousel/carousel.component';
-import {FormFeedbackComponent} from './forms/form-feedback/form-feedback.component';
-import {FormEditTransferComponent} from './forms/form-edit-transfer/form-edit-transfer.component';
-import {ModalRegistrationComponent} from './modals/modal-registration/modal-registration.component';
+import {FeedbackFormComponent} from './forms/feedback-form/feedback-form.component';
+import {TransferFormComponent} from './forms/transfer-form/transfer-form.component';
+import {RegistrationModalComponent} from './modals/registration-modal/registration-modal.component';
 import {RealtyLocationComponent} from './sections/realty-location/realty-location.component';
 import {RealtyShareComponent} from './common/realty-share/realty-share.component';
 import {PageContactsComponent} from './pages/site/page-contacts/page-contacts.component';
@@ -76,12 +76,12 @@ import {PopularCitiesComponent} from './common/popular-cities/popular-cities.com
 import {RealtySearchFormComponent} from './forms/realty-search-form/realty-search-form.component';
 import {PageProfileComponent} from './pages/cabinet/page-profile/page-profile.component';
 import {PhotosOfTheComplexComponent} from './sections/photos-of-the-complex/photos-of-the-complex.component';
-import {FormRecoveryComponent} from './forms/form-recovery/form-recovery.component';
-import {FormCarRentalComponent} from './forms/form-car-rental/form-car-rental.component';
+import {PasswordRecoveryFormComponent} from './forms/password-recovery-form/password-recovery-form.component';
+import {CarRentalFormComponent} from './forms/car-rental-form/car-rental-form.component';
 import {NearestComplexesComponent} from './sections/nearest-complexes/nearest-complexes.component';
 import {WhoWeAreComponent} from './sections/who-we-are/who-we-are.component';
 import {PageTrustComponent} from './pages/site/page-trust/page-trust.component';
-import {FormChangePasswordComponent} from './forms/form-change-password/form-change-password.component';
+import {PasswordChangeFormComponent} from './forms/password-change-form/password-change-form.component';
 import {PageRealtyComponent} from './pages/site/page-realty/page-realty.component';
 import {SimilarRealtyComponent} from './sections/similar-realty/similar-realty.component';
 import {RealtyMainPropertiesComponent} from './sections/realty-main-properties/realty-main-properties.component';
@@ -100,29 +100,29 @@ import {PageTripsComponent} from './pages/cabinet/page-trips/page-trips.componen
 import {PageManagementComponent} from './pages/site/page-management/page-management.component';
 import {FeedbackComponent} from './sections/feedback/feedback.component';
 import {PageEscortComponent} from './pages/site/page-escort/page-escort.component';
-import {FormChangePersonalDataComponent} from './forms/form-change-personal-data/form-change-personal-data.component';
+import {ProfileFormComponent} from './forms/profile-form/profile-form.component';
 import {PageComplexComponent} from './pages/site/page-complex/page-complex.component';
-import {FormRentingComponent} from './forms/form-renting/form-renting.component';
-import {FormRegistrationComponent} from './forms/form-registration/form-registration.component';
+import {RentingFormComponent} from './forms/renting-form/renting-form.component';
+import {RegistrationFormComponent} from './forms/registration-form/registration-form.component';
 import {ComplexItemComponent} from './common/complex-item/complex-item.component';
 import {RealtyReviewsComponent} from './sections/realty-reviews/realty-reviews.component';
-import {FormSubscribeComponent} from './forms/form-subscribe/form-subscribe.component';
+import {SubscriptionFormComponent} from './forms/subscription-form/subscription-form.component';
 import {PageArticleComponent} from './pages/site/page-article/page-article.component';
 import {RealtyOwnerComponent} from './common/realty-owner/realty-owner.component';
 import {PropertyComponent} from './common/property/property.component';
 import {CitiesTabsComponent} from './common/cities-tabs/cities-tabs.component';
 import {PageAddComponent} from './pages/cabinet/page-add/page-add.component';
-import {FormChangeLanguagesComponent} from './forms/form-change-languages/form-change-languages.component';
+import {LanguageChangeFormComponent} from './forms/language-change-form/language-change-form.component';
 import {ViewOnMapComponent} from './common/view-on-map/view-on-map.component';
 import {PageCleaningComponent} from './pages/site/page-cleaning/page-cleaning.component';
 import {RealtyFacilitiesComponent} from './sections/realty-facilities/realty-facilities.component';
 import {PageTransfersComponent} from './pages/cabinet/page-transfers/page-transfers.component';
 import {ListOfComplexesComponent} from './common/list-of-complexes/list-of-complexes.component';
-import {FormChangeProfilePictureComponent} from './forms/form-change-profile-picture/form-change-profile-picture.component';
-import {ModalPasswordRecoveryComponent} from './modals/modal-password-recovery/modal-password-recovery.component';
-import {FormRealtyFilterComponent} from './forms/form-realty-filter/form-realty-filter.component';
+import {ProfileAvatarFormComponent} from './forms/profile-avatar-form/profile-avatar-form.component';
+import {PasswordRecoveryModalComponent} from './modals/password-recovery-modal/password-recovery-modal.component';
+import {RealtyFilterFormComponent} from './forms/realty-filter-form/realty-filter-form.component';
 import {ReviewComponent} from './common/review/review.component';
-import {FormSupportComponent} from './forms/form-support/form-support.component';
+import {SupportFormComponent} from './forms/support-form/support-form.component';
 import {AuthorizationComponent} from './sections/authorization/authorization.component';
 import {RealtyPropertiesComponent} from './sections/realty-properties/realty-properties.component';
 
@@ -137,7 +137,7 @@ import { SafePipe } from './pipes/safe.pipe';
 
 @NgModule({
   declarations: [
-      AppComponent, AskForHelpComponent, BookingItemComponent, CabinetNavigationComponent, CitiesTabsComponent, ComplexItemComponent, ComplexTabsComponent, IconComponent, ListOfComplexesComponent, RealtyRatingsComponent, ListOfRealtyComponent, RealtyEmployedByComponent, CarouselComponent, RealtyItemComponent, RealtyOwnerComponent, RealtyOnTheMapComponent, PageFooterComponent, PaginationComponent, PopularCitiesComponent, PreloaderComponent, ReviewComponent, RatingComponent, SocialAuthorizationComponent, AvatarComponent, FormAuthorizationComponent, FormBookingComponent, FormCarRentalComponent, FormChangeLanguagesComponent, FormChangePersonalDataComponent, FormChangeProfilePictureComponent, FormFeedbackComponent, FormRecoveryComponent, FormRegistrationComponent, FormRentingComponent, RealtySearchFormComponent, FormSubscribeComponent, FormSupportComponent, ModalPasswordRecoveryComponent, ModalRegistrationComponent, PageBalanceComponent, PageBookingComponent, PagePartnershipComponent, PageRealtiesComponent, PageReviewsComponent, PageTransfersComponent, PageArticleComponent, PageAuthorizationComponent, PageCarRentalComponent, PageCommissionComponent, PageComplexComponent, PageContactsComponent, PageFavoritesComponent, PageManagementComponent, PageSearchComponent, PageSupportComponent, PageTransferComponent, PageWithdrawComponent, AboutTheComplexComponent, ApartmentsInTheComplexComponent, AuthorizationComponent, CharacteristicsOfTheComplexComponent, ComplexRealtyComponent, DescriptionOfTheComplexComponent, FeedbackComponent, HowItWorksComponent, LatestRealtyComponent, MostPopularCitiesComponent, RealtyFacilitiesComponent, RealtyLocationComponent, RealtyMainPropertiesComponent, RealtyPricesComponent, RealtyReviewsComponent, RealtyDescriptionComponent, PhotosOfTheComplexComponent, ServicesComponent, SimilarRealtyComponent, WhoWeAreComponent, RealtyInterestedInComponent, PageHeaderComponent, ViewOnMapComponent, FormChangePasswordComponent, FormEditTransferComponent, FormRealtyFilterComponent, FormServiceSettingsComponent, ModalAuthorizationComponent, PageBookingsComponent, PageProfileComponent, PageReferralBookingsComponent, PageTripsComponent, PageAboutComponent, PageCleaningComponent, PageRealtyComponent, PageTrustComponent, BestRealtyOfTheWeekComponent, ComplexOnTheMapComponent, GuaranteesComponent, LatestReviewsComponent, OurServicesComponent, PropertyComponent, ReviewsCarouselComponent, FormBookingsFilterComponent, PageAddComponent, PageIndexComponent, NearestComplexesComponent, PropertiesComponent, ReviewsComponent, RealtyShareComponent, PageEscortComponent, PropertiesComponent, ToggleFavoriteComponent, SafePipe, RealtyPropertiesComponent
+      AppComponent, AskForHelpComponent, BookingItemComponent, CabinetNavigationComponent, CitiesTabsComponent, ComplexItemComponent, ComplexTabsComponent, IconComponent, ListOfComplexesComponent, RealtyRatingsComponent, ListOfRealtyComponent, RealtyEmployedByComponent, CarouselComponent, RealtyItemComponent, RealtyOwnerComponent, RealtyOnTheMapComponent, PageFooterComponent, PaginationComponent, PopularCitiesComponent, PreloaderComponent, ReviewComponent, RatingComponent, SocialAuthorizationComponent, AvatarComponent, AuthorizationFormComponent, BookingFormComponent, CarRentalFormComponent, LanguageChangeFormComponent, ProfileFormComponent, ProfileAvatarFormComponent, FeedbackFormComponent, PasswordRecoveryFormComponent, RegistrationFormComponent, RentingFormComponent, RealtySearchFormComponent, SubscriptionFormComponent, SupportFormComponent, PasswordRecoveryModalComponent, RegistrationModalComponent, PageBalanceComponent, PageBookingComponent, PagePartnershipComponent, PageRealtiesComponent, PageReviewsComponent, PageTransfersComponent, PageArticleComponent, PageAuthorizationComponent, PageCarRentalComponent, PageCommissionComponent, PageComplexComponent, PageContactsComponent, PageFavoritesComponent, PageManagementComponent, PageSearchComponent, PageSupportComponent, PageTransferComponent, PageWithdrawComponent, AboutTheComplexComponent, ApartmentsInTheComplexComponent, AuthorizationComponent, CharacteristicsOfTheComplexComponent, ComplexRealtyComponent, DescriptionOfTheComplexComponent, FeedbackComponent, HowItWorksComponent, LatestRealtyComponent, MostPopularCitiesComponent, RealtyFacilitiesComponent, RealtyLocationComponent, RealtyMainPropertiesComponent, RealtyPricesComponent, RealtyReviewsComponent, RealtyDescriptionComponent, PhotosOfTheComplexComponent, ServicesComponent, SimilarRealtyComponent, WhoWeAreComponent, RealtyInterestedInComponent, PageHeaderComponent, ViewOnMapComponent, PasswordChangeFormComponent, TransferFormComponent, RealtyFilterFormComponent, ServiceSettingsFormComponent, AuthorizationModalComponent, PageBookingsComponent, PageProfileComponent, PageReferralBookingsComponent, PageTripsComponent, PageAboutComponent, PageCleaningComponent, PageRealtyComponent, PageTrustComponent, BestRealtyOfTheWeekComponent, ComplexOnTheMapComponent, GuaranteesComponent, LatestReviewsComponent, OurServicesComponent, PropertyComponent, ReviewsCarouselComponent, BookingsFilterFormComponent, PageAddComponent, PageIndexComponent, NearestComplexesComponent, PropertiesComponent, ReviewsComponent, RealtyShareComponent, PageEscortComponent, PropertiesComponent, ToggleFavoriteComponent, SafePipe, RealtyPropertiesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.profile-form__control-code {
+  max-width: 150px;
+}
+
+.profile-form__socials {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-around;
+}

@@ -1,0 +1,110 @@
+<form action="#"
+      class="transfer-form card bg-gray-50">
+    <header class="transfer-form__header card-header">
+        <ul class="row">
+            <li class="transfer-form__id col-auto">№12</li>
+            <li class="transfer-form__title col">
+                <span class="transfer-form__from">Солнечный берег</span>
+                <span class="transfer-form__to">Аэропорт "Бургас"</span>
+            </li>
+            <li class="transfer-form__price col-auto ml-auto text-right">€29</li>
+        </ul>
+    </header>
+    <fieldset class="transfer-form__body card-body pb-2">
+        <ul class="row">
+            <li class="transfer-form__col col">
+                <div class="form-group">
+                    <label>Надпись на табличке</label>
+                    <input type="text"
+                           name="nameplate"
+                           value="Дмитрий Черчел"
+                           disabled
+                           required
+                           class="form-control">
+                </div>
+            </li>
+            <li class="transfer-form__col col">
+                <div class="form-group">
+                    <label>Дата и время встречи</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <app-icon name="calendar"></app-icon>
+                            </div>
+                        </div>
+                        <input type="text"
+                               name="datetime"
+                               value="2017-09-06 09:00"
+                               required
+                               disabled
+                               class="form-control">
+                    </div>
+                </div>
+            </li>
+            <li class="transfer-form__col col">
+                <div class="form-group">
+                    <label>Количество пасажиров</label>
+                    <select name="NumberOfGuests"
+                            disabled
+                            required
+                            class="custom-select">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+            </li>
+            <li class="transfer-form__col col">
+                <div class="form-group">
+                    <label>Машина</label>
+                    <select name="car"
+                            disabled
+                            class="custom-select">
+                        <option value="" selected>Легковой автомобиль</option>
+                    </select>
+                </div>
+            </li>
+            <li class="transfer-form__col col-12">
+                <div class="transfer-form__note-collapse collapse">
+                    <div class="form-group">
+                        <label>Примечание</label>
+                        <textarea name="note"
+                                  disabled
+                                  rows="4"
+                                  class="form-control"></textarea>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </fieldset>
+    <footer class="transfer-form__footer card-footer">
+        <div class="row align-items-center">
+            <div class="transfer-form__footer-col col">
+                <div class="transfer-form__status text-success">Зарегистрирован</div>
+            </div>
+            <div class="transfer-form__footer-col col">
+                <div class="transfer-form__buttons">
+                    <div class="transfer-form__buttons-editable">
+                        <button type="submit"
+                                class="transfer-form__button-save btn btn-primary">Сохранить</button>
+                        <a
+                           class="transfer-form__button-cancel btn btn-danger">Отмена</a>
+                    </div>
+                    <div class="transfer-form__buttons-default">
+                        <a
+                           class="transfer-form__button-edit btn btn-outline-primary btn-filled">Изменить</a>
+                        <a
+                           class="transfer-form__button-details btn btn-outline-info btn-filled collapsed">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</form>

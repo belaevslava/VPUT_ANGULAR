@@ -548,10 +548,10 @@ $custom-file-text: (
 
 
 // Form validation
-$form-feedback-margin-top:          $form-text-margin-top !default;
-$form-feedback-font-size:           $small-font-size !default;
-$form-feedback-valid-color:         theme-color("success") !default;
-$form-feedback-invalid-color:       theme-color("danger") !default;
+$feedback-form-margin-top:          $form-text-margin-top !default;
+$feedback-form-font-size:           $small-font-size !default;
+$feedback-form-valid-color:         theme-color("success") !default;
+$feedback-form-invalid-color:       theme-color("danger") !default;
 
 
 // Dropdowns

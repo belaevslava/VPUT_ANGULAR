@@ -30,8 +30,8 @@
   .#{$state}-feedback {
     display: none;
     width: 100%;
-    margin-top: $form-feedback-margin-top;
-    font-size: $form-feedback-font-size;
+    margin-top: $feedback-form-margin-top;
+    font-size: $feedback-form-font-size;
     color: $color;
   }
 

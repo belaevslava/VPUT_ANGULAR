@@ -1,0 +1,44 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.booking-form {
+  background-color: $light;
+  padding: $card-spacer-x;
+  border-radius: $border-radius;
+}
+.booking-form__price {
+  display: flex;
+  align-items: flex-start;
+}
+.booking-form__price-label {
+   margin-right: .5rem;
+}
+.booking-form__price-value {
+  font-size: 2rem;
+}
+.booking-form__description {
+  color: $primary;
+}
+.booking-form__table {
+  color: $text-muted;
+  &.table {
+    background-color: $white;
+    border-radius: $border-radius;
+  }
+  tr:first-child td {
+    border-top-width: 0;
+  }
+}
+.booking-form__amount {
+  color: $dark;
+}
+.booking-form__to-pay {
+  color: $secondary;
+}
+.booking-form__alert {
+  text-align: center;
+}
+.booking-form__informer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}

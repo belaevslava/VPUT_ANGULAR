@@ -1,0 +1,24 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.authorization-modal {
+}
+.authorization-modal__content {
+  background-color: $light;
+}
+.authorization-modal__footer {
+  justify-content: center;
+  margin-bottom: -60px;
+  font-size: 1.125rem;
+  border-width: 0;
+}
+.authorization-modal__legend {
+  text-align: center;
+}
+.authorization-modal__register-link {
+  color: rgba($white, .8);
+  transition: $transition-base;
+  @include hover-focus-active() {
+    color: $white;
+    text-decoration: none;
+  }
+}
