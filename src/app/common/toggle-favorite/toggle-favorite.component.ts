@@ -10,6 +10,7 @@ import { FavoriteService } from '../../services/favorite.service';
 export class ToggleFavoriteComponent implements OnInit {
   @Input() id: number;
   isActive: boolean;
+  needAnimate: boolean;
   constructor(private favoriteService: FavoriteService) { }
 
   ngOnInit() {
@@ -18,6 +19,7 @@ export class ToggleFavoriteComponent implements OnInit {
 
   toggleStatus() {
     this.isActive = !this.isActive;
+    this.needAnimate = this.isActive;
     this.favoriteService.toggleItem(this.id);
   }
 

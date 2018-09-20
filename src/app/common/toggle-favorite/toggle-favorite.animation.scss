@@ -128,7 +128,7 @@ $_precision: 10;
     opacity: 1;
   }
 
-  &.active {
+  &.active.toggle-favorites__is_animated {
     animation: heart 1.2s cubic-bezier(.17, .89, .32, 1.49);
 
     &:before, &:after {
