@@ -10,15 +10,11 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class ArticlePageComponent implements OnInit {
   @Input() article: Article;
+  alias: string;
   constructor(private articleService: ArticleService,
-              private route: ActivatedRoute,) { }
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.getArticle();
-  }
-
-  getArticle() {
-    const alias = this.route.snapshot.paramMap.get('alias');
-    this.articleService.getArticleByAlias(alias).subscribe(article => this.article = article);
+    this.alias = this.route.snapshot.paramMap.get('alias');
   }
 }

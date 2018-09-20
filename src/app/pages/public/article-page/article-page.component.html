@@ -1,10 +1,7 @@
 <app-page-header [theme]="'dark'"></app-page-header>
 <!-- Page: article-page -->
-<main class="article-page">
-    <article class="container">
-        <h1>{{article.h1.ru}}</h1>
-        <div [innerHTML]="article.text.ru"></div>
-    </article>
+<main class="article-page" *ngIf="alias">
+    <app-article [alias]="alias"></app-article>
 </main>
 <!-- /Page: article-page -->
 <app-page-footer></app-page-footer>
