@@ -5,15 +5,6 @@
 @import "~swiper/dist/css/swiper.min.css";
 // FancyApp (Image Gallery)
 @import "~@fancyapps/fancybox/dist/jquery.fancybox";
-// Slick Carousel
-@import "~slick-carousel/slick/slick";
-@import "assets/libraries/slick-carousel/slick-theme";
-// noUiSlider
-@import "assets/libraries/nouislider/nouislider";
-// dateRangePicker
-@import "~daterangepicker/daterangepicker";
-// FilePond
-@import "~filepond/dist/filepond";
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -102,14 +93,5 @@ ul {
   }
   .article-page__page-header {
     background-color: $gray-700;
-  }
-}
-
-@include media-breakpoint-down(sm) {
-  [data-slick-adaptive] {
-    .slick-slide {
-      padding-left: ($grid-gutter-width / 4);
-      padding-right: ($grid-gutter-width / 4);
-    }
   }
 }

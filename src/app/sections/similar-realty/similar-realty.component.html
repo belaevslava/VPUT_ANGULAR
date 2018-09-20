@@ -1,9 +1,8 @@
-<!-- Section: similar-realty -->
 <section class="similar-realty" *ngIf="similarRealty">
     <h2 class="similar-realty__title mb-4 text-center" i18n>Похожие предложения</h2>
     <div class="similar-realty__realty-list">
         <!-- realty-list -->
-        <ul class="realty-list row" data-slick-adaptive>
+        <ul class="realty-list row">
 
             <li class="col-md-6 col-lg-4 col-xl-3 mb-3" *ngFor="let realty of similarRealty">
                 <app-realty [realty]="realty"></app-realty>
@@ -16,4 +15,3 @@
         <a routerLink="/search/" class="btn btn-primary btn-lg">Посмотреть больше предложений</a>
     </div>
 </section>
-<!-- /Section: similar-realty -->
