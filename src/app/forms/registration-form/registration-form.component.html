@@ -2,24 +2,14 @@
       method="post"
       class="registration-form">
     <h2 class="registration-form__title">Новый аккаунт</h2>
-    <fieldset class="registration-modal__fieldset">
-        <legend class="registration-modal__legend">через</legend>
-        <!-- Common: social-authorization -->
-        <nav class="social-authorization">
-            <a href="#" class="social-authorization__item">
-                <app-icon name="facebook" size="3"></app-icon>
-            </a>
-            <a href="#" class="social-authorization__item">
-                <app-icon name="vk" size="3"></app-icon>
-            </a>
-            <a href="#" class="social-authorization__item">
-                <app-icon name="ok" size="3"></app-icon>
-            </a>
-        </nav>
-        <!-- /Common: social-authorization -->
+    <fieldset class="registration-form__fieldset">
+        <legend class="registration-form__legend">через</legend>
+        <div class="registration-form__social-authorization">
+            <app-social-authorization></app-social-authorization>
+        </div>
     </fieldset>
-    <fieldset class="registration-modal__fieldset">
-        <legend class="registration-modal__legend mb-3">или</legend>
+    <fieldset class="registration-form__fieldset">
+        <legend class="registration-form__legend mb-3">или</legend>
         <div class="form-group">
             <input type="email"
                    name="login"

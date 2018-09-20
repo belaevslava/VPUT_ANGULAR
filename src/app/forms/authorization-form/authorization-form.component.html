@@ -2,18 +2,14 @@
       method="post"
       class="authorization-form">
     <h2 class="authorization-form__title">Вход</h2>
-    <fieldset class="authorization-modal__fieldset">
-        <legend class="authorization-modal__legend">через</legend>
-        <!-- Common: social-authorization -->
-        <nav class="social-authorization">
-            <a href="#" class="social-authorization__item"><app-icon name="facebook" size="3"></app-icon></a>
-            <a href="#" class="social-authorization__item"><app-icon name="vk" size="3"></app-icon></a>
-            <a href="#" class="social-authorization__item"><app-icon name="ok" size="3"></app-icon></a>
-        </nav>
-        <!-- /Common: social-authorization -->
+    <fieldset class="authorization-form__fieldset">
+        <legend class="authorization-form__legend">через</legend>
+        <div class="authorization-form__social-authorization">
+            <app-social-authorization></app-social-authorization>
+        </div>
     </fieldset>
-    <fieldset class="authorization-modal__fieldset">
-        <legend class="authorization-modal__legend mb-3">или</legend>
+    <fieldset class="authorization-form__fieldset">
+        <legend class="authorization-form__legend mb-3">или</legend>
         <div class="form-group">
             <input type="email"
                    name="login"
