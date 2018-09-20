@@ -38,11 +38,11 @@ export class RealtyService {
             );
     }
 
-    getListOfRealty(ids: number[]): Observable<Realty[]> {
+    getRealtyList(ids: number[]): Observable<Realty[]> {
         const url = `${this.realtyUrl}/items/?ids=${ids.join(',')}`;
         return this.http.get<Realty[]>(url)
             .pipe(
-                    catchError(this.handleError('getListOfRealty', []))
+                    catchError(this.handleError('getRealtyList', []))
             );
     }
 

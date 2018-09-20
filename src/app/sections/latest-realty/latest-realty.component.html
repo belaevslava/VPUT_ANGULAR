@@ -4,12 +4,12 @@
         <h2 class="latest-realty__title mb-0" i18n>Самые новые предложения</h2>
         <div class="latest-realty__description lead text-muted" i18n>Последние предложения, поступившие на наш сайт</div>
     </header>
-    <div class="latest-realty__list-of-realty">
+    <div class="latest-realty__realty-list">
         <!-- List of realty -->
-        <ul class="list-of-realty row" data-slick-adaptive>
+        <ul class="realty-list row" data-slick-adaptive>
             
             <li class="col-md-6 col-lg-4 col-xl-3 mb-3" *ngFor="let realty of latestRealty">
-                <app-realty-item [realty]="realty"></app-realty-item>
+                <app-realty [realty]="realty"></app-realty>
             </li>
             
         </ul>

@@ -1,0 +1,106 @@
+<figure class="realty" *ngIf="realty">
+    <app-toggle-favorite [id]="realty.id"
+                         class="realty__toggle-favorite"></app-toggle-favorite>
+    <div class="realty__realty-carousel">
+        <app-carousel [images]="realty.images"
+                      [height]="200"></app-carousel>
+
+    </div>
+    <figcaption class="realty__description">
+        <h3 class="realty__title">
+            <a [routerLink]="'/realty/' + realty.id"
+               [attr.title]="realty.name.ru "
+               *ngIf="realty.name?.ru"
+               class="realty__link">{{realty.name.ru}}</a>
+        </h3>
+        <address class="realty__address" *ngIf="!hideDetails">
+            <ng-container *ngIf="realty.address?.city">
+                {{realty.address.city.country.name.ru}} |
+                {{realty.address.city.name.ru}}
+            </ng-container>
+            &nbsp;
+        </address>
+        <ul class="realty__details" *ngIf="!hideDetails">
+            <li class="realty__detail realty__type" *ngIf="realty.category">
+                {{realty.category.name?.ru}}
+            </li>
+            <li class="realty__detail realty__rooms">
+                <span class="realty__rooms-label" i18n>Комнат: </span>
+                <span class="realty__rooms-value">{{realty.rooms}}</span>
+            </li>
+            <li class="realty__detail realty__guests">
+                <span class="realty__guests-label" i18n>Гостей: </span>
+                <span class="realty__guests-value">{{realty.guests}}</span>
+            </li>
+        </ul>
+        <ul class="realty__prices" *ngIf="!hideDetails">
+            <li class="realty__price">
+                <span class="realty__price-currency">€</span>
+                <span class="realty__price-value">{{realty.price}}</span>
+            </li>
+            <li class="realty__price-per-day">
+                <span class="realty__price-per-day-currency">€</span>
+                <span class="realty__price-per-day-value">{{realty.price / realty.guests | number: '1.0-0'}}</span>
+                <app-icon [name]="'guest'"
+                          [size]="1"
+                          class="ml-1"></app-icon>
+            </li>
+        </ul>
+        <ul class="realty__properties">
+            <li class="realty__property realty__pets mr-3" *ngIf="realty.allowPets">
+                <app-icon [name]="'pets'"
+                          [theme]="'light'"
+                          class="ml-1"></app-icon>
+            </li>
+            <li class="realty__property mr-3" *ngIf="realty.hasTV">
+                <app-icon [name]="'tv'"
+                          [theme]="'light'"
+                          class="ml-1"></app-icon>
+            </li>
+            <li class="realty__property realty__air-conditioner mr-3" *ngIf="realty.hasAirConditioner">
+                <app-icon [name]="'air-conditioner'"
+                          [theme]="'light'"
+                          class="ml-1"></app-icon>
+            </li>
+            <li class="realty__property realty__reliable-host">
+                <app-icon [name]="'reliable-host'"
+                          [size]="2"></app-icon>
+            </li>
+        </ul>
+    </figcaption>
+    <!-- If the item belongs to the owner -->
+    <footer class="realty__editor">
+        <div class="realty__actions">
+            <!-- ! -->
+            <a routerLink="/cabinet/add/?id="
+               class="realty__action btn btn-secondary d-none" i18n>Редактировать</a>
+            <!-- /! -->
+            <a routerLink="/add/?id="
+               class="realty__action btn btn-warning"
+               data-toggle="tooltip"
+               data-placement="top"
+               data-html="true"
+               title="Пройдено <b class='text-warning'>5</b> шагов из <b class='text-success'>11</b>" i18n i18n-title>Продолжить добавление</a>
+            <a
+               class="realty__action btn btn-warning"
+               data-toggle="tooltip"
+               data-placement="top"
+               data-html="true"
+               title="Подтвердить актуальность календаря <div class='alert alert-warning alert-sm mb-0 mt-2'>Последнее обновление календаря: <b class='d-block'>26-06-2018 16:45:05</b></div><div class='alert alert-warning alert-sm mb-0 mt-2'>Календарь не актуален</div>"><app-icon name="calendar" size="1" theme="dark"></app-icon></a>
+            <button type="button"
+                    class="realty__action btn btn-light"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    data-html="true"
+                    title="Копировать ссылку на объект"><app-icon name="link" size="1" theme="dark"></app-icon></button>
+        </div>
+        <div class="realty__statuses">
+            <!-- ! -->
+            <div class="realty__status realty__status_state_danger d-none" i18n>Заблокированно</div>
+            <div class="realty__status realty__status_state_warning d-none" i18n>На модерации</div>
+            <!-- /! -->
+            <div class="realty__status realty__status_state_success" i18n>Публикуется</div>
+        </div>
+    </footer>
+    <!-- /If the item belongs to the owner -->
+</figure>

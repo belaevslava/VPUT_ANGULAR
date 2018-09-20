@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="assets/articles/article-cleaning.css">
 <script src="assets/articles/article-cleaning.js" defer></script>
 <article class="article-cleaning article-cleaning_lang_ru">
-    <header class="page-article__article-header"
+    <header class="article-page__article-header"
             style="background-image: url(/assets/content/articles/article-cleaning/article-cleaning__header-bg.jpg)">
         <div class="container">
             <h1>CLEANING AND CHANGING BED SHEETS</h1>

@@ -1,0 +1,17 @@
+@import "../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.booking__id {
+  font-weight: normal;
+}
+.booking__price {
+  color: $secondary;
+}
+
+@include media-breakpoint-up(sm) {
+  .booking__communication {
+    display: flex;
+  }
+  .booking__communication-body {
+    flex: auto;
+  }
+}

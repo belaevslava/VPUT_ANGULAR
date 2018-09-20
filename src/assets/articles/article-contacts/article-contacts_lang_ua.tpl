@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="assets/articles/article-contacts.js">
 
 <article class="article-contacts">
-    <header class="page-article__article-header" style="background-image: url(/assets/content/articles/article-contacts/article-contacts__header-bg.jpg)">
+    <header class="article-page__article-header" style="background-image: url(/assets/content/articles/article-contacts/article-contacts__header-bg.jpg)">
         <section class="container text-left">
             <h1 class="mb-4">Служба підтримки</h1>
             <ul class="row">

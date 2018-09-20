@@ -3,7 +3,7 @@
 <script src="assets/articles/article-escort.js" defer></script>
 
 <article class="article-escort">
-    <header class="page-article__article-header"
+    <header class="article-page__article-header"
             style="background-image: url(/assets/content/articles/article-escort/article-escort__header-bg.jpg)">
         <div class="container">
             <h1>ЗАСЕЛЕНИЕ И ВЫСЕЛЕНИЕ ГОСТЕЙ</h1>

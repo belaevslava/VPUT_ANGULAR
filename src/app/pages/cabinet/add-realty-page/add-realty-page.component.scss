@@ -1,0 +1,16 @@
+@import "../../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.add-realty-page__header {
+  background-color: $dark;
+  color: $white;
+  background-image: url(/assets/images/pages/cabinet/add-realty-page/add-realty-page__header-bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+@include media-breakpoint-up(lg) {
+  .add-realty-page__header {
+    min-height: 300px;
+    margin-top: -67px;
+  }
+}

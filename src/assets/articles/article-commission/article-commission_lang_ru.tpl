@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="assets/articles/article-commission.css">
 <article class="article-commission">
-    <header class="page-article__article-header" style="background-image: url(/assets/content/articles/article-commission/article-commission__header-bg.jpg)">
+    <header class="article-page__article-header" style="background-image: url(/assets/content/articles/article-commission/article-commission__header-bg.jpg)">
         <div class="container">
             <h1>ЗА ЧТО МЫ БЕРЁМ КОМИССИЮ</h1>
             <p class="lead">Справедливо ли выплачивать комиссию с аренды? Из чего складывается итоговая сумма комиссии?

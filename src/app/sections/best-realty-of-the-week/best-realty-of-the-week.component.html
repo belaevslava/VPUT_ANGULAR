@@ -1,11 +1,11 @@
 <!-- Section: best-realty-of-the-week -->
 <section class="best-realty-of-the-week" *ngIf="bestRealty">
     <h2 class="best-realty-of-the-week__title text-center mb-4" i18n>Лучшие апартаменты недели</h2>
-    <div class="best-realty-of-the-week__list-of-realty">
+    <div class="best-realty-of-the-week__realty-list">
         <!-- List of realty -->
-        <ul class="list-of-realty row" data-slick-adaptive>
+        <ul class="realty-list row" data-slick-adaptive>
             <li class="col-md-6 col-lg-4 col-xl-3 mb-3" *ngFor="let realty of bestRealty">
-                <app-realty-item [realty]="realty"></app-realty-item>
+                <app-realty [realty]="realty"></app-realty>
             </li>
         </ul>
         <!-- /List of realty -->

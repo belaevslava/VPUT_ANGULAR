@@ -1,15 +1,15 @@
 @import "../../../assets/libraries/bootstrap/bootstrap-reboot";
 
-.reviews__title {
+.realty-reviews__title {
   display: flex;
   align-items: center;
 }
-.reviews__total-rating {
+.realty-reviews__total-rating {
   display: inline-block;
 }
 
 @include media-breakpoint-down(sm) {
-  .reviews__total-rating {
+  .realty-reviews__total-rating {
     margin-left: auto;
   }
 }

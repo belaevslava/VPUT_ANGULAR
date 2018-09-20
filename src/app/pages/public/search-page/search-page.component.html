@@ -1,0 +1,36 @@
+<app-page-header></app-page-header>
+
+<main class="search-page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8 search-page__search-container">
+                <div class="search-page__realty-search-form pt-4 pb-2 border-bottom">
+                    <app-realty-search-form></app-realty-search-form>
+                </div>
+                <div class="search-page__results" *ngIf="realtySearchResult">
+                    <ul class="search-page__realty-list py-4 row">
+                        <li class="col-sm-6 col-xl-4 mb-3" *ngFor="let realty of realtySearchResult.data">
+                            <app-realty [realty]="realty"></app-realty>
+                        </li>
+                    </ul>
+                    <app-pagination [currentPage]="realtySearchResult.current_page"
+                                    [lastPage]="realtySearchResult.last_page"
+                                    class="search-page__pagination"></app-pagination>
+                </div>
+            </div>
+            <div class="col-lg-4 search-page__map-container d-none d-lg-block">
+                <div class="search-page__realty-on-the-map">
+                    <agm-map [latitude]="42.70703948337048"
+                             [longitude]="27.774349376531973"
+                             class="h-100"
+                             *ngIf="realtySearchResult">
+                            <agm-marker [latitude]="realty.address.latitude"
+                                        [longitude]="realty.address.longitude"
+                                        *ngFor="let realty of realtySearchResult.data"></agm-marker>
+                    </agm-map>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+

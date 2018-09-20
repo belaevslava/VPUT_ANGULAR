@@ -1,0 +1,109 @@
+<app-page-header theme="dark"></app-page-header>
+<!-- Page: user-balance-page -->
+<main class="user-balance-page">
+    <header class="page-cabinet__header text-center py-4">
+        <div class="container">
+            <h1 class="page-cabinet__title mb-0">Ваш баланс</h1>
+        </div>
+    </header>
+    <div class="container mb-4">
+        <div class="row">
+            <div class="col-xl-3 d-none d-xl-block">
+                <aside class="user-bookings-page__aside">
+                    <app-cabinet-navigation></app-cabinet-navigation>
+                </aside>
+            </div>
+            <div class="col-xl-9">
+                <div class="alert alert-info lead">Текущая сумма: <b class="text-secondary">€0</b></div>
+                <form class="card bg-gray-50 mb-4">
+                    <header class="card-header bg-gray-50">Фильтр активных бонусов</header>
+                    <div class="card-body">
+                        <ul class="row">
+                            <li class="col-lg-3 col-md-6">
+                                <div class="form-group mb-md-0">
+                                    <label for="">Тип транзакции</label>
+                                    <select name="filters[type]"
+                                            class="custom-select">
+                                        <option value="0">Все</option>
+                                        <option value="deposit">Начисление</option>
+                                        <option value="withdraw">Списание</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="col-lg-3 col-md-6">
+                                <div class="form-group mb-md-0">
+                                    <label for="">Период с</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <app-icon name="calendar"></app-icon>
+                                            </div>
+                                        </div>
+                                        <input type="date"
+                                               name="filters[startDate]"
+                                               id=""
+                                               class="form-control">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-lg-3 col-md-6">
+                                <div class="form-group mb-md-0">
+                                    <label for="">по</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <app-icon name="calendar"></app-icon>
+                                            </div>
+                                        </div>
+                                        <input type="date"
+                                               name="filters[endDate]"
+                                               class="form-control">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-lg-3 col-md-6">
+                                <div class="form-group mb-md-0">
+                                    <div class="mb-2">&nbsp;</div>
+                                    <button class="btn btn-primary mr-2">Фильтровать</button>
+                                    <button class="btn btn-danger"><app-icon name="close" size="1" theme="light"></app-icon></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-adaptive" data-plugin="data-table">
+                        <thead>
+                        <tr>
+                            <th class="table-balance__number">#</th>
+                            <th>Номер транзакции</th>
+                            <th>Сумма, €</th>
+                            <th>Дата</th>
+                            <th>Бронирование</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>655</td>
+                            <td class="text-danger">-10</td>
+                            <td>28-11-2017 12:08:31</td>
+                            <td>убираем лишнее</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>373</td>
+                            <td class="text-success">10</td>
+                            <td>06-07-2017 18:19:57</td>
+                            <td>Зачисление средств за бронирование №3956</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- /Page: user-balance-page -->
+<app-page-footer></app-page-footer>

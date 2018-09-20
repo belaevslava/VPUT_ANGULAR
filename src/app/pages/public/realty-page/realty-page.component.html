@@ -1,0 +1,112 @@
+<app-page-header></app-page-header>
+<!-- Page: realty-page -->
+<main class="realty-page"
+      *ngIf="realty">
+    <div class="container">
+        <!-- Common: breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript: void(0);">Главная</a></li>
+                <li class="breadcrumb-item"><a href="javascript: void(0);">{{realty.address.city.country.name.ru}}</a></li>
+                <li class="breadcrumb-item"><a href="javascript: void(0);">{{realty.address.city.name.ru}}</a></li>
+                <li class="breadcrumb-item active"
+                    aria-current="page">{{realty.name.ru}}</li>
+            </ol>
+        </nav>
+        <!-- /Common: breadcrumb -->
+
+        <div class="realty-page__image-slider">
+            <app-carousel [images]="realty.images"
+                          [height]="'90vh'"></app-carousel>
+        </div>
+
+        <div class="row">
+            <div class="col-xl">
+                <article class="realty-page__article py-4">
+                    <header class="realty-page__header pb-3 border-bottom">
+                        <h1 class="realty-page__title">{{realty.name.ru}}</h1>
+                        <div class="realty-page__place lead">
+                            {{realty.address.city.country.name.ru}},
+                            {{realty.address.city.name.ru}},
+                            <a routerLink="/complex/" class="realty-page__complex">?Комплекс Венера-палас</a>
+                        </div>
+                    </header>
+
+                    <div class="realty-page__realty-main-properties pt-4 border-bottom">
+                        <app-realty-main-properties [realty]="realty"></app-realty-main-properties>
+                    </div>
+
+                    <app-realty-properties [properties]="realty.properties"></app-realty-properties>
+
+                    <div class="realty-page__reviews py-4 border-bottom">
+                        <app-realty-reviews></app-realty-reviews>
+                    </div>
+
+                    <div class="realty-page__realty-facilities py-4 border-bottom">
+                        <app-realty-facilities></app-realty-facilities>
+                    </div>
+
+                    <div class="realty-page__realty-prices py-4 border-bottom">
+                        <app-realty-prices [prices]="realty.prices"></app-realty-prices>
+                    </div>
+
+                    <div class="realty-page__realty-description py-4 border-bottom">
+                        <app-realty-description [realty]="realty"></app-realty-description>
+                    </div>
+                </article>
+            </div>
+            <div class="realty-page__aside-wrapper col-xl-auto">
+                <a
+                   class="realty-page__modal-toggle btn btn-primary"
+                   data-target=".realty-page__modal"
+                   data-toggle="modal">
+                    <app-icon name="book" class="mr-2"></app-icon>
+                </a>
+                <div class="realty-page__modal"
+                     tabindex="-1"
+                     is-sticked>
+                    <div class="realty-page__modal-dialog">
+                        <aside class="realty-page__aside">
+                            <div class="realty-page__realty-employed-by mb-3">
+                                <app-realty-employed-by></app-realty-employed-by>
+                            </div>
+                            <div class="realty-page__booking-form mb-3">
+                                <app-booking-form></app-booking-form>
+                            </div>
+                            <div class="realty-page__realty-insterested-in mb-3">
+                                <app-realty-interested-in></app-realty-interested-in>
+                            </div>
+                            <div class="realty-page__realty-owner mb-3">
+                                <app-realty-owner></app-realty-owner>
+                            </div>
+                            <div class="realty-page__realty-share mb-3">
+                                <app-realty-share></app-realty-share>
+                            </div>
+                            <div class="realty-page__how-it-works">
+                                <app-how-it-works [maxHeight]="300"></app-how-it-works>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="realty-page__realty-location-map pt-4">
+        <app-realty-location [realty]="realty"></app-realty-location>
+    </div>
+    <div class="realty-page__complex bg-light pt-5 pb-3">
+        <div class="container">
+            <div class="realty-page__about-the-complex mb-4">
+                <app-about-the-complex></app-about-the-complex>
+            </div>
+            <div class="realty-page__complex-realty">
+                <app-complex-realty></app-complex-realty>
+            </div>
+        </div>
+    </div>
+    <div class="realty-page__similar-realty container py-5">
+        <app-similar-realty></app-similar-realty>
+    </div>
+</main>
+<!-- /Page: realty-page -->
+<app-page-footer></app-page-footer>

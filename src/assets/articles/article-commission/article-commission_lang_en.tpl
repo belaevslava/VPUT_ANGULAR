@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="assets/articles/article-commission.css">
 <article class="article-commission">
-    <header class="page-article__article-header" style="background-image: url(/assets/content/articles/article-commission/article-commission__header-bg.jpg)">
+    <header class="article-page__article-header" style="background-image: url(/assets/content/articles/article-commission/article-commission__header-bg.jpg)">
         <div class="container">
             <h1>FOR WHAT WE CHARGE A COMMISSION</h1>
             <p class="lead">Is it reasonable to pay a commission for rent? What makes the total amount of our commission?<br>

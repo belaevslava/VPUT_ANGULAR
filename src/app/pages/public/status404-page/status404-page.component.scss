@@ -1,0 +1,88 @@
+@import "../../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.status404-page {
+  position: relative;
+  height: 100%;
+}
+
+.status404-page__sea {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 40%;
+  overflow: hidden;
+}
+.status404-page__sea-wave {
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  z-index: 1;
+}
+
+.status404-page__sea-wave + .status404-page__sea-wave {
+  z-index: 2;
+}
+
+.status404-page {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  background-color: #74b9ff;
+}
+
+.status404-page__island {
+  position: absolute;
+  top: 0;
+  bottom: 28%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-size: 800px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.status404-page__header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 40px;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  text-align: center;
+}
+
+.status404-page__logo {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  margin: auto;
+}
+
+.status404-page__title {
+  font-size: 160px;
+  margin: 0;
+}
+
+.status404-page__description {
+  font-size: 24px;
+  margin-bottom: 1rem;
+}

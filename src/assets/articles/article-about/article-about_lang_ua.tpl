@@ -3,10 +3,10 @@
 <link rel="stylesheet" href="assets/articles/article-about.js">
 
 <article class="article-about">
-    <header class="page-article__article-header"
+    <header class="article-page__article-header"
             style="background-image: url(/assets/content/articles/article-about/article-about__header-bg.jpg)">
         <div class="container">
-            <h1 class="page-article__title">ПОДОРОЖИ ТА ОРЕНДА НЕРУХИМОСТИ <br>РАЗОМ З НАМИ</h1>
+            <h1 class="article-page__title">ПОДОРОЖИ ТА ОРЕНДА НЕРУХИМОСТИ <br>РАЗОМ З НАМИ</h1>
         </div>
     </header>
     <div class="bg-dark d-none d-sm-block">
@@ -34,7 +34,7 @@
         </div>
     </div>
     <a name="idea"></a>
-    <section class="page-article__section py-5">
+    <section class="article-page__section py-5">
         <div class="container">
             <figure class="row">
                 <header class="col-md-auto d-flex align-items-center justify-content-center mb-4">
@@ -58,7 +58,7 @@
         </div>
     </section>
     <a name="plans"></a>
-    <section class="page-article__section bg-light py-5">
+    <section class="article-page__section bg-light py-5">
         <div class="container">
             <header class="text-center">
                 <h2>ПЛАНИ</h2>
@@ -114,9 +114,9 @@
         </div>
     </section>
     <a name="team"></a>
-    <section class="page-article__section text-center py-5">
+    <section class="article-page__section text-center py-5">
         <div class="container">
-            <h2 class="page-article__title mb-4">КОМАНДА</h2>
+            <h2 class="article-page__title mb-4">КОМАНДА</h2>
             <ul class="row">
                 <li class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">

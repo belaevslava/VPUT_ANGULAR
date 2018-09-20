@@ -1,0 +1,86 @@
+@import "../../../../assets/libraries/bootstrap/bootstrap-reboot";
+
+.realty-page__article h2,
+.realty-page__complex h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.realty-page__place {
+  color: $text-muted;
+}
+.realty-page__how-it-works {
+  .how-it-works {
+    height: 260px;
+  }
+}
+.realty-page__modal-dialog {
+  max-width: 375px;
+}
+
+.realty-page__modal-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1051;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transition: $transition-base;
+}
+.realty-page__aside-toggle-caption-hide {
+  display: none;
+}
+
+@include media-breakpoint-down(lg) {
+  .realty-page__aside {
+    background-color: $white;
+    padding: $card-spacer-y;
+    border-radius: 0;
+  }
+}
+@include media-breakpoint-up(xl) {
+  .realty-page__modal,
+  .realty-page__modal-dialog,
+  .realty-page__modal {
+    position: relative;
+    display: block!important;
+    opacity: 1!important;
+    transform: initial!important;
+  }
+  .realty-page__aside {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .realty-page__modal-toggle {
+    display: none;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .realty-page {
+    .breadcrumb {
+      display: none;
+    }
+  }
+
+  .realty-page__article {
+    h2 {
+      font-size: $h4-font-size * .875;
+    }
+  }
+}
+@include media-breakpoint-down(xs) {
+  .realty-page {
+    .booking-form {
+      padding: 0;
+      background-color: initial;
+    }
+    .booking-form__table {
+      background-color: $light;
+    }
+  }
+}

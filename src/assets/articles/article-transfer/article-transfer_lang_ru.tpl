@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="assets/articles/article-transfer.css">
 <article class="article-transfer">
-    <header class="page-article__article-header"
+    <header class="article-page__article-header"
             style="background-image: url(/assets/content/articles/article-transfer/article-transfer__header-bg.jpg);">
         <div class="container">
             <h1>ТРАНСФЕРЫ</h1>

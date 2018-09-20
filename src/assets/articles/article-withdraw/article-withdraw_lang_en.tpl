@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="assets/articles/article-withdraw.js">
 
 <article class="article-withdraw">
-    <header class="page-article__article-header"
+    <header class="article-page__article-header"
             style="background-image: url(/assets/content/articles/article-withdraw/article-withdraw__header-bg.jpg)">
         <div class="container">
             <h1>КАК ПОЛУЧИТЬ ДЕНЬГИ?</h1>

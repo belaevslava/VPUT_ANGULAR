@@ -73,7 +73,7 @@ ul {
   text-transform: uppercase;
 }
 
-.page-article__article-header {
+.article-page__article-header {
   text-align: center;
   background-color: $dark;
   color: $white;
@@ -91,16 +91,16 @@ ul {
 }
 
 @include media-breakpoint-up(md) {
-  .page-article__article-header {
+  .article-page__article-header {
     margin-top: -67px;
     min-height: 360px;
   }
-  .page-article__article-header {
+  .article-page__article-header {
     .page-header {
       border-width: 0;
     }
   }
-  .page-article__page-header {
+  .article-page__page-header {
     background-color: $gray-700;
   }
 }

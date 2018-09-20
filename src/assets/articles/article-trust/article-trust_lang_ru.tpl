@@ -3,14 +3,14 @@
 <link rel="stylesheet" href="assets/articles/article-trust.js">
 
 <article class="article-trust">
-    <header class="page-article__article-header"
+    <header class="article-page__article-header"
             style="background-image: url(/assets/content/articles/article-trust/article-trust__header-bg.jpg)">
         <div class="container">
-            <h1 class="page-article__title">ПОЧЕМУ НАМ ДОВЕРЯЮТ <span class="text-primary">ТЫСЯЧИ КЛИЕНТОВ</span></h1>
+            <h1 class="article-page__title">ПОЧЕМУ НАМ ДОВЕРЯЮТ <span class="text-primary">ТЫСЯЧИ КЛИЕНТОВ</span></h1>
         </div>
     </header>
 
-    <section class="page-article__section py-5">
+    <section class="article-page__section py-5">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-6">
@@ -39,7 +39,7 @@
             </div>
         </div>
     </section>
-    <section class="page-article__section bg-light py-5">
+    <section class="article-page__section bg-light py-5">
         <div class="container">
             <h2 class="text-center mb-4">ЗАЩИТА ДАННЫХ КЛИЕНТОВ</h2>
             <ul class="row text-center">
@@ -84,9 +84,9 @@
             </ul>
         </div>
     </section>
-    <section class="page-article__section py-5">
+    <section class="article-page__section py-5">
         <div class="container">
-            <h2 class="page-article__title mb-4 text-center">ЕВРОПЕЙСКИЙ БАНК-ЭКВАЙЕР С ФИНАНСОВЫМИ ГАРАНТИЯМИ</h2>
+            <h2 class="article-page__title mb-4 text-center">ЕВРОПЕЙСКИЙ БАНК-ЭКВАЙЕР С ФИНАНСОВЫМИ ГАРАНТИЯМИ</h2>
             <figure class="figure d-md-flex align-items-center">
                 <div class="text-center">
                     <img src="content/articles/article-trust/article-trust__europe.svg" alt="" class="figure-img mr-md-5">
@@ -97,7 +97,7 @@
             </figure>
         </div>
     </section>
-    <section class="page-article__section bg-light py-5">
+    <section class="article-page__section bg-light py-5">
         <div class="container">
             <h2 class="text-center mb-4">МОТИВАЦИЯ ВЛАДЕЛЬЦЕВ</h2>
             <ul class="row text-center">

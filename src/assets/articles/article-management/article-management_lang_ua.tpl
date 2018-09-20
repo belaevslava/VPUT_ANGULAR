@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="assets/articles/article-management.css">
 <script src="assets/articles/article-management.js" defer></script>
 <article class="article-management">
-    <header class="page-article__article-header"
+    <header class="article-page__article-header"
             style="background-image: url(/assets/content/articles/article-management/article-management__header-bg.jpg)">
         <div class="container">
             <h1>УПРАВЛЕНИЕ ЖИЛЬЁМ</h1>
