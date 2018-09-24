@@ -1,13 +1,9 @@
-<!-- Form: realty-search-form -->
 <form class="realty-search-form"
-      (ngSubmit)="onSubmit()"
+      (submit)="onSubmit($event)"
       [class.realty-search-form_is_short]="layout == 'short'">
-
     <fieldset class="realty-search-form__main-fieldset">
         <ul class="form-row">
             <li class="realty-search-form__cityId-col form-group col">
-                <input type="hidden"
-                       name="filter[cityId]">
                 <input class="realty-search-form__cities-tabs-toggle custom-select disabled custom-select-lg collapsed"
                        readonly
                        onfocus="this.blur()"
@@ -18,66 +14,47 @@
             <li class="realty-search-form__dateRange-col form-group col">
                 <nz-range-picker [nzSize]="'large'"></nz-range-picker>
             </li>
-            <li class="form-group col d-none">
-                <input name="filter[endDate]"
-                       class="custom-select custom-select-lg"
-                       placeholder="Выезд">
-            </li>
             <li class="realty-search-form__guests-col form-group col">
                 <select name="filters[guests]"
+                        [(ngModel)]="model.filters.guests"
+                        required
                         id="guests"
                         class="custom-select custom-select-lg">
-                    
-                    <option value="1">1 гость</option>
-                    
-                    <option value="2">2 гостя</option>
-                    
-                    <option value="3">3 гостя</option>
-                    
-                    <option value="4">4 гостя</option>
-                    
-                    <option value="5">5 гостей</option>
-                    
-                    <option value="6">6 гостей</option>
-                    
-                    <option value="7">7 гостей</option>
-                    
-                    <option value="8">8 гостей</option>
-                    
-                    <option value="9">9 гостей</option>
-                    
-                    <option value="10">10 гостей</option>
-                    
+                    <option selected
+                            disabled>Кол-во гостей</option>
+                    <option *ngFor="let guest of guests"
+                            [value]="guest">{{guest}} гость</option>
                 </select>
             </li>
             <li class="realty-search-form__search-by-complexes-col form-group col">
-                <a routerLink="/search"
-                   class="realty-search-form__search-by-complexes-button btn btn-outline-primary btn-lg w-100">Искать по комплексам</a>
+                <button type="submit"
+                        class="btn btn-outline-primary btn-lg w-100">Искать по комплексам</button>
             </li>
             <li class="realty-search-form__other-filters-col form-group col">
-                <a
-                   class="realty-search-form__other-filters-toggle-button btn btn-outline-primary btn-lg w-100 collapsed"
-                   data-toggle="collapse"
-                   data-target=".realty-search-form__other-filters">Ещё фильтры</a>
+                <a  href="javascript: return void(0)"
+                    data-toggle="collapse"
+                    data-target=".realty-search-form__other-filters"
+                    class="btn btn-outline-primary btn-lg w-100 collapsed">Ещё фильтры</a>
             </li>
             <li class="realty-search-form__id-col form-group col">
                 <input type="number"
                        name="filters[id]"
-                       class="form-control form-control-lg"
-                       placeholder="ID">
+                       placeholder="ID"
+                       class="form-control form-control-lg">
             </li>
             <li class="realty-search-form__search-col form-group col">
-                <a routerLink="/search"
-                   class="realty-search-form__search-button btn btn-secondary btn-lg w-100">Найти</a>
+                <button type="submit"
+                        class="btn btn-secondary btn-lg w-100">Найти</button>
             </li>
         </ul>
     </fieldset>
 
     <div class="realty-search-form__show-booked custom-control custom-checkbox">
         <input type="checkbox"
-               class="realty-search-form__show-booked-control custom-control-input"
+               name="filters[showBooked]"
+               [(ngModel)]="model.filters.showBooked"
                id="realty-search-form__show-booked-control"
-               name="filters[doNotShowBooked]">
+               class="realty-search-form__show-booked-control custom-control-input">
         <label class="custom-control-label"
                for="realty-search-form__show-booked-control">Не показывать забронированные</label>
     </div>
@@ -88,10 +65,12 @@
 
     <!-- Other filters -->
     <div class="realty-search-form__other-filters collapse">
-        <fieldset class="realty-search-form__fieldset">
+        <fieldset class="realty-search-form__fieldset d-none">
             <div class="form-row align-items-center">
                 <legend class="realty-search-form__legend col-md-3 text-center text-md-left mb-md-0 mt-md-3">Цена в сутки</legend>
-                <nz-slider nzRange [nzDefaultValue]="[0, 768]" class="d-block col-md"></nz-slider>
+                <!--<nz-slider [nzRange]-->
+                           <!--[nzDefaultValue]="[0, 768]"-->
+                           <!--class="d-block col-md"></nz-slider>-->
             </div>
         </fieldset>
 
@@ -110,9 +89,10 @@
                         <div class="input-group-append">
                             <div class="custom-control custom-checkbox input-group-text">
                                 <input type="checkbox"
-                                       name="filters[realtyTypes][2]"
-                                       class="custom-control-input"
-                                       id="realty-search-form__home">
+                                       name="filters[categories][]"
+                                       (click)="model.toggleCategoryId(2)"
+                                       id="realty-search-form__home"
+                                       class="custom-control-input">
                                 <label class="custom-control-label"
                                        for="realty-search-form__home"></label>
                             </div>
@@ -133,9 +113,10 @@
                         <div class="input-group-append">
                             <div class="custom-control custom-checkbox input-group-text">
                                 <input type="checkbox"
-                                       name="filters[realtyTypes][1]"
-                                       class="custom-control-input"
-                                       id="realty-search-form__apartment">
+                                       name="filters[categories][]"
+                                       (click)="model.toggleCategoryId(1)"
+                                       id="realty-search-form__apartment"
+                                       class="custom-control-input">
                                 <label class="custom-control-label"
                                        for="realty-search-form__apartment"></label>
                             </div>
@@ -153,9 +134,10 @@
                         <div class="input-group-append">
                             <div class="custom-control custom-checkbox input-group-text">
                                 <input type="checkbox"
-                                       name="filters[realtyTypes][28]"
-                                       class="custom-control-input"
-                                       id="realty-search-form__room">
+                                       name="filters[categories][]"
+                                       (click)="model.toggleCategoryId(3)"
+                                       id="realty-search-form__room"
+                                       class="custom-control-input">
                                 <label class="custom-control-label"
                                        for="realty-search-form__room"></label>
                             </div>
@@ -175,9 +157,10 @@
                         <div class="input-group-append">
                             <div class="custom-control custom-checkbox input-group-text">
                                 <input type="checkbox"
-                                       name="filters[realtyTypes][31]"
-                                       class="custom-control-input"
-                                       id="realty-search-form__hotel">
+                                       name="filters[categories][]"
+                                       (click)="model.toggleCategoryId(31)"
+                                       id="realty-search-form__hotel"
+                                       class="custom-control-input">
                                 <label class="custom-control-label"
                                        for="realty-search-form__hotel"></label>
                             </div>
@@ -197,30 +180,12 @@
                             </div>
                         </div>
                         <select class="custom-select"
-                                name="filters[rooms]">
+                                name="filters[rooms]"
+                                [(ngModel)]="model.filters.rooms">
                             <option selected
                                     disabled>Кол-во комнат</option>
-                            
-                            <option value="1">1 комната</option>
-                            
-                            <option value="2">2 комнаты</option>
-                            
-                            <option value="3">3 комнаты</option>
-                            
-                            <option value="4">4 комнаты</option>
-                            
-                            <option value="5">5 комнат</option>
-                            
-                            <option value="6">6 комнат</option>
-                            
-                            <option value="7">7 комнат</option>
-                            
-                            <option value="8">8 комнат</option>
-                            
-                            <option value="9">9 комнат</option>
-                            
-                            <option value="10">10 комнат</option>
-                            
+                            <option *ngFor="let room of rooms"
+                                    [value]="room">{{room}} комната</option>
                         </select>
                     </div>
                 </li>
@@ -232,30 +197,12 @@
                             </div>
                         </div>
                         <select class="custom-select"
-                                name="filters[bathRooms]">
+                                name="filters[bathRooms]"
+                                [(ngModel)]="model.filters.bathRooms">
                             <option selected
                                     disabled>Кол-во ванных</option>
-                            
-                            <option value="1">1 ванная комната</option>
-                            
-                            <option value="2">2 ванные комнаты</option>
-                            
-                            <option value="3">3 ванные комнаты</option>
-                            
-                            <option value="4">4 ванные комнаты</option>
-                            
-                            <option value="5">5 ванных комнат</option>
-                            
-                            <option value="6">6 ванных комнат</option>
-                            
-                            <option value="7">7 ванных комнат</option>
-                            
-                            <option value="8">8 ванных комнат</option>
-                            
-                            <option value="9">9 ванных комнат</option>
-                            
-                            <option value="10">10 ванных комнат</option>
-                            
+                            <option *ngFor="let bathRoom of bathRooms"
+                                    [value]="bathRoom">{{bathRoom}} ванн</option>
                         </select>
                     </div>
                 </li>
@@ -267,30 +214,12 @@
                             </div>
                         </div>
                         <select class="custom-select"
-                                name="filters[beds]">
+                                name="filters[beds]"
+                                [(ngModel)]="model.filters.beds">
                             <option selected
                                     disabled>Кол-во кроватей</option>
-                            
-                            <option value="1">1 кровать</option>
-                            
-                            <option value="2">2 кровати</option>
-                            
-                            <option value="3">3 кровати</option>
-                            
-                            <option value="4">4 кровати</option>
-                            
-                            <option value="5">5 кроватей</option>
-                            
-                            <option value="6">6 кроватей</option>
-                            
-                            <option value="7">7 кроватей</option>
-                            
-                            <option value="8">8 кроватей</option>
-                            
-                            <option value="9">9 кроватей</option>
-                            
-                            <option value="10">10 кроватей</option>
-                            
+                            <option *ngFor="let bed of beds"
+                                    [value]="bed">{{bed}} кроватей</option>
                         </select>
                     </div>
                 </li>
@@ -305,7 +234,8 @@
                         <li class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox"
-                                       name="filters[parameters][266]"
+                                       name="filters[parameters][]"
+                                       (click)="model.toggleParameterId(266)"
                                        class="custom-control-input"
                                        id="realty-search-form__parking">
                                 <label class="custom-control-label"
@@ -315,7 +245,8 @@
                         <li class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox"
-                                       name="filters[parameters][254]"
+                                       name="filters[parameters][]"
+                                       (click)="model.toggleParameterId(254)"
                                        class="custom-control-input"
                                        id="realty-search-form__pool">
                                 <label class="custom-control-label"
@@ -325,7 +256,8 @@
                         <li class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox"
-                                       name="filters[parameters][259]"
+                                       name="filters[parameters][]"
+                                       (click)="model.toggleParameterId(259)"
                                        class="custom-control-input"
                                        id="realty-search-form__spa">
                                 <label class="custom-control-label"
@@ -335,7 +267,8 @@
                         <li class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox"
-                                       name="filters[parameters][245]"
+                                       name="filters[parameters][]"
+                                       (click)="model.toggleParameterId(245)"
                                        class="custom-control-input"
                                        id="realty-search-form__lift">
                                 <label class="custom-control-label"
@@ -352,7 +285,8 @@
                         <li class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox"
-                                       name="filters[parameters][243]"
+                                       name="filters[parameters][]"
+                                       (click)="model.toggleParameterId(243)"
                                        class="custom-control-input"
                                        id="realty-search-form__air-conditioning">
                                 <label class="custom-control-label"
@@ -362,7 +296,8 @@
                         <li class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox"
-                                       name="filters[parameters][271]"
+                                       name="filters[parameters][]"
+                                       (click)="model.toggleParameterId(271)"
                                        class="custom-control-input"
                                        id="realty-search-form__cooker">
                                 <label class="custom-control-label"
@@ -372,7 +307,8 @@
                         <li class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox"
-                                       name="filters[parameters][270]"
+                                       name="filters[parameters][]"
+                                       (click)="model.toggleParameterId(270)"
                                        class="custom-control-input"
                                        id="realty-search-form__refrigerator">
                                 <label class="custom-control-label"
@@ -382,7 +318,8 @@
                         <li class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox"
-                                       name="filters[parameters][287]"
+                                       name="filters[parameters][]"
+                                       (click)="model.toggleParameterId(287)"
                                        class="custom-control-input"
                                        id="realty-search-form__tv">
                                 <label class="custom-control-label" for="realty-search-form__tv">Телевизор</label>
@@ -391,8 +328,8 @@
                         <li class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox"
-                                       name="filters[parameters][280]"
-                                       value="280"
+                                       name="filters[parameters][]"
+                                       (click)="model.toggleParameterId(280)"
                                        class="custom-control-input"
                                        id="realty-search-form__washer">
                                 <label class="custom-control-label" for="realty-search-form__washer">Стиральная машина</label>
@@ -408,7 +345,8 @@
                         <li class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox"
-                                       name="filters[parameters][247]"
+                                       name="filters[parameters][]"
+                                       (click)="model.toggleParameterId(247)"
                                        class="custom-control-input"
                                        id="realty-search-form__smoking">
                                 <label class="custom-control-label"
@@ -418,7 +356,8 @@
                         <li class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox"
-                                       name="filters[parameters][80]"
+                                       name="filters[parameters][]"
+                                       (click)="model.toggleParameterId(80)"
                                        class="custom-control-input"
                                        id="realty-search-form__children">
                                 <label class="custom-control-label"
@@ -428,7 +367,8 @@
                         <li class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox"
-                                       name="filters[parameters][240]"
+                                       name="filters[parameters][]"
+                                       (click)="model.toggleParameterId(240)"
                                        class="custom-control-input"
                                        id="realty-search-form__pets">
                                 <label class="custom-control-label"
@@ -445,7 +385,9 @@
                         <li class="form-group">
                             <div class="custom-control custom-radio">
                                 <input type="radio"
-                                       name="filters[sorting]"
+                                       value="asc"
+                                       name="sort"
+                                       [(ngModel)]="model.sort"
                                        class="custom-control-input"
                                        id="realty-search-form__sorting_from_cheap-to-expensive">
                                 <label class="custom-control-label"
@@ -456,7 +398,9 @@
                         <li class="form-group">
                             <div class="custom-control custom-radio">
                                 <input type="radio"
-                                       name="filters[sorting]"
+                                       value="desc"
+                                       name="sort"
+                                       [(ngModel)]="model.sort"
                                        class="custom-control-input"
                                        id="realty-search-form__sorting_from_expensive-to-cheap">
                                 <label class="custom-control-label"
@@ -470,4 +414,3 @@
     </div>
     <!-- /Other filters -->
 </form>
-<!-- /Form: realty-search-form -->

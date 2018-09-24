@@ -32,7 +32,7 @@ export class RealtyService {
     /** GET best realty from the server */
     getBestRealty(): Observable<Realty[]> {
         const url = `${this.realtyUrl}/best`;
-        return window['bestRealty'] ? window['bestRealty'] : this.http.get<Realty[]>(url)
+        return this.http.get<Realty[]>(url)
             .pipe(
                 catchError(this.handleError('getBestRealty', []))
             );

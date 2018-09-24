@@ -1,6 +1,5 @@
-import { Location } from '@angular/common';
 import { Component, OnInit, Input } from '@angular/core';
-import {Router, NavigationExtras} from '@angular/router';
+import {Router, NavigationExtras, ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-pagination',
@@ -8,31 +7,33 @@ import {Router, NavigationExtras} from '@angular/router';
   styleUrls: ['./pagination.component.scss']
 })
 export class PaginationComponent implements OnInit {
-  @Input() currentPage: number;
   @Input() lastPage: number;
-  @Input() countPages: number;
+  @Input() activePage: number;
+  countPages: number;
   pages: number[];
-  constructor(private router: Router,
-              private locationService: Location) {
+  constructor(private route: ActivatedRoute,
+              private router: Router) {
+    this.activePage = this.activePage || +this.route.snapshot.paramMap.get('page') || 1;
+    console.log(this.activePage);
     this.countPages = this.countPages ? this.countPages : 6;
   }
 
   ngOnInit() {
-    this.switchPage(this.currentPage);
+    this.updatePagination();
   }
 
   switchPage(page: number) {
-    this.currentPage = page;
+    this.activePage = page;
     this.updatePagination();
   }
 
   switchToPrev() {
-    this.currentPage--;
+    this.activePage--;
     this.updatePagination();
   }
 
   switchToNext() {
-    this.currentPage++;
+    this.activePage++;
     this.updatePagination();
   }
 
@@ -40,9 +41,9 @@ export class PaginationComponent implements OnInit {
     const pages = [];
     const countPagesAfterActive = Math.round(this.countPages / 2);
     for (let i = 0; i < (this.countPages + 1); i++) {
-        const page = (this.currentPage + i) - countPagesAfterActive;
-        if (page < 1) continue;
-        if (page > this.lastPage) break;
+        const page = (this.activePage + i) - countPagesAfterActive;
+        if (page < 1) { continue; }
+        if (page > this.lastPage) { break; }
         pages.push(page);
     }
     this.pages = pages;
@@ -51,8 +52,9 @@ export class PaginationComponent implements OnInit {
   updateNavigator() {
     const navigationExtras: NavigationExtras = {
         queryParams: {
-            page: this.currentPage
-        }
+          page: this.activePage
+        },
+        queryParamsHandling: 'merge'
     };
     this.router.navigate([], navigationExtras);
   }
